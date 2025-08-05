@@ -1,0 +1,4815 @@
+R00001.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             IDENTIFICATION CODE, 66
+ 
+IDENTIFICATION CODE  0001 THRU 5225 RESPONDENT'S RECORD NUMBER
+DESCRIPTION: THIS NUMBER WAS ASSIGNED ACCORDING TO THE RECORD NUMBER OF EACH 
+RESPONDENT ON THE TAPE. THE FIRST  RESPONDENT WAS ASSIGNED THE SERIAL NUMBER OF 
+0001: THE SECOND WAS ASSIGNED 0002, ETC.
+ 
+    5225           1 TO 5225: IDENTIFICATION CODE - YM COHORT
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           5225        Mean:                2613
+ 
+Lead In: None.
+Default Next Question: R00001.01
+--------------------------------------------------------------------------------
+R00022.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             AGE, 66
+ 
+AGE
+ 
+14 THRU 24 ACTUAL AGE OF RESPONDENT
+UNIVERSE INFORMATION:
+ALL RESPONDENTS.
+ 
+BIRTH DATES WERE ADDED TO THE TAPE FOR THE FIRST TIME IN OCTOBER 1978, IN THE 
+PROCESS IT WAS DISCOVERED THAT THERE ARE 3 YOUNG MEN IN THE SAMPLE WHOSE AGES DO
+NOT IN FACT FALL WITHIN THE SPECIFIED RANGE (14-24) AS OF APRIL 1, 1966. THESE 
+AGES WERE REPORTED INCORRECTLY BY ANOTHER HOUSEHOLD MEMBER AT THE TIME OF 
+SCREENING. THESE THREE RECORDS HAVE NOT BEEN DELETED FROM THE TAPE NOR HAS THE 
+AGE BEEN CHANGED. THE THREE RESPONDENTS ARE ID3487, ID3664 AND ID4900. THE 
+SAMPLE WAS INTENDED TO BE YM AGES 14-24 AS OF THEIR LAST BIRTHDAY PRIOR TO 
+4/1/66.
+ 
+     687          14
+     669          15
+     693          16
+     604          17
+     516          18
+     399          19
+     293          20
+     298          21
+     348          22
+     357          23
+     361          24
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:             14        Max:             24        Mean:               18.09
+ 
+Lead In: R00021.03[Default]
+Default Next Question: R00022.02
+--------------------------------------------------------------------------------
+R00022.02    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MONTH OF R BIRTH, 66
+ 
+BIRTHDATE  1 THRU 12 JANUARY - DECEMBER
+DATE CREATED: OCTOBER 25, 1978 REQUESTED BY E. KREIDER CENSUS UPDATE. SEE MEMO 
+B. FORD TO E. KREIDER DATED 6/27/78
+ 
+DATE CHANGED: NOVEMBER, 1983 REQUESTED BY HILLS SEE MEMO FROM P. HEALY TO P. 
+RHOTON DATED 3/25/82 AND MEMO FROM J. RIEMEN SCHNEIDER TO P. HEALY DATED 3/8/83
+ 
+     477           1: JANUARY
+     384           2: FEBRUARY
+     467           3: MARCH
+     385           4: APRIL
+     402           5: MAY
+     417           6: JUNE
+     411           7: JULY
+     468           8: AUGUST
+     462           9: SEPTEMBER
+     487          10: OCTOBER
+     411          11: NOVEMBER
+     440          12: DECEMBER
+  -------
+    5211
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5211   VALID SKIP(-4)      14     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             12        Mean:                6.55
+ 
+Lead In: R00022.00[Default]
+Default Next Question: R00022.03
+--------------------------------------------------------------------------------
+R00022.03    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             YEAR OF R BIRTH, 66
+ 
+BIRTHDATE  41 THRU 52 ACTUAL YEAR
+NOTE: SEE MEMO FROM FORD TO RHOTON (10/19/79) 3 RESPONDENTS WHO WERE ORIGINALLY 
+THOUGHT TO BE THE CORRECT AGE FOR INCLUSION IN THE SAMPLE WERE FOUND TO BE OUT 
+OF RANGE.  THESE 3 (ID#HS 3487, 3664, 4900) REMAIN IN THE SAMPLE.
+ 
+DATE CREATED: OCTOBER 25, 1978  REQUESTED BY E. KREIDER CENSUS UPDATE. SEE MEMO 
+B. FORD TO E. KREIDER DATED 6/27/78
+ 
+DATE CHANGED: NOVEMBER, 1983 REQUESTED BY HILLS SEE MEMO FROM P. HEALY TO P. 
+RHOTON DATED 3/25/82 AND MEMO FROM J. RIEMEN SCHNEIDER TO P. HEALY DATED 3/8/83
+ 
+       3          36 TO 40: 1936-1940
+     256          41: 1941
+     322          42: 1942
+     370          43: 1943
+     314          44: 1944
+     310          45: 1945
+     310          46: 1946
+     514          47: 1947
+     594          48: 1948
+     677          49: 1949
+     662          50: 1950
+     696          51: 1951
+     196          52: 1952
+  -------
+    5224
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5224   VALID SKIP(-4)       1     NON-INTERVIEW(-5)       0
+ 
+Min:             36        Max:             52        Mean:               47.22
+ 
+Lead In: R00022.02[Default]
+Default Next Question: R00023.00
+--------------------------------------------------------------------------------
+R00023.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             RACE, 66
+ 
+RACE
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+    3734       1 WHITE
+    1438       2 BLACK
+      53       3 OTHER
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00022.03[Default]
+Default Next Question: R00024.00
+--------------------------------------------------------------------------------
+R00024.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MARITAL STATUS, 66
+ 
+MARITAL STATUS
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+  
+DATE CHANGED: SEPT. 25, 1975  REQUESTED BY J. GRASSO
+ 
+DESCRIPTION: IF R(24.)=NA & R(635.)=6     THEN R(24.)=6
+ 
+     943       1 MARRIED, SPOUSE PRESENT
+       8       2 MARRIED, SPOUSE ABSENT
+       0       3 WIDOWED
+      13       4 DIVORCED
+      31       5 SEPARATED
+    4230       6 NEVER MARRIED
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00023.00[Default]
+Default Next Question: R00024.50
+--------------------------------------------------------------------------------
+R00024.51    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             REGION OF RESIDENCE IN 66 (REVISED)
+ 
+SOUTH/ NON-SOUTH
+ 
+    2150       1 LIVES IN SOUTH
+    3075       0 LIVES IN NON-SOUTH
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00024.50[Default]
+Default Next Question: R00024.52
+--------------------------------------------------------------------------------
+R00024.54    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             COMPARISON OF CURRENT WITH PREVIOUS SMSA OF RESIDENCE IN 66
+ 
+0 RESPONDENT DID NOT LIVE IN SMSA  01 THRU 10 RESIDENCE CODE (AT TIME OF 
+INTERVIEWS)  SEE CODEBOOK SUPPLEMENT APPENDIX 21 FOR EXPLANATION
+DATE CHANGED: NOVEMBER, 1983  REQUESTED BY SIMON
+ 
+IF R(1.)=427 THEN R(24.54)=0;
+IF R(1.)=428 THEN R(24.54)=0;
+ 
+    1777           0: DOES NOT LIVE IN SMSA
+    3448           1: SMSA OF 1966 RESIDENCE
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .66
+ 
+Lead In: R00024.53[Default]
+Default Next Question: R00024.55
+--------------------------------------------------------------------------------
+R00024.55    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             CURRENT RESIDENCE IN SMSA, 66? (REVISED)
+ 
+CURRENT RESIDENCE IN SMSA? PART OF REVISED SERIES
+ 
+    1832       1 IN SMSA:  IN CENTRAL CITY
+    1616       2 IN SMSA:  NOT IN CENTRAL CITY
+    1777       3 NOT IN SMSA
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00024.54[Default]
+Default Next Question: R00024.56
+--------------------------------------------------------------------------------
+R00024.56    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             SIZE OF LABOR FORCE, 70 CENSUS, FOR LABOR MARKET OF 66 RESIDENCE 
+             (REVISED)
+ 
+SIZE OF LABOR FORCE
+ 
+    1700       1 LESS THAN 50,000
+    1096       2 50,000 TO 199,999
+     720       3 200,000 TO 399,999
+      79       4 400,000 TO 499,999
+     369       5 500,000 TO 799,999
+     294       6 800,000 TO 999,999
+     613       7 1,000,000 TO 2,999,999
+     354       8 3,000,000+
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00024.55[Default]
+Default Next Question: R00024.57
+--------------------------------------------------------------------------------
+R00025.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF AREA OF RESIDENCE, 66
+ 
+AREA
+THIS IS THE FIRST DIGIT OF THE "IDENTIFICATION CODE" BASED ON 1960 CENSUS 
+CLASSIFICATION.
+ 
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+     842       1 URBANIZED AREA - 3,000,000 OR MORE
+     486       2 URBANIZED AREA - 1,000,000 TO 2,999,999
+     661       3 URBANIZED AREA - 250,000 TO 999,999
+     501       4 URBANIZED AREA - UNDER 250,000
+     202       5 URBAN PLACES 25,000 - OUTSIDE URBANIZED AREAS
+     233       6 URBAN PLACES 10,000 - 24,999 OUTSIDE URBANIZED AREAS
+     367       7 URBAN PLACES 2,500 - 9,999 OUTSIDE URBANIZED AREAS
+    1926       8 RURAL BASED ON  1960 CENSUS CLASSIFICATION.
+  -------
+    5218
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5218   VALID SKIP(-4)       7     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00024.57[Default]
+Default Next Question: R00026.00
+--------------------------------------------------------------------------------
+R00027.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF PROPERTY OF RESIDENCE, 66
+ 
+TYPE
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+    3391       1 URBAN
+     494       2 FARM (10 ACRES OR MORE, AND SALES $50+)
+      35       3 FARM (LESS THAN 10 ACRES, AND SALES $250+)
+     105       4 NONFARM (10 ACRES OR MORE, AND SALES LESS THAN $50)
+    1196       5 NONFARM (LESS THAN 10 ACRES, AND SALES LESS THAN $250)
+  -------
+    5221
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5221   VALID SKIP(-4)       4     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00026.00[Default]
+Default Next Question: R00028.00
+--------------------------------------------------------------------------------
+R00028.00    [PG1]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TENURE, 66
+ 
+TENURE
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+    3189       1 OWNED OR BEING BOUGHT
+    1810       2 RENTED
+     198       3 NO CASH RENT
+  -------
+    5197
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5197   VALID SKIP(-4)      28     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00027.00[Default]
+Default Next Question: R00029.00
+--------------------------------------------------------------------------------
+R00034.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             INDUSTRIAL DIVERSIFICATION SCORE FOR LABOR MARKET OF CURRENT 
+             RESIDENCE, 66
+ 
+00 THRU 99 ACTUAL SCORE
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+AN INDEX WHICH MEASURES THE DEGREE TO WHICH THE INDUSTRIAL COMPOSITION OF THE 
+RESPONDENT'S LOCAL AREA RESEMBLES THAT OF THE NATIONAL ECONOMY.  FOR EACH MAJOR 
+INDUSTRY DIVISION WITHIN THE LOCAL AREA, THE ABSOLUTE DIFFERENCE BETWEEN THE 
+PERCENT  EMPLOYED IN THAT INDUSTRY AND THE PERCENT EMPLOYED IN THE SAME INDUSTRY
+NATIONALLY WAS CALCULATED.  THESE DIFFERENCES WERE SUMMED AND THE TOTAL DIVIDED 
+BY TWO.  THUS, LOW SCORES DENOTE   DIVERSIFIED AREAS AND HIGH ONES DENOTE 
+INDUSTRIALLY CONCENTRATED AREAS.
+ 
+     560           5 TO 9
+    1841          10 TO 14
+    1042          15 TO 19
+     741          20 TO 24
+     493          25 TO 29
+     401          30 TO 34
+     123          35 TO 39
+      24          40 TO 99
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              7        Max:             58        Mean:               17.63
+ 
+Lead In: R00032.00[Default]
+Default Next Question: R00036.00
+--------------------------------------------------------------------------------
+R00036.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             INDEX OF DEMAND FOR MALE LABOR FOR LABOR MARKET OF CURRENT 
+             RESIDENCE, 66
+ 
+INDEX OF DEMAND
+ 
+    2766       1 SCORE LESS THAN 20
+    2459       2 SCORE IS 20 PLUS
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00034.00[Default]
+Default Next Question: R00038.00
+--------------------------------------------------------------------------------
+R00038.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             PRESENCE OF ACCREDITED 2 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE
+ 
+PRESENCE OF 2 YEAR ACCREDITED COLLEGE
+ 
+     870       1 YES, PRIVATE ONLY
+     660       2 YES, PUBLIC ONLY
+     862       3 YES, BOTH PUBLIC AND PRIVATE 2 YEAR COLLEGE
+    2833       4 NO 2 YEAR COLLEGE
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00036.00[Default]
+Default Next Question: R00039.00
+--------------------------------------------------------------------------------
+R00039.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF ACCREDITED 2 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE
+ 
+TYPE OF 2 YEAR ACCREDITED COLLEGE
+ 
+    2314       1 AT LEAST ONE COED COLLEGE, BOYS AND GIRLS COLLEGES BOTH
+      30       2 BOYS COLLEGES ONLY
+      48       3 GIRLS COLLEGES ONLY
+    2833       4 NO 2 YEAR COLLEGES
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00038.00[Default]
+Default Next Question: R00040.00
+--------------------------------------------------------------------------------
+R00040.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             PRESENCE OF ACCREDITED 4 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE
+ 
+PRESENCE OF 4 YEAR ACCREDITIED COLLEGE
+ 
+     935       1 YES, PRIVATE ONLY
+     456       2 YES, PUBLIC ONLY
+    2224       3 YES, BOTH PUBLIC AND PRIVATE 4 YEAR COLLEGE
+    1610       4 NO 4 YEAR COLLEGE
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00039.00[Default]
+Default Next Question: R00041.00
+--------------------------------------------------------------------------------
+R00041.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF ACCREDITED 4 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE
+ 
+TYPE OF 4 YEAR ACCREDITED COLLEGE
+ 
+    3511       1 AT LEAST ONE COED COLLEGE, BOYS AND GIRLS COLLEGES BOTH
+      81       2 BOYS COLLEGES ONLY
+      19       3 GIRLS COLLEGES ONLY
+    1614       4 NO 4 YEAR COLLEGES
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00040.00[Default]
+Default Next Question: R00043.00
+--------------------------------------------------------------------------------
+R00043.00    [1]                                            Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ENROLLMENT STATUS, 66 - IS R CURRENTLY ENROLLED?
+ 
+Are you attending or enrolled in regular school?
+UNIVERSE INFORMATION:
+ALL RESPONDENTS
+ 
+    3210       1 YES, CURRENTLY ENROLLED
+    2015       0 NO, NOT CURRENTLY ENROLLED   (Go To R00046.00)
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00041.00[Default]
+Default Next Question: R00044.00
+--------------------------------------------------------------------------------
+R00054.00    [CHA]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ENROLLMENT STATUS,  66 (CH ITEM)
+ 
+CHECK ITEM
+UNIVERSE INFORMATION:
+'RESPONSDENT IS 14' IN 3, SEE R(45.) *OR* 'NO' IN 3, SEE R(45.)
+ 
+    3129       1 ENROLLED IN SCHOOL (EXCEPT ENROLLED IN ELEMENTARY SCHOOL) OR 
+                      COLLEGE GRADUATE   (Go To R00091.00)
+    1906       2 ALL OTHERS NOT ENROLLED AND COMPLETED 1-15 YEARS OF SCHOOL
+  -------
+    5035
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5035   VALID SKIP(-4)     190     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00053.00[Default]  R00045.00[2:3] R00049.00[0:0]
+Default Next Question: R00055.00
+--------------------------------------------------------------------------------
+R00091.00    [17]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HAS R EVER SERVED IN THE ARMED FORCES? AS OF 66
+ 
+Have you ever served in the U.S. Armed Forces?
+UNIVERSE INFORMATION:
+1) 'ENROLLED IN SCHOOL OR A COLLEGE GRADUATE' IN CH A, SEE R(54.)
+2) 'NO' IN 16A  SEE R(83.)
+3) 'STILL GOING ON' IN 16F, SEE R(88.)
+4) 'YES' IN 16F, SEE R(88.)
+5. 'NO' IN 16F, SEE R(88.)
+ 
+      97       1 YES, NAVY
+     230       2 YES, ARMY
+      61       3 YES, AIR FORCE
+      34       4 YES, MARINES
+       5       5 YES, COAST GUARD
+    4596       6 NO, DID NOT SERVE   (Go To R00105.00)
+  -------
+    5023
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5023   VALID SKIP(-4)     202     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00090.00[Default]  R00054.00[1:1] R00083.00[0:0] R00088.00[3:3]
+Default Next Question: R00092.00
+--------------------------------------------------------------------------------
+R00105.00    [22A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID R EVER TRY TO ENTER ARMED FORCES? 66
+ 
+Have you ever tried to enter Active Military Service?
+UNIVERSE INFORMATION:
+'NO' IN 17, SEE R(91.)
+ 
+     432       1 YES
+    4155       0 NO, OR UNDER 17 YEARS OLD   (Go To R00107.00)
+  -------
+    4587
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4587   VALID SKIP(-4)     638     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00091.00[6:6]
+Default Next Question: R00106.00
+--------------------------------------------------------------------------------
+R00108.00    [23B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             COMPARISON OF RESIDENCE WHILE IN HIGH SCHOOL & CURRENT RESIDENCE, 
+             66
+ 
+What is this high school's address?
+UNIVERSE INFORMATION:
+*NOT* NEVER ATTENDED HIGH SCHOOL' IN 23A, SEE R(107.)
+ 
+    3990       1 SAME SMSA OR COUNTY
+     335       2 DIFFERENT SMSA OR COUNTY, SAME STATE
+     129       3 DIFFERENT STATE, SAME DIVISION
+     162       4 DIFFERENT DIVISION
+      20       5 ABROAD (EXCEPT U.S. POSSESSIONS)
+  -------
+    4636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4636   VALID SKIP(-4)     589     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00107.00[Default]
+Default Next Question: R00109.00
+--------------------------------------------------------------------------------
+R00111.00    [23C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS LAST HIGH SCHOOL ATTENDED A PUBLIC SCHOOL? 66
+ 
+Is this school public or private?
+UNIVERSE INFORMATION:
+*NOT* NEVER ATTENDED HIGH SCHOOL' IN 23A, SEE R(107.)
+ 
+    4202       1 YES, PUBLIC
+     362       0 NO, PRIVATE
+  -------
+    4564
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4564   VALID SKIP(-4)     661     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00110.00[Default]
+Default Next Question: R00112.00
+--------------------------------------------------------------------------------
+R00128.00    [28]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ATTITUDE TOWARD HIGH SCHOOL EXPERIENCE, 66
+ 
+All things considered, how do you feel about your high school experience?
+UNIVERSE INFORMATION:
+1) 'NO' IN 26E, SEE R(124.)
+2) 'YES' IN 26E, SEE R(124.)
+ 
+    1501       1 LIKE IT VERY MUCH
+    1606       2 LIKE IT FAIRLY WELL
+     222       3 DISLIKE IT SOMEWHAT
+      73       4 DISLIKE IT VERY MUCH
+  -------
+    3402
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3402   VALID SKIP(-4)    1823     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00127.00[Default]
+Default Next Question: R00129.00
+--------------------------------------------------------------------------------
+R00150.00    [32]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ATTITUDE TOWARD COLLEGE EXPERIENCE, 66
+ 
+All things considered, how do you feel about your college experience?
+UNIVERSE INFORMATION:
+1) 'NONE' IN 31A, SEE R(148.)
+2) *NOT* 'NONE' IN 31A, SEE R(148.)
+ 
+     539       1 LIKE IT VERY MUCH
+     223       2 LIKE IT FAIRLY WELL
+      30       3 DISLIKE IT SOMEWHAT
+       5       4 DISLIKE IT VERY MUCH
+  -------
+     797
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     797   VALID SKIP(-4)    4428     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00149.00[Default]  R00148.00[0:0]
+Default Next Question: R00151.00
+--------------------------------------------------------------------------------
+R00226.00    [48]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ATTITUDE TOWARD CURRENT JOB 66
+ 
+How do you feel about the job you have now?
+ 
+     845       1 LIKE IT VERY MUCH
+     762       2 LIKE IT FAIRLY WELL
+     141       3 DISLIKE IT SOMEWHAT
+      52       4 DISLIKE IT VERY MUCH
+  -------
+    1800
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1800   VALID SKIP(-4)    3425     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00225.00[Default]
+Default Next Question: R00227.00
+--------------------------------------------------------------------------------
+R00227.00    [49A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             1ST FACTOR LIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things you like best about your job?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+     306       1 LIKES THE KIND OF WORK
+     138       2 ABILITY OR CAPACITY TO DO WORK
+     102       3 FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING
+      98       4 TYPE OF WORK HAS VARIETY, IS INTERESTING
+      81       5 MY OWN BOSS, INDEPENDENCE
+      37       6 NOT MUCH PRESSURE OR MUCH RESPONSIBILITY
+      39       7 WORK INVOLVES RESPONSIBILITY
+     181       8 OTHER INTRINSIC
+     205       9 EARNINGS
+       9      10 JOB SECURITY
+       7      11 STEADY WORK
+      23      12 FRINGE BENEFITS
+       0      13 SENIORITY
+     115      14 HOURS OF WORK
+      51      15 WORKING CONDITIONS
+      66      16 SUPERVISION
+      38      17 COMPANY POLICY AND ADMINISTRATION
+      84      18 CONGENIAL FELLOW WORKERS
+       1      19 GOOD UNION
+       5      20 KEEPS ME BUSY
+      81      21 MEET INTERESTING PEOPLE
+      43      22 OTHER EXTRINSIC
+      22      23 CHANCE FOR ADVANCEMENT
+       2      24 UNCLASSIFIABLE
+      48      25 NOTHING (WRITTEN IN AS STATED)
+       0      40 Unknown
+  -------
+    1782
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1782   VALID SKIP(-4)    3443     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00226.00[Default]
+Default Next Question: R00228.00
+--------------------------------------------------------------------------------
+R00228.00    [49A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             2ND FACTOR LIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things you like best about your job?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+     154       1 LIKES THE KIND OF WORK
+      90       2 ABILITY OR CAPACITY TO DO WORK
+     106       3 FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING
+      72       4 TYPE OF WORK HAS VARIETY, IS INTERESTING
+      45       5 MY OWN BOSS, INDEPENDENCE
+      26       6 NOT MUCH PRESSURE OR MUCH RESPONSIBILITY
+      53       7 WORK INVOLVES RESPONSIBILITY
+     163       8 OTHER INTRINSIC
+     155       9 EARNINGS
+      12      10 JOB SECURITY
+      12      11 STEADY WORK
+      24      12 FRINGE BENEFITS
+       0      13 SENIORITY
+     119      14 HOURS OF WORK
+      75      15 WORKING CONDITIONS
+      74      16 SUPERVISION
+      47      17 COMPANY POLICY AND ADMINISTRATION
+     118      18 CONGENIAL FELLOW WORKERS
+       2      19 GOOD UNION
+       4      20 KEEPS ME BUSY
+      46      21 MEET INTERESTING PEOPLE
+      48      22 OTHER EXTRINSIC
+      33      23 CHANCE FOR ADVANCEMENT
+       2      24 UNCLASSIFIABLE
+  -------
+    1480
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1480   VALID SKIP(-4)    3745     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00227.00[Default]
+Default Next Question: R00229.00
+--------------------------------------------------------------------------------
+R00229.00    [49A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             3RD FACTOR LIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things you like best about your job?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+      64       1 LIKES THE KIND OF WORK
+      29       2 ABILITY OR CAPACITY TO DO WORK
+      85       3 FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING
+      46       4 TYPE OF WORK HAS VARIETY, IS INTERESTING
+      29       5 MY OWN BOSS, INDEPENDENCE
+      19       6 NOT MUCH PRESSURE OR MUCH RESPONSIBILITY
+      28       7 WORK INVOLVES RESPONSIBILITY
+     111       8 OTHER INTRINSIC
+     151       9 EARNINGS
+       9      10 JOB SECURITY
+       4      11 STEADY WORK
+      38      12 FRINGE BENEFITS
+       2      13 SENIORITY
+      67      14 HOURS OF WORK
+      59      15 WORKING CONDITIONS
+      49      16 SUPERVISION
+      33      17 COMPANY POLICY AND ADMINISTRATION
+     108      18 CONGENIAL FELLOW WORKERS
+       5      19 GOOD UNION
+       6      20 KEEPS ME BUSY
+      28      21 MEET INTERESTING PEOPLE
+      52      22 OTHER EXTRINSIC
+      40      23 CHANCE FOR ADVANCEMENT
+       2      24 UNCLASSIFIABLE
+  -------
+    1064
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1064   VALID SKIP(-4)    4161     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00228.00[Default]
+Default Next Question: R00230.00
+--------------------------------------------------------------------------------
+R00230.00    [49B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             1ST FACTOR DISLIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things about your job that you don't like so well?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+      26       1 DISLIKES THE KIND OF WORK
+      63       2 WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS 
+                      DANGEROUS, HAZARDOUS
+      10       3 FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT 
+                      CHALLENGING, NOT MAKING USE OF ABILITIES
+      43       4 TYPE OF WORK IS MONOTONOUS, DULL
+       0       5 CODE 5 IS NOT USED HERE
+      22       6 TOO MUCH PRESSURE OR RESPONSIBILITY
+       4       7 WORK INVOLVES LITTLE OR NO RESPONSIBILITY
+     296       8 OTHER INTRINSIC
+     230       9 EARNINGS
+       7      10 JOB INSECURITY
+      19      11 WORK NOT STEADY
+      11      12 FRINGE BENEFITS
+       0      13 LACK OF SENIORITY
+     214      14 HOURS OF WORK
+      63      15 WORKING CONDITIONS
+      54      16 SUPERVISION
+      44      17 COMPANY POLICY AND ADMINISTRATION
+      24      18 DISLIKES FELLOW WORKERS
+       3      19 POOR UNION
+       9      20 NOT ENOUGH TO DO
+       0      21 CODE 21 IS NOT USED
+     120      22 OTHER EXTRINSIC
+      10      23 NO CHANCE FOR ADVANCEMENT
+      36      24 UNCLASSIFIABLE
+     433      25 NOTHING (WRITTEN AS STATED)
+       0      40 UNKNOWN
+  -------
+    1741
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1741   VALID SKIP(-4)    3484     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00229.00[Default]
+Default Next Question: R00231.00
+--------------------------------------------------------------------------------
+R00231.00    [49B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             2ND FACTOR DISLIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things about your job that you don't like so well?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+      14       1 DISLIKES THE KIND OF WORK
+      45       2 WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS 
+                      DANGEROUS, HAZARDOUS
+      11       3 FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT 
+                      CHALLENGING, NOT MAKING USE OF ABILITIES
+      18       4 TYPE OF WORK IS MONOTONOUS, DULL
+       0       5 CODE 5 IS NOT USED HERE
+      18       6 TOO MUCH PRESSURE OR RESPONSIBILITY
+       3       7 WORK INVOLVES LITTLE OR NO RESPONSIBILITY
+     143       8 OTHER INTRINSIC
+      82       9 EARNINGS
+       3      10 JOB INSECURITY
+      11      11 WORK NOT STEADY
+      10      12 FRINGE BENEFITS
+       0      13 LACK OF SENIORITY
+      70      14 HOURS OF WORK
+      35      15 WORKING CONDITIONS
+      22      16 SUPERVISION
+      27      17 COMPANY POLICY AND ADMINISTRATION
+       9      18 DISLIKES FELLOW WORKERS
+       1      19 POOR UNION
+       3      20 NOT ENOUGH TO DO
+       0      21 CODE 21 IS NOT USED
+      87      22 OTHER EXTRINSIC
+      19      23 NO CHANCE FOR ADVANCEMENT
+      27      24 UNCLASSIFIABLE
+       0      25 NOTHING (WRITTEN AS STATED)
+       0      40 UNKNOWN
+  -------
+     658
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     658   VALID SKIP(-4)    4567     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00230.00[Default]
+Default Next Question: R00232.00
+--------------------------------------------------------------------------------
+R00232.00    [49B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             3RD FACTOR DISLIKED MOST ABOUT CURRENT JOB 66
+ 
+What are the things about your job that you don't like so well?
+INTRINSIC FACTORS -- FACTORS INHERENT IN THE NATURE OF THE WORK, I.E., ASPECTS 
+OF WORK INHERENT IN THE CONTENT OF THE JOB RATHER THAN THE CONTEXT IN WHICH THE 
+WORK IS PERFORMED.
+ 
+EXTRINSIC FACTORS -- FACTORS STEMMING FROM THE ENVIRONMENT IN WHICH THE WORK IS 
+PERFORMED, I.E., ASPECTS OF WORK INHERENT IN THE CONTEXT OF THE JOB RATHER THAN 
+THE JOB CONTENT.
+ 
+OTHER FACTORS -- FACTORS REFERRING TO JOB ASPECTS WHICH CANNOT BE UNAMBIGUOUSLY 
+DEFINED AS DIMENSIONS OF EITHER JOB CONTENT OR CONTEXT.
+ 
+       3       1 DISLIKES THE KIND OF WORK
+      11       2 WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS 
+                      DANGEROUS, HAZARDOUS
+       8       3 FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT 
+                      CHALLENGING, NOT MAKING USE OF ABILITIES
+       8       4 TYPE OF WORK IS MONOTONOUS, DULL
+       0       5 CODE 5 IS NOT USED HERE
+       9       6 TOO MUCH PRESSURE OR RESPONSIBILITY
+       1       7 WORK INVOLVES LITTLE OR NO RESPONSIBILITY
+      44       8 OTHER INTRINSIC
+      34       9 EARNINGS
+       0      10 JOB INSECURITY
+       4      11 WORK NOT STEADY
+       5      12 FRINGE BENEFITS
+       0      13 LACK OF SENIORITY
+      21      14 HOURS OF WORK
+      16      15 WORKING CONDITIONS
+      12      16 SUPERVISION
+      16      17 COMPANY POLICY AND ADMINISTRATION
+       4      18 DISLIKES FELLOW WORKERS
+       2      19 POOR UNION
+       2      20 NOT ENOUGH TO DO
+       0      21 CODE 21 IS NOT USED
+      46      22 OTHER EXTRINSIC
+       4      23 NO CHANCE FOR ADVANCEMENT
+       9      24 UNCLASSIFIABLE
+       0      25 NOTHING (WRITTEN AS STATED)
+       0      40 UNKNOWN
+  -------
+     259
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     259   VALID SKIP(-4)    4966     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00231.00[Default]
+Default Next Question: R00233.00
+--------------------------------------------------------------------------------
+R00233.00    [50]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             RATE OF PAY REQUIRED ACCEPT HYPOTHETICAL JOB OFFER SAME AREA, 66
+ 
+Suppose someone in this area offered you a job in the same line of work you're 
+in now. What would the wage or salary have to be for you to be willing to take 
+it?  00001 THRU 99999 ACTUAL DOLLARS $.01 - 999.99 WHEN PER HOUR $1.00 - 99999. 
+WHEN OTHER THAN PER HOUR
+ 
+     176           1 TO 99
+     478         100 TO 199
+     315         200 TO 299
+     202         300 TO 399
+      73         400 TO 499
+      35         500 TO 599
+      23         600 TO 699
+      17         700 TO 799
+       6         800 TO 899
+       3         900 TO 999
+      70        1000 TO 999997
+  -------
+    1398
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1398   VALID SKIP(-4)    3827     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:          50000        Mean:              648.94
+ 
+Lead In: R00232.00[Default]
+Default Next Question: R00234.00
+--------------------------------------------------------------------------------
+R00234.00    [50]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TIME UNIT OF RATE OF PAY REQUIRED TO ACCEPT HYPOTHETICAL JOB OFFER 
+             SAME AREA, 66
+ 
+Suppose someone in this area offered you a job in the same line of work you're 
+in now. What would the wage or salary have to be for you to be willing to take 
+it? (per)
+ 
+     799       1 HOUR
+      17       2 DAY
+     377       3 WEEK
+       9       4 BIWEEKLY OR SEMI-MONTHLY
+     127       5 MONTHLY
+      65       6 YEARLY
+       0       7 PIECE RATE
+       0       8 ANY PAY OR OTHER
+  -------
+    1394
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1394   VALID SKIP(-4)    3831     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00233.00[Default]
+Default Next Question: R00235.00
+--------------------------------------------------------------------------------
+R00235.00    [50]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             REACTION TO HYPOTHETICAL JOB OFFER IN SAME AREA, 66
+ 
+Suppose someone in this area offered you a job in the same line of work you're 
+in now. What would the wage or salary have to be for you to be willing to take 
+it?
+ 
+      50       1 WOULD TAKE A STEADY JOB AT SAME OR LESS PAY
+      85       2 WOULD ACCEPT JOB, DONT KNOW AMOUNT
+     279       3 WOULDNT TAKE IT AT ANY CONCEIVABLE PAY
+     489       4 OTHER
+  -------
+     903
+ 
+Refusal(-1)            0
+Don't Know(-2)        17
+TOTAL =========>     920   VALID SKIP(-4)    4305     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00234.00[Default]
+Default Next Question: R00236.00
+--------------------------------------------------------------------------------
+R00236.00    [51]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             RATE OF PAY REQUIRED ACCEPT HYPOTHETICAL JOB OFFER DIFFERENT AREA, 
+             66
+ 
+What if this job were in some other part of the country. What would the wage or 
+salary have to be for you to be willing to take it?  00001 THRU 99999 ACTUAL 
+DOLLARS $.01 - 999.99 WHEN PER HOUR $1.00 - 99999. WHEN OTHER THAN PER HOUR
+ 
+      91           1 TO 99
+     257         100 TO 199
+     224         200 TO 299
+     167         300 TO 399
+      98         400 TO 499
+      53         500 TO 599
+      21         600 TO 699
+      15         700 TO 799
+      19         800 TO 899
+       4         900 TO 999
+      83        1000 TO 999997
+  -------
+    1032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1032   VALID SKIP(-4)    4193     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:          30000        Mean:              917.49
+ 
+Lead In: R00235.00[Default]
+Default Next Question: R00237.00
+--------------------------------------------------------------------------------
+R00237.00    [51]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TIME UNIT OF RATE OF PAY REQUIRED TO ACCEPT HYPOTHETICAL JOB OFFER 
+             DIFFERENT AREA, 66
+ 
+What if this job were in some other part of the country. What would the wage or 
+salary have to be for you to be willing to take it? (per)
+ 
+     553       1 HOUR
+       9       2 DAY
+     289       3 WEEK
+       7       4 BIWEEKLY OR SEMI-MONTHLY
+     108       5 MONTHLY
+      65       6 YEARLY
+       0       7 PIECE RATE
+       0       8 ANY PAY OR OTHER
+  -------
+    1031
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1031   VALID SKIP(-4)    4194     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00236.00[Default]
+Default Next Question: R00238.00
+--------------------------------------------------------------------------------
+R00238.00    [51]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             REACTION TO HYPOTHETICAL JOB OFFER IN DIFFERENT AREA, 66
+ 
+What if this job were in some other part of the country. What would the wage or 
+salary have to be for you to be willing to take it?
+ 
+      23       1 WOULD TAKE A STEADY JOB AT SAME OR LESS PAY
+     161       2 WOULD ACCEPT JOB, DONT KNOW AMOUNT
+     557       3 WOULDNT TAKE IT AT ANY CONCEIVABLE PAY
+     464       4 OTHER
+  -------
+    1205
+ 
+Refusal(-1)            0
+Don't Know(-2)        15
+TOTAL =========>    1220   VALID SKIP(-4)    4005     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00237.00[Default]
+Default Next Question: R00239.00
+--------------------------------------------------------------------------------
+R00240.00    [52]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             PLANS OF R IF LOSS OF CURRENT JOB, 66
+ 
+If for some reason you were permanently to lose your present job tomorrow, what 
+would you do?
+ 
+      53       1 RETURN TO SCHOOL; GET TRAINING
+     120       2 TAKE ANOTHER JOB I KNOW ABOUT   (Go To R00244.00)
+      29       3 GO INTO BUSINESS   (Go To R00248.00)
+    1354       4 LOOK FOR WORK   (Go To R00249.00)
+      46       5 ENTER ARMED FORCES   (Go To R00260.00)
+     141       6 OTHER   (Go To R00260.00)
+  -------
+    1743
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1743   VALID SKIP(-4)    3482     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00239.00[Default]
+Default Next Question: R00241.00
+--------------------------------------------------------------------------------
+R00241.00    [53A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF TRAINING R WOULD TAKE IF LOSS OF CURRENT JOB, 66
+ 
+What kind of courses or training would you take?
+ 
+       0       0 NONE
+      23       1 PROFESSIONAL, TECHNICAL
+       4       2 MANAGERIAL
+       5       3 CLERICAL, SALES
+      10       4 SKILLED MANUAL
+       0       5 SEMI-SKILLED MANUAL
+      10       6 OTHER
+  -------
+      52
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      52   VALID SKIP(-4)    5173     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00240.00[Default]
+Default Next Question: R00242.00
+--------------------------------------------------------------------------------
+R00242.00    [53B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TYPE OF SCHOOL R WOULD ENROLL IN IF LOSS OF CURRENT JOB, 66
+ 
+Where would you enroll for such schooling?
+ 
+       2       1 HIGH SCHOOL
+      23       2 COLLEGE
+       2       3 BUSINESS SCHOOL OR COLLEGE
+       9       4 TRADE OR TECHNICAL SCHOOL
+       4       5 OTHER
+  -------
+      40
+ 
+Refusal(-1)            0
+Don't Know(-2)         5
+TOTAL =========>      45   VALID SKIP(-4)    5180     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00241.00[Default]
+Default Next Question: R00243.00
+--------------------------------------------------------------------------------
+R00243.00    [53C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             METHOD OF FINANCING FOR SCHOOL OR TRAINING IF LOSS OF CURRENT JOB, 
+             66
+ 
+How would you finance this schooling?
+ 
+       0       1 SCHOLARSHIP
+       6       2 AID FROM PARENTS, RELATIVES
+      12       3 WORK (FULL OR PART-TIME)
+       9       4 SAVINGS
+       8       5 GOVERNMENT PROGRAM
+       6       6 OTHER
+       3       7 COMBINATION OF METHODS (INCLUDING WORK)
+       3       8 COMBINATION OF METHODS (EXCLUDING WORK)
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      48   VALID SKIP(-4)    5177     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00242.00[Default]
+Default Next Question: R00260.00
+--------------------------------------------------------------------------------
+R00244.00    [54B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             INDUSTRY OF JOB R WOULD TAKE IF LOSS OF CURRENT JOB, 66 (3-DIGIT) 
+             (60 CODES)
+ 
+What kind of business or industry would this be?
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+DATE CHANGED: APRIL 1, 1974. REQUESTED BY J. GRASSO
+ 
+DESCRIPTION: IF R(240.) EQ 2 AND R(244.) EQ NA THEN R(244.)=999.
+ 
+      10          16 TO 18: AGRICULTURE, FORESTRY AND FISHERIES
+       4         126 TO 156: MINING
+      12         196: CONSTRUCTION
+      38         206 TO 459: MANUFACTURING
+       5         506 TO 579: TRANSPORTATION, COMMNICATION, PUBLIC UTILITIES
+      30         606 TO 696: WHOLESALE AND RETAIL TRADE
+       2         706 TO 736: FINANCE, INSURANCE, AND REAL ESTATE
+       5         806 TO 809: BUSINESS AND REPAIR SERVICES
+       2         816 TO 839: PERSONAL SERVICES
+       1         846 TO 849: ENTERTINMENT AND RECREATION SERVICES
+       3         867 TO 898: PROFESSIONAL AND RELATED SERVICES
+       2         906 TO 936: PUBLIC ADMINISTRATION
+       6         999: NOT REPORTED
+  -------
+     120
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     120   VALID SKIP(-4)    5105     NON-INTERVIEW(-5)       0
+ 
+Min:             16        Max:            999        Mean:              456.31
+ 
+Lead In: R00240.00[2:2]
+Default Next Question: R00245.00
+--------------------------------------------------------------------------------
+R00245.00    [54C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF JOB R WOULD TAKE IF LOSS OF CURRENT JOB, 66 (3-DIGIT)
+             (60 CODES)
+ 
+What kind of work do you think you would be doing?
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+DATE CHANGED: APRIL 1, 1974.  REQUESTED BY J. GRASSO
+ 
+DESCRIPTION: IF R(240.) EQ 2 AND R(245.) EQ NA THEN R(245.)=995.
+ 
+       8           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+       5         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+       8         301 TO 370: CLERICAL AND KINDRED WORKERS
+      10         380 TO 395: SALES WORKERS
+      28         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+      29         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+       1         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+       8         901 TO 905: FARM LABORERS AND FOREMEN
+       7         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+      16         995: OCCUPATION NOT REPORTED
+  -------
+     120
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     120   VALID SKIP(-4)    5105     NON-INTERVIEW(-5)       0
+ 
+Min:             74        Max:            995        Mean:              613.16
+ 
+Lead In: R00244.00[Default]
+Default Next Question: R00246.00
+--------------------------------------------------------------------------------
+R00246.00    [54D]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             LOCATION R WOULD TAKE A JOB IN IF LOSS OF CURRENT JOB, 66
+ 
+In what city (or county) and State would this job be located?
+ 
+      91       1 SAME SMSA OR COUNTY
+      15       2 DIFFERENT SMSA OR COUNTY, SAME STATE
+       5       3 DIFFERENT STATE, SAME DIVISION
+       1       4 DIFFERENT DIVISION
+       0       5 ABROAD (EXCEPT U.S. POSSESSIONS)
+  -------
+     112
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     112   VALID SKIP(-4)    5113     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00245.00[Default]
+Default Next Question: R00260.00
+--------------------------------------------------------------------------------
+R00248.00    [55B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             LOCATION OF BUSINESS R WOULD BEGIN IF LOSS OF CURRENT JOB, 66
+ 
+In what city (or county) and State would it be located?
+ 
+      22       1 SAME SMSA OR COUNTY
+       4       2 DIFFERENT SMSA OR COUNTY, SAME STATE
+       0       3 DIFFERENT STATE, SAME DIVISION
+       1       4 DIFFERENT DIVISION
+       0       5 ABROAD (EXCEPT U.S. POSSESSIONS)
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27   VALID SKIP(-4)    5198     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00240.00[3:3]
+Default Next Question: R00260.00
+--------------------------------------------------------------------------------
+R00249.00    [56A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF JOB R WOULD SEEK IF LOSS OF CURRENT JOB, 66 (3-DIGIT)
+             (60 CODES)
+ 
+What kind of work would you look for?
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+DATE CHANGED: APRIL 1, 1974. REQUESTED BY J. GRASSO
+ 
+DESCRIPTION: IF R(240.) EQ 4 AND R(249.) EQ NA THEN R(249) = 995
+ 
+      90           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+       1         200 TO 222: FARMERS AND FARM MANAGERS
+      26         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+      91         301 TO 370: CLERICAL AND KINDRED WORKERS
+      60         380 TO 395: SALES WORKERS
+     231         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+     357         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+      57         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+      42         901 TO 905: FARM LABORERS AND FOREMEN
+     121         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+     280         995: OCCUPATION NOT REPORTED
+  -------
+    1356
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1356   VALID SKIP(-4)    3869     NON-INTERVIEW(-5)       0
+ 
+Min:             12        Max:            995        Mean:              683.27
+ 
+Lead In: R00240.00[4:4]
+Default Next Question: R00250.00
+--------------------------------------------------------------------------------
+R00297.00    [67A1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - HOSPITAL ORDERLY - QUESTION A-1, 66
+ 
+Hospital Orderly
+UNIVERSE INFORMATION:
+1) 'NEVER WORKED 2 WEEKS OR MORE' IN 40F, SEE R(188.) *OR* 'NEVER WORKED AT ALL'
+IN 40F, SEE R(188.)
+2) 'RESPONDENT HAS NEVER WORKED' IN CH J SEE R(224.)
+3) 'RESPONDENT ENROLLED IN SCHOOL THIS YEAR ' IN CH 0, SEE R(286.)
+4) 'SAME OCCUPATION AS IN ITEM 42C' IN 66G, SEE R(293.) *AND* 'JOB IS SAME AS 
+JOB REPORTED IN 42D' IN 66B, SEE R(287.)*OR* 'JOB IS SAME AS JOB REPORTED IN 
+65D' IN 66B, SEE R(287.)
+5) 'ANY' IN 66G, SEE R(294.)*AND* 'JOB IS SAME AS JOB REPORTED IN 42D' IN 66B, 
+SEE R(287.) *OR* 'JOB IS SAME AS JOB REPORTED IN 65D' IN 66B, SEE R(287.)
+ 
+    3654       1 HELPS TO TAKE CARE OF HOSPITAL PATIENTS
+     722       2 ORDERS FOOD AND OTHER SUPPLIES FOR HOSPITAL KITCHENS
+     462       3 WORKS AT HOSPITAL DESK WHERE PATIENTS CHECK IN
+  -------
+    4838
+ 
+Refusal(-1)            0
+Don't Know(-2)       335
+TOTAL =========>    5173   VALID SKIP(-4)      52     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00296.00[Default]  R00188.00[3:4] R00224.00[1:1] R00286.00[1:1]
+Default Next Question: R00298.00
+--------------------------------------------------------------------------------
+R00298.00    [67A2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION A-1, 66
+ 
+How much regular schooling do you think hospital orderlies usually have?
+UNIVERSE INFORMATION:
+*NOT* 'DON'T KNOW' IN 67A1, SEE R(297.)
+ 
+     735       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    2297       2 A HIGH SCHOOL DIPLOMA
+     938       3 SOME COLLEGE
+     575       4 COLLEGE DEGREE
+  -------
+    4545
+ 
+Refusal(-1)            0
+Don't Know(-2)       293
+TOTAL =========>    4838   VALID SKIP(-4)     387     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00297.00[Default]
+Default Next Question: R00299.00
+--------------------------------------------------------------------------------
+R00299.00    [67B1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - MACHINIST - QUESTION B-1, 66
+ 
+Machinist
+UNIVERSE INFORMATION
+1) 'DON'T KNOW' IN 67A1, SEE R(297.)
+2) *NOT* 'DON'T KNOW' IN67A1, SEE R(297.)
+ 
+    1360       1 MAKES ADJUSTMENTS ON AUTOMOBILE, AIRPLANE, AND TRACTOR ENGINES
+     434       2 REPAIRS ELECTRICAL EQUIPMENT
+    3195       3 SETS UP AND OPERATES METAL LATHES, SHAPERS, GRINDERS, BUFFERS, 
+                      ETC.
+  -------
+    4989
+ 
+Refusal(-1)            0
+Don't Know(-2)       180
+TOTAL =========>    5169   VALID SKIP(-4)      56     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00298.00[Default]
+Default Next Question: R00300.00
+--------------------------------------------------------------------------------
+R00300.00    [67B2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION B-2, 66
+ 
+How much regular schooling do you think machinists usually have?
+UNIVERSE INFORMATION:
+*NOT* 'DON'T KNOW' IN 67B1, SEE R(299.)
+ 
+     661       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    2656       2 A HIGH SCHOOL DIPLOMA
+    1127       3 SOME COLLEGE
+     411       4 COLLEGE DEGREE
+  -------
+    4855
+ 
+Refusal(-1)            0
+Don't Know(-2)       128
+TOTAL =========>    4983   VALID SKIP(-4)     242     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00299.00[Default]
+Default Next Question: R00301.00
+--------------------------------------------------------------------------------
+R00301.00    [67C1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - ACETYLENE WELDER - QUESTION C-1, 66
+ 
+Acetylene Welder
+UNIVERSE INFORMATION:
+1) 'DON'T KNOW' IN 67B1 , SEE R(299.)
+2) *NOT* 'DON'T KNOW' IN 67B1 , SEE R(299.)
+ 
+     161       1 BUILDS WOODEN CRATES TO HOLD TANKS OF ACETYLENE GAS
+    4517       2 USES A GAS TORCH TO CUT METAL OR JOIN PIECES OF METAL TOGETHER
+     151       3 OPERATES A MACHINE THAT STITCHES THE SOLES TO THE UPPER PARTS 
+                      OF SHOES
+  -------
+    4829
+ 
+Refusal(-1)            0
+Don't Know(-2)       340
+TOTAL =========>    5169   VALID SKIP(-4)      56     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00300.00[Default]
+Default Next Question: R00302.00
+--------------------------------------------------------------------------------
+R00302.00    [67C2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION C-2, 66
+ 
+How much regular schooling do you think acetylene welders usually have?
+UNIVERSE INFORMATION:
+*NOT* 'DON'T KNOW' IN 67C1, SEE R(301.)
+ 
+    1186       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    2668       2 A HIGH SCHOOL DIPLOMA
+     640       3 SOME COLLEGE
+     177       4 COLLEGE DEGREE
+  -------
+    4671
+ 
+Refusal(-1)            0
+Don't Know(-2)       153
+TOTAL =========>    4824   VALID SKIP(-4)     401     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00301.00[Default]
+Default Next Question: R00303.00
+--------------------------------------------------------------------------------
+R00303.00    [67D1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - STATIONARY ENGINEER - QUESTION D-1, 66
+ 
+Stationary Engineer
+UNIVERSE INFORMATION:
+1) 'DON'T KNOW' IN 67C1, SEE R(301.)
+2) *NOT* 'DON'T KNOW' IN 67C1, SEE R(301.)
+ 
+    2830       1 WORKS AT A DESK, MAKING DRAWINGS AND SOLVING ENGINEERING 
+                      PROBLEMS
+     329       2 DRIVES A LOCOMOTIVE THAT MOVES CARS AROUND IN A FREIGHT YARD
+     884       3 OPERATES AND MAINTAINS SUCH EQUIPMENT AS STEAM BOILERS AND 
+                      GENERATORS
+  -------
+    4043
+ 
+Refusal(-1)            0
+Don't Know(-2)      1124
+TOTAL =========>    5167   VALID SKIP(-4)      58     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00302.00[Default]
+Default Next Question: R00304.00
+--------------------------------------------------------------------------------
+R00304.00    [67D2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION D-2, 66
+ 
+How much regular schooling do you think stationary engineers usually have?
+UNIVERSAL INFORMATION: *NOT* 'DON'T KNOW' IN 67D1, SEE R(303.)
+ 
+     145       1 LESS THAN A HIGH SCHOOL DIPLOMA
+     799       2 A HIGH SCHOOL DIPLOMA
+    1068       3 SOME COLLEGE
+    1876       4 COLLEGE DEGREE
+  -------
+    3888
+ 
+Refusal(-1)            0
+Don't Know(-2)       154
+TOTAL =========>    4042   VALID SKIP(-4)    1183     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00303.00[Default]
+Default Next Question: R00305.00
+--------------------------------------------------------------------------------
+R00305.00    [67E1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - STATISTICAL CLERK - QUESTION E-1, 66
+ 
+Statistical clerk
+UNIVERSAL INFORMATION:
+1) 'DON'T KNOW' IN 67D1, SEE R(303.)
+2) *NOT* 'DON'T KNOW' IN 67D1, SEE R(303.)
+ 
+    3690       1 MAKES CALCULATIONS WITH AN ADDING MACHINE OR A CALCULATOR
+     461       2 SELLS VARIOUS KINDS OF OFFICE MACHINES AND OFFICE SUPPLIES
+     256       3 COLLECTS TICKETS AT SPORTS EVENTS AND OTHER TYPES OF 
+                      ENTERTAINMENT
+  -------
+    4407
+ 
+Refusal(-1)            0
+Don't Know(-2)       761
+TOTAL =========>    5168   VALID SKIP(-4)      57     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00304.00[Default]
+Default Next Question: R00306.00
+--------------------------------------------------------------------------------
+R00306.00    [67E2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION E-2, 66
+ 
+How much regular schooling do you think statistical clerks usually have?
+ 
+     117       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    1610       2 A HIGH SCHOOL DIPLOMA
+    1654       3 SOME COLLEGE
+     899       4 COLLEGE DEGREE
+  -------
+    4280
+ 
+Refusal(-1)            0
+Don't Know(-2)       123
+TOTAL =========>    4403   VALID SKIP(-4)     822     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00305.00[Default]
+Default Next Question: R00307.00
+--------------------------------------------------------------------------------
+R00307.00    [67F1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - FORK LIFT OPERATOR - QUESTION F-1, 66
+ 
+Fork Lift Operator
+ 
+     292       1 OPERATES A MACHINE THAT MAKES A CERTAIN KIND OF AGRICULTURAL 
+                      TOOL
+     865       2 OPERATES A FREIGHT ELEVATOR IN A WAREHOUSE OR FACTORY
+    3649       3 DRIVES AN ELECTRICAL OR GAS POWERED MACHINE TO MOVE MATERIAL IN
+                      A WAREHOUSE OR FACTORY
+  -------
+    4806
+ 
+Refusal(-1)            0
+Don't Know(-2)       362
+TOTAL =========>    5168   VALID SKIP(-4)      57     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00306.00[Default]
+Default Next Question: R00308.00
+--------------------------------------------------------------------------------
+R00308.00    [67F2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION F-2, 66
+ 
+How much regular schooling do you think fork lift operators usually have?
+ 
+    2062       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    2340       2 A HIGH SCHOOL DIPLOMA
+     202       3 SOME COLLEGE
+     104       4 COLLEGE DEGREE
+  -------
+    4708
+ 
+Refusal(-1)            0
+Don't Know(-2)        91
+TOTAL =========>    4799   VALID SKIP(-4)     426     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00307.00[Default]
+Default Next Question: R00309.00
+--------------------------------------------------------------------------------
+R00309.00    [67G1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - ECONOMIST - QUESTION G-1, 66
+ 
+Economist
+ 
+     439       1 PREPARES MENUS IN A HOSPITAL, HOTEL, OR OTHER SUCH 
+                      ESTABLISHMENT
+    3539       2 DOES RESEARCH ON SUCH MATTERS AS GENERAL BUSINESS CONDITIONS, 
+                      UNEMPLOYMENT, ETC.
+     370       3 ASSISTS A CHEMIST IN DEVELOPING CHEMICAL FORMULAS
+  -------
+    4348
+ 
+Refusal(-1)            0
+Don't Know(-2)       823
+TOTAL =========>    5171   VALID SKIP(-4)      54     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00308.00[Default]
+Default Next Question: R00310.00
+--------------------------------------------------------------------------------
+R00310.00    [67G2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION G-2, 66
+ 
+How much regular schooling do you think economists usually have?
+ 
+      37       1 LESS THAN A HIGH SCHOOL DIPLOMA
+     482       2 A HIGH SCHOOL DIPLOMA
+    1005       3 SOME COLLEGE
+    2731       4 COLLEGE DEGREE
+  -------
+    4255
+ 
+Refusal(-1)            0
+Don't Know(-2)        92
+TOTAL =========>    4347   VALID SKIP(-4)     878     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00309.00[Default]
+Default Next Question: R00311.00
+--------------------------------------------------------------------------------
+R00311.00    [67H1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - MEDICAL ILLUSTRATOR - QUESTION H-1, 66
+ 
+Medical Illustrator
+ 
+     396       1 HANDS TOOLS AND EQUIPMENT TO A SURGEON DURING AN OPERATION
+    1350       2 DEMONSTRATES THE USE OF VARIOUS TYPES OF MEDICINES
+    2660       3 DRAWS PICTURES THAT ARE USED TO TEACH ANATOMY AND SURGICAL 
+                      OPERATING PROCEDURES
+  -------
+    4406
+ 
+Refusal(-1)            0
+Don't Know(-2)       765
+TOTAL =========>    5171   VALID SKIP(-4)      54     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00310.00[Default]
+Default Next Question: R00312.00
+--------------------------------------------------------------------------------
+R00312.00    [67H2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION H-2, 66
+ 
+How much regular schooling do you think medical illustrators usually have?
+ 
+      23       1 LESS THAN A HIGH SCHOOL DIPLOMA
+     271       2 A HIGH SCHOOL DIPLOMA
+     830       3 SOME COLLEGE
+    3206       4 COLLEGE DEGREE
+  -------
+    4330
+ 
+Refusal(-1)            0
+Don't Know(-2)        74
+TOTAL =========>    4404   VALID SKIP(-4)     821     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00311.00[Default]
+Default Next Question: R00313.00
+--------------------------------------------------------------------------------
+R00313.00    [67I1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - DRAFTSMAN - QUESTION I-1, 66
+ 
+Draftsman
+ 
+    4543       1 MAKES SCALE DRAWINGS OF PRODUCTS OR EQUIPMENT FOR ENGINEERING 
+                      OR MANUFACTURING PURPOSES
+     117       2 MIXES AND SERVES DRINKS IN A BAR OR TAVERN
+     153       3 PUSHES OR PULLS A CART IN A FACTORY OR WAREHOUSE
+  -------
+    4813
+ 
+Refusal(-1)            0
+Don't Know(-2)       356
+TOTAL =========>    5169   VALID SKIP(-4)      56     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00312.00[Default]
+Default Next Question: R00314.00
+--------------------------------------------------------------------------------
+R00314.00    [67I2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION I-2, 66
+ 
+How much regular schooling do you think draftsmen usually have?
+ 
+     113       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    1035       2 A HIGH SCHOOL DIPLOMA
+    1500       3 SOME COLLEGE
+    2086       4 COLLEGE DEGREE
+  -------
+    4734
+ 
+Refusal(-1)            0
+Don't Know(-2)        68
+TOTAL =========>    4802   VALID SKIP(-4)     423     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00313.00[Default]
+Default Next Question: R00315.00
+--------------------------------------------------------------------------------
+R00315.00    [67J1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SOCIAL WORKER - QUESTION J-1, 66
+ 
+Social worker
+ 
+    4607       1 WORKS FOR A WELFARE AGENCY AND HELPS PEOPLE WITH VARIOUS TYPES 
+                      OF PROBLEMS THEY MAY HAVE
+     207       2 CONDUCTS RESEARCH ON LIFE IN PRIMITIVE SOCIETIES
+     167       3 WRITES NEWSPAPER STORIES ON MARRIAGES, ENGAGEMENTS, BIRTHS, AND
+                      SIMILAR EVENTS
+  -------
+    4981
+ 
+Refusal(-1)            0
+Don't Know(-2)       187
+TOTAL =========>    5168   VALID SKIP(-4)      57     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00314.00[Default]
+Default Next Question: R00316.00
+--------------------------------------------------------------------------------
+R00316.00    [67J2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION J-2, 66
+ 
+How much regular schooling do you think social workers usually have?
+ 
+     115       1 LESS THAN A HIGH SCHOOL DIPLOMA
+    1452       2 A HIGH SCHOOL DIPLOMA
+    1236       3 SOME COLLEGE
+    2045       4 COLLEGE DEGREE
+  -------
+    4848
+ 
+Refusal(-1)            0
+Don't Know(-2)       126
+TOTAL =========>    4974   VALID SKIP(-4)     251     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00315.00[Default]
+Default Next Question: R00317.00
+--------------------------------------------------------------------------------
+R00317.00    [68]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MOTIVATION TO WORK - MOST IMPORTANT THING ABOUT JOB, 66
+ 
+What would you say is more important to you in deciding what kind of work you 
+want to go into, good wages or liking the work?
+ 
+    3918       1 LIKING IT
+    1139       2 GOOD WAGES
+      68       3 COMBINATION OF LIKING IT AND GOOD WAGES
+  -------
+    5125
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5125   VALID SKIP(-4)     100     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00316.00[Default]
+Default Next Question: R00318.00
+--------------------------------------------------------------------------------
+R00318.00    [69A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON A, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+An automobile mechanic or an electrician?
+ 
+     786       1 AN AUTOMOBILE MECHANIC
+    4335       2 AN ELECTRICIAN
+  -------
+    5121
+ 
+Refusal(-1)            0
+Don't Know(-2)        66
+TOTAL =========>    5187   VALID SKIP(-4)      38     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00317.00[Default]
+Default Next Question: R00319.00
+--------------------------------------------------------------------------------
+R00319.00    [69B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON B, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+A medical doctor or a lawyer?
+ 
+    2986       1 A MEDICAL DOCTOR
+    2072       2 A LAWYER
+  -------
+    5058
+ 
+Refusal(-1)            0
+Don't Know(-2)       120
+TOTAL =========>    5178   VALID SKIP(-4)      47     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00318.00[Default]
+Default Next Question: R00320.00
+--------------------------------------------------------------------------------
+R00320.00    [69C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON C, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+An aeronautical engineer or a doctor?
+ 
+    2560       1 AN AERONAUTICAL ENGINEER
+    2475       2 A MEDICAL DOCTOR
+  -------
+    5035
+ 
+Refusal(-1)            0
+Don't Know(-2)       150
+TOTAL =========>    5185   VALID SKIP(-4)      40     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00319.00[Default]
+Default Next Question: R00321.00
+--------------------------------------------------------------------------------
+R00321.00    [69D]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON D, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+A truck driver or a grocery store clerk?
+ 
+    4310       1 A TRUCK DRIVER
+     834       2 A GROCERY STORE CLERK
+  -------
+    5144
+ 
+Refusal(-1)            0
+Don't Know(-2)        41
+TOTAL =========>    5185   VALID SKIP(-4)      40     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00320.00[Default]
+Default Next Question: R00322.00
+--------------------------------------------------------------------------------
+R00322.00    [69E]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON E, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+An unskilled laborer in a steel mill or an unskilled laborer in a shoe factory?
+ 
+    4606       1 AN UNSKILLED LABORER IN A STEEL MILL
+     464       2 AN UNSKILLED LABORER IN A SHOE FACTORY
+  -------
+    5070
+ 
+Refusal(-1)            0
+Don't Know(-2)       114
+TOTAL =========>    5184   VALID SKIP(-4)      41     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00321.00[Default]
+Default Next Question: R00323.00
+--------------------------------------------------------------------------------
+R00323.00    [69F]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON F, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+A lawyer or a high school teacher?
+ 
+    4922       1 A LAWYER
+     236       2 A HIGH SCHOOL TEACHER
+  -------
+    5158
+ 
+Refusal(-1)            0
+Don't Know(-2)        28
+TOTAL =========>    5186   VALID SKIP(-4)      39     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00322.00[Default]
+Default Next Question: R00324.00
+--------------------------------------------------------------------------------
+R00324.00    [69G]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON G, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+A high school teacher or a janitor?
+ 
+    4842       1 A HIGH SCHOOL TEACHER
+     310       2 A JANITOR
+  -------
+    5152
+ 
+Refusal(-1)            0
+Don't Know(-2)        32
+TOTAL =========>    5184   VALID SKIP(-4)      41     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00323.00[Default]
+Default Next Question: R00325.00
+--------------------------------------------------------------------------------
+R00325.00    [69H]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON H, 66
+ 
+WHO DOES RESPONDENT THINK EARNS MORE IN A YEAR...
+ 
+A janitor or a policeman?
+ 
+     728       1 A JANITOR
+    4387       2 A POLICEMAN
+  -------
+    5115
+ 
+Refusal(-1)            0
+Don't Know(-2)        68
+TOTAL =========>    5183   VALID SKIP(-4)      42     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00324.00[Default]
+Default Next Question: R00326.00
+--------------------------------------------------------------------------------
+R00326.00    [PG18]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS ANOTHER PERSON PRESENT WHEN R ANSWERED OCCUPATION COMPARISON 
+             QUESTIONS? 66
+ 
+While answering section H was another person present?
+ 
+    2550       1 YES
+    2630       0 NO   (Go To R00329.00)
+  -------
+    5180
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5180   VALID SKIP(-4)      45     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00325.00[Default]
+Default Next Question: R00327.00
+--------------------------------------------------------------------------------
+R00336.00    [CHP]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             ENROLLMENT STATUS, 66 (3RD CH ITEM)
+ 
+Check Item
+ 
+    3210       1 RESPONDENT CURRENTLY IN SCHOOL
+    2015       2 RESPONDENT CURRENTLY NOT IN SCHOOL   (Go To R00338.00)
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00335.00[Default]  R00334.00[0:0]
+Default Next Question: R00337.00
+--------------------------------------------------------------------------------
+R00337.00    [75]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES HEALTH LIMIT SCHOOL ACTIVITY? 66
+ 
+Do you have any health problems that limit in any way your activity in school?
+ 
+     207       1 YES   (Go To R00340.00)
+    2990       0 NO
+  -------
+    3197
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3197   VALID SKIP(-4)    2028     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00336.00[Default]
+Default Next Question: R00338.00
+--------------------------------------------------------------------------------
+R00338.00    [76]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES HEALTH LIMIT WORK? 66
+ 
+Do you have an health problems that limit in any way the amount or kind of work 
+you can do?
+ 
+     382       1 YES   (Go To R00340.00)
+    4615       0 NO
+  -------
+    4997
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4997   VALID SKIP(-4)     228     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00337.00[Default]  R00336.00[2:2]
+Default Next Question: R00339.00
+--------------------------------------------------------------------------------
+R00339.00    [77]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES HEALTH LIMIT ANY OTHER ACTIVITIES? 66
+ 
+Do you have an health problems that limit in any way all your other activities?
+ 
+     117       1 YES
+    4498       0 NO   (Go To R00342.00)
+  -------
+    4615
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4615   VALID SKIP(-4)     610     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00338.00[Default]
+Default Next Question: R00340.00
+--------------------------------------------------------------------------------
+R00346.00    [CHQ]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             IS R HEAD OF HOUSEHOLD? 66 (CH ITEM)
+ 
+Check Item
+ 
+    4229       1 RESPONDENT IS NOT HEAD OF HOUSEHOLD   (Go To R00353.00)
+     996       2 RESPONDENT IS HEAD OF HOUSEHOLD
+  -------
+    5225
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00345.00[Default]  R00343.00[0:0]
+Default Next Question: R00347.00
+--------------------------------------------------------------------------------
+R00349.00    [CHR]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES R OWN OR RENT HIS HOUSE? (CH ITEM), 66
+ 
+Check Item
+ 
+     240       1 OWNED OR BEING BOUGHT
+     759       2 RENT OR NO CASH RENT   (Go To R00353.00)
+  -------
+     999
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     999   VALID SKIP(-4)    4226     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00348.00[Default]  R00347.00[0:0]
+Default Next Question: R00351.00
+--------------------------------------------------------------------------------
+R00351.00    [82B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MARKET VALUE OF HOUSE OR APARTMENT, 66
+ 
+About how much do you think this property would sell for on today's market?
+ 
+0 NONE
+00001 THRU 99999 ACTUAL DOLLARS
+-2 DON'T KNOW
+ 
+    5000           0
+       5           1 TO 999
+      10        1000 TO 1999
+      12        2000 TO 2999
+      21        3000 TO 3999
+       5        4000 TO 4999
+      14        5000 TO 5999
+       6        6000 TO 6999
+       9        7000 TO 7999
+       8        8000 TO 8999
+       7        9000 TO 9999
+      61       10000 TO 14999
+      44       15000 TO 19999
+      11       20000 TO 24999
+       8       25000 TO 49999
+  -------
+    5221
+ 
+Refusal(-1)            0
+Don't Know(-2)         4
+TOTAL =========>    5225   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          38000        Mean:              458.02
+ 
+Lead In: R00349.00[Default]
+Default Next Question: R00352.00
+--------------------------------------------------------------------------------
+R00352.00    [82C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             AMOUNT OF DEBT ON HOUSE OR APARTMENT, 66
+ 
+About how much do you (or your wife) owe on this property for mortgages, back 
+taxes, home improvement loans, etc.?
+ 
+0 NONE
+ 00001 THRU 99999 ACTUAL DOLLARS
+-2 DON'T KNOW
+ 
+    5022           0
+       6           1 TO 999
+      11        1000 TO 1999
+      15        2000 TO 2999
+       9        3000 TO 3999
+      14        4000 TO 4999
+      10        5000 TO 5999
+      13        6000 TO 6999
+       7        7000 TO 7999
+      11        8000 TO 8999
+      17        9000 TO 9999
+      57       10000 TO 14999
+      15       15000 TO 19999
+       5       20000 TO 24999
+       2       25000 TO 49999
+  -------
+    5214
+ 
+Refusal(-1)            0
+Don't Know(-2)        10
+TOTAL =========>    5224   VALID SKIP(-4)       1     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          28000        Mean:              317.82
+ 
+Lead In: R00351.00[Default]
+Default Next Question: R00353.00
+--------------------------------------------------------------------------------
+R00353.00    [83A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             $ AMOUNT OF SAVINGS, 66
+ 
+Do you (or your wife) have any money in savings or checking accounts, savings 
+and loan companies or credit unions?
+ 
+0 NONE
+00001 THRU 99999 ACTUAL DOLLARS
+-2 DON'T KNOW
+ 
+    2456           0
+    1790           1 TO 499
+     420         500 TO 999
+     195        1000 TO 1499
+      58        1500 TO 1999
+      63        2000 TO 2499
+      22        2500 TO 2999
+      20        3000 TO 3499
+      12        3500 TO 3999
+       8        4000 TO 4499
+       3        4500 TO 4999
+      51        5000 TO 999999: 5000+
+  -------
+    5098
+ 
+Refusal(-1)            0
+Don't Know(-2)       116
+TOTAL =========>    5214   VALID SKIP(-4)      11     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          20000        Mean:              307.43
+ 
+Lead In: R00352.00[Default]  R00346.00[1:1] R00349.00[2:2]
+Default Next Question: R00354.00
+--------------------------------------------------------------------------------
+R00354.00    [83B1]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             $ AMOUNT OF U.S. SAVINGS BONDS, 66
+ 
+Do you (or your wife have any)-- U.S. Savings Bonds?
+ 
+0 NONE
+00001 THRU 99999 ACTUAL DOLLARS
+-2 DON'T KNOW
+ 
+    4365           0
+     577           1 TO 499
+      66         500 TO 999
+      25        1000 TO 1499
+       6        1500 TO 1999
+       5        2000 TO 2499
+       2        2500 TO 2999
+       1        3000 TO 3499
+       1        3500 TO 3999
+       1        4000 TO 4499
+       6        5000 TO 999999: 5000+
+  -------
+    5055
+ 
+Refusal(-1)            0
+Don't Know(-2)        98
+TOTAL =========>    5153   VALID SKIP(-4)      72     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          11000        Mean:               40.26
+ 
+Lead In: R00353.00[Default]
+Default Next Question: R00355.00
+--------------------------------------------------------------------------------
+R00355.00    [83B2]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MARKET VALUE OF BONDS, STOCKS, & MUTUAL FUNDS, 66
+ 
+Do you (or your wife have any)--Stocks, bonds, or mutual funds?
+ 
+0 NONE
+00001 THRU 99999 ACTUAL DOLLARS
+-2 DON'T KNOW
+ 
+    4766           0
+     185           1 TO 999
+      35        1000 TO 1999
+      20        2000 TO 2999
+       8        3000 TO 3999
+       1        4000 TO 4999
+       6        5000 TO 5999
+       4        6000 TO 6999
+       2        7000 TO 7999
+       1        8000 TO 8999
+       8       10000 TO 14999
+       2       15000 TO 19999
+       3       20000 TO 24999
+       4       25000 TO 49999
+       2       50000 TO 999999
+  -------
+    5047
+ 
+Refusal(-1)            0
+Don't Know(-2)        76
+TOTAL =========>    5123   VALID SKIP(-4)     102     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          80000        Mean:              137.63
+ 
+Lead In: R00354.00[Default]
+Default Next Question: R00356.00
+--------------------------------------------------------------------------------
+R00356.00    [84B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES R/WIFE RENT/OWN/INVEST IN FARM/BUSINESS/REAL ESTATE? 66
+ 
+Do you (or your wife) rent, own, or have an investment in a farm, business, or 
+any other real estate: Which one?
+DERIVATIONS:
+ 
+DATE CHANGED: APRIL 21, 1972
+ 
+DESCRIPTION: EXPLANTION: UPDATE FROM CENSUS.
+ 
+    4688       0 NONE   (Go To R00359.00)
+      82       1 YES, FARM
+      61       2 YES, BUSINESS
+      66       3 YES, REAL ESTATE
+       8       4 YES, COMBINATION OF CODES 1, 2, AND/OR 3
+  -------
+    4905
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4905   VALID SKIP(-4)     320     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00355.00[Default]
+Default Next Question: R00357.00
+--------------------------------------------------------------------------------
+R00357.00    [84C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MARKET VALUE OF FARM/BUSINESS/ REAL ESTATE, 66
+ 
+About how much do you think this (business, farm, or other real estate) would 
+sell for on today's market?
+ 
+0 NONE
+000001 THRU 999999 ACTUAL DOLLARS
+ -2 DON'T KNOW
+ 
+    4988           0
+      31           1 TO 999
+      23        1000 TO 1999
+      15        2000 TO 2999
+      14        3000 TO 3999
+       5        4000 TO 4999
+      12        5000 TO 5999
+       5        6000 TO 6999
+       5        7000 TO 7999
+       3        8000 TO 8999
+      20       10000 TO 14999
+      11       15000 TO 19999
+       5       20000 TO 24999
+      15       25000 TO 49999
+      16       50000 TO 999999
+  -------
+    5168
+ 
+Refusal(-1)            0
+Don't Know(-2)        41
+TOTAL =========>    5209   VALID SKIP(-4)      16     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:         375000        Mean:              629.54
+ 
+Lead In: R00356.00[Default]
+Default Next Question: R00358.00
+--------------------------------------------------------------------------------
+R00358.00    [84D]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             $ AMOUNT OF FARM/BUSINESS/REAL ESTATE LIABILITY, 66
+ 
+What is the total amount of debt and other liabilities on this (business, farm, 
+or other real estate)?  0 NONE
+000001 THRU 999999 ACTUAL DOLLARS -2 DON'T KNOW
+ 
+    5093           0
+      14           1 TO 999
+       8        1000 TO 1999
+       9        2000 TO 2999
+       7        3000 TO 3999
+       7        4000 TO 4999
+       5        5000 TO 5999
+       2        6000 TO 6999
+       1        7000 TO 7999
+       3        8000 TO 8999
+       2        9000 TO 9999
+      16       10000 TO 14999
+       2       15000 TO 19999
+       5       25000 TO 49999
+       1       50000 TO 999999
+  -------
+    5175
+ 
+Refusal(-1)            0
+Don't Know(-2)        15
+TOTAL =========>    5190   VALID SKIP(-4)      35     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:         110000        Mean:               135.1
+ 
+Lead In: R00357.00[Default]
+Default Next Question: R00359.00
+--------------------------------------------------------------------------------
+R00359.00    [85B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             MODEL YEAR OF AUTOMOBILE, 66
+ 
+What is the make and model year (of your automobile)?
+ 
+00 NO OWNERSHIP 20 THRU 67 MODEL YEAR
+IN THE ABOVE DISTRIBUTION, <52 BREAKS DOWN AS:
+00 = 2,981 RESPONDENTS
+11 THRU 51 = 45 RESPONDENTS
+ 
+    2981           0: NO OWNERSHIP   (Go To R00361.00)
+      33           1 TO 50: 1901-1950
+     186          51 TO 55: 1951-1955
+     582          56 TO 60: 1956-1960
+     843          61 TO 65: 1961-1965
+     285          66 TO 70: 1966-1970
+  -------
+    4910
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4910   VALID SKIP(-4)     315     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             67        Mean:               23.93
+ 
+Lead In: R00358.00[Default]  R00356.00[0:0]
+Default Next Question: R00360.00
+--------------------------------------------------------------------------------
+R00360.00    [85C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             $ AMOUNT OF AUTOMOBILE LIABILITY, 66
+ 
+Do you owe any money on this automobile?  0 NONE
+00001 THRU 99999 ACTUAL DOLLARS -2 DON'T KNOW
+ 
+    4249           0
+     276           1 TO 499
+     200         500 TO 999
+     162        1000 TO 1499
+     133        1500 TO 1999
+      80        2000 TO 2499
+      43        2500 TO 2999
+      22        3000 TO 3499
+       5        3500 TO 3999
+       1        4000 TO 4499
+       1        5000 TO 999999: 5000+
+  -------
+    5172
+ 
+Refusal(-1)            0
+Don't Know(-2)        24
+TOTAL =========>    5196   VALID SKIP(-4)      29     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:           5730        Mean:              191.41
+ 
+Lead In: R00359.00[Default]
+Default Next Question: R00361.00
+--------------------------------------------------------------------------------
+R00361.00    [86]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             $ AMOUNT OF OTHER LIABILITY, 66
+ 
+Do you (or your wife) owe any (other) money to stores, banks, doctors, or anyone
+else, excluding 30-day charge accounts?  0 NONE
+00001 THRU 99999 ACTUAL DOLLARS -2 DON'T KNOW
+ 
+    4141           0
+     655           1 TO 499
+     184         500 TO 999
+      67        1000 TO 1499
+      46        1500 TO 1999
+      24        2000 TO 2499
+      10        2500 TO 2999
+      13        3000 TO 3499
+       1        3500 TO 3999
+       6        4000 TO 4499
+      11        5000 TO 999999: 5000+
+  -------
+    5158
+ 
+Refusal(-1)            0
+Don't Know(-2)        11
+TOTAL =========>    5169   VALID SKIP(-4)      56     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:          15000        Mean:                 116
+ 
+Lead In: R00360.00[Default]  R00359.00[0:0]
+Default Next Question: R00362.00
+--------------------------------------------------------------------------------
+R00375.00    [CHT]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES R LIVE WITH BOTH PARENTS? (CH ITEM), 66
+ 
+Check Item
+ 
+    3865       1 RESPONDENT LIVES WITH PARENTS   (Go To R00380.00)
+    1347       2 RESPONDENT DOES NOT LIVE WITH PARENTS
+  -------
+    5212
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5212   VALID SKIP(-4)      13     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00374.00[Default]
+Default Next Question: R00376.00
+--------------------------------------------------------------------------------
+R00376.00    [89A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             # OF DEPENDENTS EXCLUDING WIFE, 66
+ 
+How many persons, not counting yourself (or your wife), are dependent upon you 
+for at least one-half of their support?
+ 
+0 THRU 8 ACTUAL NUMBER OF DEPENDENTS
+9 9 OR MORE DEPENDENTS
+ 
+    1296           0 TO 8: ACTUAL NUMBER   (Go To R00380.00)
+       1           9: 9 OR MORE
+  -------
+    1297
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1297   VALID SKIP(-4)    3928     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              9        Mean:                 .78
+ 
+Lead In: R00375.00[Default]
+Default Next Question: R00377.00
+--------------------------------------------------------------------------------
+R00377.00    [89B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WHICH DEPENDENTS LIVE OUTSIDE HOUSEHOLD? 66
+ 
+Do any of these dependents live somewhere other than here at home with you?
+ 
+       4       1 PARENTS (PARENTS-IN-LAW)
+       3       2 BROTHERS AND SISTERS (INCLUDING IN-LAWS)
+      14       3 CHILDREN
+       2       4 COMBINATION OF CODES 1, 2, OR 3
+       7       5 OTHER FAMILY MEMBERS
+       3       6 NA
+     411       7 NONE
+  -------
+     444
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     444   VALID SKIP(-4)    4781     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00376.00[Default]
+Default Next Question: R00378.00
+--------------------------------------------------------------------------------
+R00380.00    [90]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS R BIRTHPLACE IN THE UNITED STATES? 66
+ 
+Now I have some question on your family background.
+ 
+Where were you born?
+ 
+    4841       1 YES, BORN IN THE UNITED STATES
+     124       0 NO, BORN OUTSIDE THE UNITED STATES
+  -------
+    4965
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4965   VALID SKIP(-4)     260     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00379.00[Default]  R00375.00[1:1] R00376.00[0:0] R00378.00[0:0]
+Default Next Question: R00381.00
+--------------------------------------------------------------------------------
+R00381.00    [90]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             COMPARISON OF BIRTHPLACE TO CURRENT RESIDENCE, 66
+ 
+Where were you born?
+ 
+    3091       1 SAME SMSA OR COUNTY
+     955       2 DIFFERENT SMSA OR COUNTY, SAME STATE
+     465       3 DIFFERENT STATE, SAME DIVISION
+     579       4 DIFFERENT DIVISION
+     108       5 ABROAD (EXCEPT U.S. POSSESSIONS)
+  -------
+    5198
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5198   VALID SKIP(-4)      27     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00380.00[Default]
+Default Next Question: R00382.00
+--------------------------------------------------------------------------------
+R00382.00    [91]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             LENGTH OF TIME IN CURRENT RESIDENCE, 66
+ 
+For how long have you been living in this area?
+ 
+     346       1 LESS THAN 1 YEAR
+    2028       2 1 YEAR OR MORE
+    2796       3 ALL MY LIFE   (Go To R00388.00)
+  -------
+    5170
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5170   VALID SKIP(-4)      55     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00381.00[Default]
+Default Next Question: R00383.00
+--------------------------------------------------------------------------------
+R00388.00    [94]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             LIFE STATUS OF PARENTS OF R, 66
+ 
+Now I'd like to ask you about your parents.
+ 
+Are your mother and father living?
+ 
+    4576       1 BOTH PARENTS ALIVE
+     454       2 MOTHER ALIVE, FATHER DEAD
+     122       3 FATHER ALIVE, MOTHER DEAD
+      41       4 NEITHER PARENT ALIVE
+  -------
+    5193
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5193   VALID SKIP(-4)      32     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00387.00[Default]  R00382.00[3:3]
+Default Next Question: R00389.00
+--------------------------------------------------------------------------------
+R00389.00    [95]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             LIFE STATUS OF PARENTS OF WIFE, 66
+ 
+What about your wife's parents? Are her mother and father living?
+ 
+    4282       1 RESPONDENT IS NOT MARRIED
+     766       2 BOTH PARENTS ALIVE
+     109       3 MOTHER ALIVE, FATHER DEAD
+      35       4 FATHER ALIVE, MOTHER DEAD
+      19       5 NEITHER PARENT ALIVE
+  -------
+    5211
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5211   VALID SKIP(-4)      14     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00388.00[Default]
+Default Next Question: R00390.00
+--------------------------------------------------------------------------------
+R00390.00    [96A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R FATHER, 66
+ 
+Where was your father born-- in the U.S. or some other country?
+ 
+    4976       1 U.S. OR CANADA
+      58       2 NORTH OR WEST EUROPE
+      33       3 CENTRAL OR EASTERN EUROPE
+      48       4 SOUTHERN EUROPE
+      36       5 LATIN AMERICA
+      46       6 OTHER
+  -------
+    5197
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5197   VALID SKIP(-4)      28     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00389.00[Default]
+Default Next Question: R00391.00
+--------------------------------------------------------------------------------
+R00391.00    [96B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R MOTHER, 66
+ 
+Where was your mother born-- in the U.S. or some other country?
+ 
+    5008       1 U.S. OR CANADA
+      55       2 NORTH OR WEST EUROPE
+      34       3 CENTRAL OR EASTERN EUROPE
+      31       4 SOUTHERN EUROPE
+      26       5 LATIN AMERICA
+      36       6 OTHER
+  -------
+    5190
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5190   VALID SKIP(-4)      35     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00390.00[Default]
+Default Next Question: R00392.00
+--------------------------------------------------------------------------------
+R00392.00    [97A]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R PATERNAL GRANDFATHER, 66
+ 
+In what country was your father's father born?
+ 
+    4228       1 U.S. OR CANADA
+     317       2 NORTH OR WEST EUROPE
+     219       3 CENTRAL OR EASTERN EUROPE
+     222       4 SOUTHERN EUROPE
+      69       5 LATIN AMERICA
+      77       6 OTHER
+  -------
+    5132
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5132   VALID SKIP(-4)      93     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00391.00[Default]
+Default Next Question: R00393.00
+--------------------------------------------------------------------------------
+R00393.00    [97B]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R PATERNAL GRANDMOTHER, 66
+ 
+In what country was your father's mother born?
+ 
+    4320       1 U.S. OR CANADA
+     280       2 NORTH OR WEST EUROPE
+     193       3 CENTRAL OR EASTERN EUROPE
+     195       4 SOUTHERN EUROPE
+      65       5 LATIN AMERICA
+      76       6 OTHER
+  -------
+    5129
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5129   VALID SKIP(-4)      96     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00392.00[Default]
+Default Next Question: R00394.00
+--------------------------------------------------------------------------------
+R00394.00    [97C]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R MATERNAL GRANDFATHER, 66
+ 
+In what country was your mother's father born?
+ 
+    4301       1 U.S. OR CANADA
+     276       2 NORTH OR WEST EUROPE
+     245       3 CENTRAL OR EASTERN EUROPE
+     192       4 SOUTHERN EUROPE
+      64       5 LATIN AMERICA
+      66       6 OTHER
+  -------
+    5144
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5144   VALID SKIP(-4)      81     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00393.00[Default]
+Default Next Question: R00395.00
+--------------------------------------------------------------------------------
+R00395.00    [97D]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             BIRTHPLACE OF R MATERNAL GRANDMOTHER, 66
+ 
+In what country was your mother's mother born?
+ 
+    4381       1 U.S. OR CANADA
+     238       2 NORTH OR WEST EUROPE
+     234       3 CENTRAL OR EASTERN EUROPE
+     160       4 SOUTHERN EUROPE
+      55       5 LATIN AMERICA
+      71       6 OTHER
+  -------
+    5139
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5139   VALID SKIP(-4)      86     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00394.00[Default]
+Default Next Question: R00396.00
+--------------------------------------------------------------------------------
+R00396.00    [98]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             RESIDENCE OF R AT AGE 14, 66
+ 
+Which of the following categories on this card describes where you were living 
+when you were 14 years old?
+ 
+     923       1 ON A FARM OR RANCH
+     564       2 IN THE COUNTRY, NOT ON FARM OR RANCH
+    1357       3 IN A TOWN OR SMALL CITY (UNDER 25,000)
+     360       4 IN THE SUBURB OF A LARGE CITY
+     730       5 IN A CITY OF 25,000 - 100,000
+    1285       6 IN A LARGE CITY (100,000 OR MORE)
+  -------
+    5219
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5219   VALID SKIP(-4)       6     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00395.00[Default]
+Default Next Question: R00397.00
+--------------------------------------------------------------------------------
+R00397.00    [99]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             PERSON R LIVED WITH AT AGE 14, 66
+ 
+With whom were you living when you were 14 years old?
+ 
+    4013       1 FATHER AND MOTHER
+      34       2 FATHER AND STEP-MOTHER
+     183       3 MOTHER AND STEP-FATHER
+      87       4 FATHER
+     618       5 MOTHER
+      92       6 SOME OTHER ADULT MALE RELATIVE
+     102       7 SOME OTHER ADULT FEMALE RELATIVE
+      79       8 SOME OTHER ARRANGEMENT
+       5       9 ON MY OWN   (Go To R00399.00)
+  -------
+    5213
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5213   VALID SKIP(-4)      12     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00396.00[Default]
+Default Next Question: R00398.00
+--------------------------------------------------------------------------------
+R00398.00    [100]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14  
+             (3-DIGIT) (60 CODES) 66
+ 
+What kind of work was your father (or head of the household) doing when you were
+14 years old?
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+ 
+     350           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+     559         200 TO 222: FARMERS AND FARM MANAGERS
+     626         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+     189         301 TO 370: CLERICAL AND KINDRED WORKERS
+     218         380 TO 395: SALES WORKERS
+     964         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+      62         555: MEMBERS OF THE ARMED FORCES
+     887         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+      98         801 TO 804: PRIVATE HOUSEHOLD WORKERS
+     281         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+     164         901 TO 905: FARM LABORERS AND FOREMEN
+     368         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+      12         995: OCCUPATION NOT REPORTED
+  -------
+    4778
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4778   VALID SKIP(-4)     447     NON-INTERVIEW(-5)       0
+ 
+Min:             12        Max:            995        Mean:              509.86
+ 
+Lead In: R00397.00[Default]
+Default Next Question: R00399.00
+--------------------------------------------------------------------------------
+R00399.00    [101A]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WERE MAGAZINES AVAILABLE AT AGE 14? 66
+ 
+Did you or your parents (or person mentioned in 99) regularly get any magazines 
+when you were about 14 years old?
+ 
+    3544       1 YES
+    1623       0 NO
+  -------
+    5167
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5167   VALID SKIP(-4)      58     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00398.00[Default]  R00397.00[9:9]
+Default Next Question: R00400.00
+--------------------------------------------------------------------------------
+R00400.00    [101B]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WERE NEWSPAPERS AVAILABLE AT AGE 14? 66
+ 
+Did you or your parents (or person mentioned in 99) regularly get a newspaper 
+when you were about 14 years old?
+ 
+    4407       1 YES
+     788       0 NO
+  -------
+    5195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5195   VALID SKIP(-4)      30     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00399.00[Default]
+Default Next Question: R00401.00
+--------------------------------------------------------------------------------
+R00401.00    [101C]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS LIBRARY CARD AVAILABLE AT AGE 14? 66
+ 
+Did you or your parents have a library card when you were about 14 years old?
+ 
+    3426       1 YES
+    1778       0 NO
+  -------
+    5204
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5204   VALID SKIP(-4)      21     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00400.00[Default]
+Default Next Question: R00402.00
+--------------------------------------------------------------------------------
+R00402.00    [CHU]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS FATHER IN HOUSEHOLD WHEN R WAS AGE 14? (CH ITEM) 66
+ 
+Check Item
+ 
+    3122       1 FATHER LIVES IN HOUSEHOLD   (Go To R00408.00)
+     403       2 FATHER DECEASED   (Go To R00408.00)
+     754       3 DID NOT LIVE WITH FATHER WHEN 14 YEARS OLD   (Go To R00408.00)
+     918       4 OTHER
+  -------
+    5197
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5197   VALID SKIP(-4)      28     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00401.00[Default]
+Default Next Question: R00403.00
+--------------------------------------------------------------------------------
+R00404.00    [102B]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID FATHER USUALLY WORK FULL-TIME IN PAST YEAR? 66
+ 
+Did your father usually work full time or part time?
+ 
+     711       1 YES, FULL-TIME
+      27       0 NO, PART-TIME
+  -------
+     738
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     738   VALID SKIP(-4)    4487     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00403.00[Default]
+Default Next Question: R00405.00
+--------------------------------------------------------------------------------
+R00406.00    [103A]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HIGHEST GRADE ATTENDED BY FATHER, 66
+ 
+What was the highest grade (or year) of regular school your father ever 
+attended?
+ 
+       8       0 NONE
+       6       1 FIRST GRADE
+      13       2 SECOND GRADE
+      27       3 THIRD GRADE
+      23       4 FOURTH GRADE
+      29       5 FIFTH GRADE
+      84       6 SIXTH GRADE
+      37       7 SEVENTH GRADE
+     185       8 EIGHTH GRADE
+      40       9 NINTH GRADE
+      58      10 TENTH GRADE
+      31      11 ELEVENTH GRADE
+     203      12 TWELFTH GRADE
+      22      13 FIRST YEAR COLLEGE
+      35      14 SECOND YEAR COLLEGE
+      11      15 THIRD YEAR COLLEGE
+      29      16 FOURTH YEAR COLLEGE
+       1      17 FIFTH YEAR COLLEGE
+      13      18 SIXTH+ YEARS COLLEGE
+  -------
+     855
+ 
+Refusal(-1)            0
+Don't Know(-2)        42
+TOTAL =========>     897   VALID SKIP(-4)    4328     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00405.00[Default]  R00403.00[0:0]
+Default Next Question: R00407.00
+--------------------------------------------------------------------------------
+R00407.00    [103B]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID FATHER COMPLETE HIGHEST GRADE ATTENDED? 66
+ 
+Did he finish this grade (or year)?
+ 
+     682       1 YES
+     126       0 NO
+  -------
+     808
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     808   VALID SKIP(-4)    4417     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00406.00[Default]
+Default Next Question: R00408.00
+--------------------------------------------------------------------------------
+R00408.00    [CHV]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             WAS MOTHER IN HOUSEHOLD WHEN R WAS AGE 14? (CH ITEM) 66
+ 
+Check Item
+ 
+    3746       1 MOTHER LIVES IN HOUSEHOLD   (Go To R00415.00)
+     102       2 MOTHER DECEASED   (Go To R00415.00)
+     316       3 DID NOT LIVE WITH MOTHER WHEN 14 YEARS OLD   (Go To R00415.00)
+    1028       4 OTHER
+  -------
+    5192
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5192   VALID SKIP(-4)      33     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00407.00[Default]  R00402.00[1:3]
+Default Next Question: R00409.00
+--------------------------------------------------------------------------------
+R00409.00    [104A]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID MOTHER WORK IN PAST YEAR? 66
+ 
+Did your mother work at all during the past 12 months?
+ 
+-2 DON'T KNOW
+ 
+     525       1 YES
+     452       0 NO   (Go To R00413.00)
+  -------
+     977
+ 
+Refusal(-1)            0   (Go To R00413.00)
+Don't Know(-2)        45   (Go To R00413.00)
+TOTAL =========>    1022   VALID SKIP(-4)    4203     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00408.00[Default]
+Default Next Question: R00410.00
+--------------------------------------------------------------------------------
+R00411.00    [104C]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID MOTHER USUALLY WORK FULL-TIME IN PAST YEAR? 66
+ 
+Did your mother usually work full time or part time?
+ 
+     374       1 YES, FULL-TIME
+     142       0 NO, PART-TIME
+  -------
+     516
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     516   VALID SKIP(-4)    4709     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00410.00[Default]
+Default Next Question: R00412.00
+--------------------------------------------------------------------------------
+R00413.00    [105A]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HIGHEST GRADE ATTENDED BY MOTHER, 66
+ 
+What was the highest grade (or year) of regular school your mother ever 
+attended?
+ 
+       7       0 NONE
+       6       1 FIRST GRADE
+       9       2 SECOND GRADE
+      15       3 THIRD GRADE
+      20       4 FOURTH GRADE
+      22       5 FIFTH GRADE
+      47       6 SIXTH GRADE
+      34       7 SEVENTH GRADE
+     157       8 EIGHTH GRADE
+      56       9 NINTH GRADE
+      70      10 TENTH GRADE
+      51      11 ELEVENTH GRADE
+     350      12 TWELFTH GRADE
+      21      13 FIRST YEAR COLLEGE
+      29      14 SECOND YEAR COLLEGE
+       9      15 THIRD YEAR COLLEGE
+      32      16 FOURTH YEAR COLLEGE
+       4      17 FIFTH YEAR COLLEGE
+      10      18 SIXTH+ YEARS COLLEGE
+  -------
+     949
+ 
+Refusal(-1)            0
+Don't Know(-2)        52
+TOTAL =========>    1001   VALID SKIP(-4)    4224     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00412.00[Default]  R00409.00[-2:0]
+Default Next Question: R00414.00
+--------------------------------------------------------------------------------
+R00414.00    [105B]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DID MOTHER COMPLETE HIGHEST GRADE ATTENDED? 66
+ 
+Did she finish this grade (or year)?
+ 
+     786       1 YES
+     127       0 NO
+  -------
+     913
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     913   VALID SKIP(-4)    4312     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00413.00[Default]
+Default Next Question: R00415.00
+--------------------------------------------------------------------------------
+R00415.00    [106A]                                         Survey Year: 1966
+  PRIMARY VARIABLE
+
+             DOES R HAVE SIBLINGS LIVING OUTSIDE THE HOUSEHOLD? 66
+ 
+Do you have any brothers or sisters who live somewhere else?
+ 
+    2972       1 YES
+    2069       0 NO   (Go To R00420.00)
+  -------
+    5041
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5041   VALID SKIP(-4)     184     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00414.00[Default]  R00408.00[1:3]
+Default Next Question: R00416.00
+--------------------------------------------------------------------------------
+R00421.00    [112]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: RELATIONSHIP TO R, 66
+ 
+Realationship to R
+ 
+     873       1 SPOUSE
+       9       2 CHILD (SEX NOT SPECIFIED)
+       0       3 SON
+       0       4 DAUGHTER
+       0       5 PARENT (SEX NOT SPECIFIED)
+    2911       6 FATHER
+     525       7 MOTHER
+      15       8 PARENT-IN-LAW
+       0       9 SIBLING (SEX NOT SPECIFIED)
+     182      10 SISTER
+     210      11 BROTHER
+       1      12 GRANDCHILD
+     309      13 OTHER RELATIVE
+  -------
+    5035
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5035   VALID SKIP(-4)     190     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00420.00[Default]
+Default Next Question: R00422.00
+--------------------------------------------------------------------------------
+R00422.00    [111]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: AGE, 66
+ 
+AGE  0 LESS THAN 6 MONTHS 1 6 MONTHS TO 23 MONTHS 2 24 MONTHS TO 35 MONTHS 3-99 
+ACTUAL AGE IN YEARS
+ 
+       3           0
+      91           1 TO 9
+     542          10 TO 19
+     691          20 TO 29
+     557          30 TO 39
+    1726          40 TO 49
+    1044          50 TO 59
+     289          60 TO 69
+      74          70 TO 79
+      14          80 TO 89
+       1          90 TO 99
+  -------
+    5032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    5032   VALID SKIP(-4)     193     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             92        Mean:               40.31
+ 
+Lead In: R00421.00[Default]
+Default Next Question: R00423.00
+--------------------------------------------------------------------------------
+R00423.00    [113]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: ENROLLMENT STATUS, 66
+ 
+Is ... attending or enrolled in school?
+For persons 6-24 years old.
+ 
+     347       1 YES
+     740       0 NO
+  -------
+    1087
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1087   VALID SKIP(-4)    4138     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00422.00[Default]
+Default Next Question: R00424.00
+--------------------------------------------------------------------------------
+R00424.00    [114]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: HIGHEST GRADE ATTENDED, 66
+ 
+If "Yes" What grade (year)?
+ 
+If "No" What is the highest grade (year) of regular school ... has ever 
+attended?
+ 
+0 NONE OR NEVER ATTENDED
+1-12 ACTUAL GRADE
+13 FIRST YEAR OF COLLEGE
+14 SECOND YEAR OF COLLEGE
+15 THIRD YEAR OF COLLEGE
+16 FOURTH YEAR OF COLLEGE
+17 FIFTH YEAR OF COLLEGE
+18 SIXTH+ YEARS OF COLLEGE
+40 TRADE OR SPECIAL SCHOOL
+ 
+      35           0: NONE OR NEVER ATTENDED
+    3905           1 TO 12: ACTUAL GRADE 1-12
+     172          13: FIRST YEAR OF COLLEGE
+     173          14: SECOND YEAR OR COLLEGE
+      64          15: THIRD YEAR OFD COLLEGE
+     271          16: FOURTH YEAR OF COLLEGE
+      31          17: FIFTH YEAR OF COLLEGE
+     114          18: SIXTH YEAR OF COLLEGE
+  -------
+    4765
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4765   VALID SKIP(-4)     460     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             18        Mean:               10.29
+ 
+Lead In: R00423.00[Default]
+Default Next Question: R00425.00
+--------------------------------------------------------------------------------
+R00425.00    [115]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: FINISHED GRADE? 66
+ 
+Did ... finish ths grade (year)?
+ 
+    3365       1 YES
+    1280       0 NO
+  -------
+    4645
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4645   VALID SKIP(-4)     580     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00424.00[Default]
+Default Next Question: R00426.00
+--------------------------------------------------------------------------------
+R00426.00    [118]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: WEEKS WORKED IN PAST YEAR 
+             (AGE 14+) 66
+ 
+During the past 12 months did ... work either full or part time (not counting 
+work around the house)?  0 NONE 1-52 1-52 WEEKS
+ 
+     792           0
+     255           1 TO 13
+     197          14 TO 26
+     172          27 TO 39
+     315          40 TO 48
+     214          49 TO 51
+    2739          52
+  -------
+    4684
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4684   VALID SKIP(-4)     541     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             52        Mean:               38.25
+ 
+Lead In: R00425.00[Default]
+Default Next Question: R00427.00
+--------------------------------------------------------------------------------
+R00427.00    [119]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: HOURS PER WEEK WORKED (AGE 
+             14+) 66
+ 
+In the weeks that ... worked, how many hours did ... usually work per week?  
+1-168 1-168 HOURS
+ 
+      74           1 TO 9
+      96          10 TO 19
+     109          20 TO 29
+     216          30 TO 39
+    2431          40 TO 49
+     460          50 TO 59
+     288          60 TO 69
+     119          70 TO 79
+      47          80 TO 89
+      40          90 TO 99
+  -------
+    3880
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3880   VALID SKIP(-4)    1345     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             99        Mean:               43.75
+ 
+Lead In: R00426.00[Default]
+Default Next Question: R00428.00
+--------------------------------------------------------------------------------
+R00428.00    [120]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  1: OCCUPATION IN PAST YEAR (AGE
+             14+) 66 (3-DIGIT) (60 CODES)
+ 
+What kind of work was ... doing?
+ 
+     353           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+     249         200 TO 222: FARMERS AND FARM MANAGERS
+     443         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+     375         301 TO 370: CLERICAL AND KINDRED WORKERS
+     212         380 TO 395: SALES WORKERS
+     669         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+      17         555: MEMBERS OF THE ARMED FORCES
+     713         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+     112         801 TO 804: PRIVATE HOUSEHOLD WORKERS
+     359         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+     126         901 TO 905: FARM LABORERS AND FOREMEN
+     236         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+       1         995: OCCUPATION NOT REPORTED
+  -------
+    3865
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3865   VALID SKIP(-4)    1360     NON-INTERVIEW(-5)       0
+ 
+Min:             10        Max:            995        Mean:              518.05
+ 
+Lead In: R00427.00[Default]
+Default Next Question: R00429.00
+--------------------------------------------------------------------------------
+R00429.00    [112]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: RELATIONSHIP TO R, 66
+ 
+Relationship to R
+ 
+      16       1 SPOUSE
+     575       2 CHILD (SEX NOT SPECIFIED)
+       0       3 SON
+       0       4 DAUGHTER
+       0       5 PARENT (SEX NOT SPECIFIED)
+      13       6 FATHER
+    2835       7 MOTHER
+      15       8 PARENT-IN-LAW
+       0       9 SIBLING (SEX NOT SPECIFIED)
+     425      10 SISTER
+     440      11 BROTHER
+       0      12 GRANDCHILD
+     261      13 OTHER RELATIVE
+  -------
+    4580
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4580   VALID SKIP(-4)     645     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00428.00[Default]
+Default Next Question: R00430.00
+--------------------------------------------------------------------------------
+R00430.00    [111]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: AGE, 66
+ 
+Age  0 LESS THAN 6 MONTHS 1 6 MONTHS TO 23 MONTHS 2 24 MONTHS TO 35 MONTHS 3-99 
+ACTUAL AGE IN YEARS
+ 
+     218           0
+     556           1 TO 9
+     614          10 TO 19
+     193          20 TO 29
+     785          30 TO 39
+    1538          40 TO 49
+     568          50 TO 59
+      72          60 TO 69
+      27          70 TO 79
+       4          80 TO 89
+       2          90 TO 99
+  -------
+    4577
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4577   VALID SKIP(-4)     648     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             90        Mean:               32.61
+ 
+Lead In: R00429.00[Default]
+Default Next Question: R00431.00
+--------------------------------------------------------------------------------
+R00431.00    [113]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: ENROLLMENT STATUS, 66
+ 
+Is ... attending or enrolled in school?
+For persons 6-24 years old.
+ 
+     636       1 YES
+     189       0 NO
+  -------
+     825
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     825   VALID SKIP(-4)    4400     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00430.00[Default]
+Default Next Question: R00432.00
+--------------------------------------------------------------------------------
+R00432.00    [114]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: HIGHEST GRADE ATTENDED, 66
+ 
+If "Yes" What grade (year)?
+ 
+If "No" What is the highest grade (year) of regular school ... has ever 
+attended?
+ 
+0 NONE OR NEVER ATTENDED 1-12 ACTUAL GRADE 13 FIRST YEAR OF COLLEGE 14 SECOND 
+YEAR OF COLLEGE 15 THIRD YEAR OF COLLEGE 16 FOURTH YEAR OF COLLEGE 17 FIFTH YEAR
+OF COLLEGE 18 SIXTH+ YEARS OF COLLEGE 40 TRADE OR SPECIAL SCHOOL
+ 
+       9           0: NONE OR NEVER ATTENDED
+    3266           1 TO 12: ACTUAL GRADE 1-12
+     138          13: FIRST YEAR OF COLLEGE
+     137          14: SECOND YEAR OR COLLEGE
+      42          15: THIRD YEAR OFD COLLEGE
+     162          16: FOURTH YEAR OF COLLEGE
+      25          17: FIFTH YEAR OF COLLEGE
+      31          18: SIXTH YEAR OF COLLEGE
+  -------
+    3810
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3810   VALID SKIP(-4)    1415     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             18        Mean:               10.22
+ 
+Lead In: R00431.00[Default]
+Default Next Question: R00433.00
+--------------------------------------------------------------------------------
+R00433.00    [115]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: FINISHED GRADE? 66
+ 
+Did ... finish ths grade (year)?
+ 
+    2518       1 YES
+    1239       0 NO
+  -------
+    3757
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3757   VALID SKIP(-4)    1468     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00432.00[Default]
+Default Next Question: R00434.00
+--------------------------------------------------------------------------------
+R00434.00    [118]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: WEEKS WORKED IN PAST YEAR 
+             (AGE 14+) 66
+ 
+During the past 12 months did ... work either full or part time (not counting 
+work around the house)?
+ 
+0 NONE 1-52 1-52 WEEKS
+ 
+    1485           0
+     287           1 TO 13
+     222          14 TO 26
+     196          27 TO 39
+     207          40 TO 48
+      89          49 TO 51
+     892          52
+  -------
+    3378
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3378   VALID SKIP(-4)    1847     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             52        Mean:               21.71
+ 
+Lead In: R00433.00[Default]
+Default Next Question: R00435.00
+--------------------------------------------------------------------------------
+R00435.00    [119]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: HOURS PER WEEK WORKED (AGE 
+             14+) 66
+ 
+In the weeks that ... worked, how many hours did ... usually work per week?  
+1-168 1-168 HOURS
+ 
+     103           1 TO 9
+     182          10 TO 19
+     208          20 TO 29
+     274          30 TO 39
+     975          40 TO 49
+      81          50 TO 59
+      27          60 TO 69
+      14          70 TO 79
+       3          80 TO 89
+       9          90 TO 99
+  -------
+    1876
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1876   VALID SKIP(-4)    3349     NON-INTERVIEW(-5)       0
+ 
+Min:              2        Max:             99        Mean:               34.68
+ 
+Lead In: R00434.00[Default]
+Default Next Question: R00436.00
+--------------------------------------------------------------------------------
+R00436.00    [120]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HOUSEHOLD RECORD - FAMILY MEMBER #  2: OCCUPATION IN PAST YEAR (AGE
+             14+) 66 (3 DIGIT) (60 CODES)
+ 
+What kind of work was ... doing?
+ 
+     172           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+      12         200 TO 222: FARMERS AND FARM MANAGERS
+      78         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+     419         301 TO 370: CLERICAL AND KINDRED WORKERS
+     154         380 TO 395: SALES WORKERS
+      36         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+       2         555: MEMBERS OF THE ARMED FORCES
+     332         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+     144         801 TO 804: PRIVATE HOUSEHOLD WORKERS
+     343         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+     155         901 TO 905: FARM LABORERS AND FOREMEN
+      48         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+       1         995: OCCUPATION NOT REPORTED
+  -------
+    1896
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1896   VALID SKIP(-4)    3329     NON-INTERVIEW(-5)       0
+ 
+Min:             14        Max:            995        Mean:              581.86
+ 
+Lead In: R00435.00[Default]
+Default Next Question: R00437.00
+--------------------------------------------------------------------------------
+R00623.00    [KEY]                                          Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TOTAL NET FAMILY ASSETS, 66  *KEY*
+ 
+TOTAL NET FAMILY ASSETS *KEY*
+ 
+-99990 THRU 999900 ACTUAL DOLLARS - NEGATIVE CODE REPRESENTS LOSS
+*** KEY VARIABLE ***
+ 
+THIS VARIABLE IS ONE OF THE KEY VARIABLES DESCRIBED IN THE  N.L.S. HANDBOOK.  IT
+WAS RECREATED AT OHIO STATE (SEE THE DECISION RULES PROVIDED IN THE 
+'DERIVATIONS' SECTION) TO BE AS CONSISTENT AS POSSIBLE WITH COUNTERPART 
+VARIABLES IN OTHER YEARS AND COHORTS.
+ 
+DATE CREATED: JUNE 4, 1974
+ 
+       STEP A. CLEAR FOR NA OR DK.
+            1) IF R(585.) NE 0 THRU 8 OR IF R(361.)
+                      EQ NA                              R(623.) = NA (STOP)
+            2) IF R(351.), R(352.), R(353.), R(354.),
+                  R(355.), R(357.), R(358.), OR
+                  R(361.) EQ DK, THEN                    R(623.) = DK (STOP)
+       STEP B. NET RESIDENCE ASSETS (NRA)
+            1) IF R(351.) AND R(352.) EQ NA, AND
+                  1) IF R(346.) EQ 1, THEN               NRA = 0 GO TO STEP C
+                  2) IF R(349.) EQ 2, THEN               NRA = 0 GO TO STEP C
+            2) IF R(351.) AND R(352.) NE NA, THEN        NRA=R(351.)-R(352.)
+               ELSE                                      R(623.) = NA (STOP)
+       STEP C. FINANCIAL ASSETS (FA)
+            1) IF R(353.), R(354.), AND R(355.) EQ NA,
+                      AND R(366.) AND R(371.) EQ 0,      FA = 0  GO TO STEP D
+            2) IF R(353.), R(354.), AND R(355.) NE NA,
+                      THEN           FA = R(353.) + R(354.) + R(355.)
+               ELSE                                      R(623.) = NA (STOP)
+       STEP D. NET BUSINESS ASSETS (NBA)
+            1) IF R(356.) EQ 0 AND R(357.) LE 0 AND
+                      R(358.) LE 0, THEN            NBA = 0 GO TO STEP E.
+            2) IF R(357.) GT 0 AND R(358.) GT 0     NBA = R(357.) - R(358.)
+               ELSE                                 R(623.) = NA (STOP)
+       STEP E. TOTAL NET ASSETS (TNA)
+            1) TNA = (NRA + FA + NBA) - R(361.)
+            2) IF TNA > 999900                      TNA = 999900
+               IF TNA < -99990                      TNA = -99990
+            3)                                      R(623.) = TNA
+ 
+     658     -999999 TO -6
+    1794           0
+    1708           1 TO 999
+     269        1000 TO 1999
+     105        2000 TO 2999
+      58        3000 TO 3999
+      28        4000 TO 4999
+      36        5000 TO 5999
+      17        6000 TO 6999
+      19        7000 TO 7999
+      15        8000 TO 8999
+       9        9000 TO 9999
+      17       10000 TO 14999
+      18       15000 TO 19999
+       8       20000 TO 24999
+       9       25000 TO 49999
+      15       50000 TO 999999
+  -------
+    4783
+ 
+Refusal(-1)            0
+Don't Know(-2)       281
+TOTAL =========>    5064   VALID SKIP(-4)     161     NON-INTERVIEW(-5)       0
+ 
+Min:         -35800        Max:         375925        Mean:              895.09
+ 
+Lead In: R00622.00[Default]
+Default Next Question: R00623.10
+--------------------------------------------------------------------------------
+R00623.10    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             TOTAL FAMILY ASSETS, 66 (SUMMATION)
+ 
+0 NONE -99990 THRU 2500000 ACTUAL DOLLARS NEGATIVE CODE REPRESENTS LOSS
+This variable was created as part of a series of summation variables after it 
+became apparent that the rules for the key variables for setting the key to NA 
+if any component was missing resulted in too many Rs being missing on the key 
+variables. The summation series is a simple addition of all positive and 
+negative values. This variable was revised in 2016 to fix the problem of 
+noninterviews being assigned to zero and fix the problem of adding a few 
+components that were missing on the original summation variables. Always use the
+revised version (R00623.20)
+ 
+     675     -999999 TO -6
+    1976           0
+    1848           1 TO 999
+     297        1000 TO 1999
+     118        2000 TO 2999
+      66        3000 TO 3999
+      33        4000 TO 4999
+      44        5000 TO 5999
+      19        6000 TO 6999
+      23        7000 TO 7999
+      19        8000 TO 8999
+       9        9000 TO 9999
+      24       10000 TO 14999
+      21       15000 TO 19999
+      10       20000 TO 24999
+      14       25000 TO 49999
+      17       50000 TO 2500000
+  -------
+    5213
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    5214   VALID SKIP(-4)      11     NON-INTERVIEW(-5)       0
+ 
+Min:         -35800        Max:         375925        Mean:              988.99
+ 
+Lead In: R00623.00[Default]
+Default Next Question: R00624.00
+--------------------------------------------------------------------------------
+R00625.50    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - 
+             (DUNCAN INDEX) 66
+ 
+OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - (DUNCAN INDEX)
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+    DATE CREATED: JUNE 1, 1974
+ 
+       R(625.5) WAS ASSIGNED ON THE BASIS OF 3-DIGIT OCCUPATION R(398.)
+               USING ATTACHMENT 2, PART 2, AND TABLE 1.
+ 
+     657           1 TO 9
+    1793          10 TO 19
+     388          20 TO 29
+     268          30 TO 39
+     529          40 TO 49
+     128          50 TO 59
+     740          60 TO 69
+      93          70 TO 79
+     124          80 TO 89
+      46          90 TO 99
+  -------
+    4766
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4766   VALID SKIP(-4)     459     NON-INTERVIEW(-5)       0
+ 
+Min:              4        Max:             96        Mean:               32.28
+ 
+Lead In: R00625.00[Default]
+Default Next Question: R00626.00
+--------------------------------------------------------------------------------
+R00626.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - 
+             (1-DIGIT) 66 (60 CODES)
+ 
+OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - (1-DIGIT)
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+DATE CHANGED: JUNE 1, 1974
+ 
+R(626.) WAS ASSIGNED ON THE BASIS OF 3-DIGIT OCCUPATION R(398.) USING ATTACHMENT
+2, PART 2.
+ 
+     350       1 PROFESSIONAL, TECHNICAL, AND KINDRED
+     626       2 MANAGERS, OFFICIALS, AND PROPRIETORS
+     189       3 CLERICAL AND KINDRED
+     218       4 SALES WORKERS
+     964       5 CRAFTSMEN, FOREMEN, AND KINDRED
+     887       6 OPERATIVES AND KINDRED
+      98       7 PRIVATE HOUSEHOLD WORKERS
+     281       8 SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD
+     559       9 FARMERS AND FARM MANAGERS
+     164      10 FARM LABORERS AND FOREMEN
+     368      11 LABORERS, EXCEPT FARM AND MINE
+      62      12 ARMED FORCES
+  -------
+    4766
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4766   VALID SKIP(-4)     459     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00625.50[Default]
+Default Next Question: R00627.00
+--------------------------------------------------------------------------------
+R00629.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             INDEX OF SOCIOECONOMIC LEVEL OF PARENTAL FAMILY, 66
+ 
+INDEX OF SOCIOECONOMIC LEVEL OF PARENTAL FAMILY
+ 
+-999 THRU 999 ACTUAL VALUE (ONE DECIMAL PLACE ASSUMED)  FOR FURTHER INFORMATION 
+SEE CODEBOOK SUPPLEMENT # 10
+    DATE CREATED: JULY 25, 1972
+ 
+       STEP A. CHECK R(631.), R(633.), R(573.), R(625.5) AND R(628.) FOR NA'S.
+               IF 3 OR MORE ARE NA                      R(629.)= NA
+       STEP B. IF NUMBER OF NA'S LE 2, THEN ZERO WAS IMPUTED FOR THE NA
+               VALUES AND THE FOLLOWING CONVERSIONS WERE MADE TO THE NON-NA
+               VALUES:
+               A= 0.8(R(631.))+2.1
+               B= R(633.)-0.3
+               C= 1.2(R(573.)-3.9
+               D= 0.11(R(625.5))+6.6
+               E= 2.1(R(628.))+4.0
+       STEP C. DUMMY= ((A+B+C+D+E)/N)(10) WHERE N EQ NUMBER OF NON-NA ITEMS
+                  FROM STEP A., I.E., N= 3, 4 OR 5.
+       STEP D. R(629.)= DUMMY (ROUNDED AND TRUNCATED AT DECIMAL POINT)
+             THIS VARIABLE IS BASED ON THE FOLLOWING FIVE COMPONENTS:
+             FATHER'S OCCUPATION, FATHER'S EDUCATION, MOTHER'S EDUCATION,
+             EDUCATION OF OLDEST OLDER SIBLING AND AVAILABILITY OF READING
+             MATERIAL IN THE HOME. IT IS CONSTRUCTED TO HAVE A GRAND MEAN
+             VALUE OF 10.0 AND STANDARD DEVIATION OF 3.0 AND IS AUTOMATICALLY
+             NA IF FEWER THAN 3 OF THE COMPONENTS ARE AVAILABLE.
+       NOTE: R(631.) AND R(633.) HAVE BEEN CHANGED SUBSEQUENT TO THE
+             CREATION OF THIS VARIABLE.
+ 
+       3           1 TO 24
+     108          25 TO 49
+     567          50 TO 74
+    1546          75 TO 99
+    2003         100 TO 124
+     606         125 TO 149
+      38         150 TO 174
+  -------
+    4871
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    4871   VALID SKIP(-4)     354     NON-INTERVIEW(-5)       0
+ 
+Min:             21        Max:            158        Mean:               100.2
+ 
+Lead In: R00628.00[Default]
+Default Next Question: R00630.00
+--------------------------------------------------------------------------------
+R00630.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             EMPLOYMENT STATUS OF FATHER, 66
+ 
+EMPLOYMENT STATUS OF FATHER
+THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE
+  ARE NOT SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH
+  THE VARIABLE WAS RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH
+  VARIABLES FOR FATHER AND MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+    DATE CHANGED: JUNE 1, 1974
+       THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR
+         SURVEYS OF MEN 14-24 YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY
+         INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+         AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES
+            IN THE 1966 HOUSEHOLD RECORD (I.E. R(421.), R(429.), ETC.).
+         THE DECISION RULES FOR RE-CREATION AND MODIFICATION CAN BE
+            FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH REFERS
+            TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+    3818       1 WORKED
+     224       0 DID NOT WORK
+  -------
+    4042
+ 
+Refusal(-1)            0
+Don't Know(-2)        84
+TOTAL =========>    4126   VALID SKIP(-4)    1099     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00629.00[Default]
+Default Next Question: R00630.30
+--------------------------------------------------------------------------------
+R00630.30    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             # OF WEEKS WORKED BY FATHER IN PAST YEAR, 66 (REVISED)
+ 
+NUMBER OF WEEKS WORKED BY FATHER IN PAST YEAR  0 NONE 01 THRU 52 ACTUAL NUMBER 
+OF WEEKS -2 DON'T KNOW
+THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE ARE NOT 
+SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH THE VARIABLE WAS 
+RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH VARIABLES FOR FATHER AND 
+MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+DATE CHANGED: JUNE 1, 1974
+ 
+THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR SURVEYS OF MEN 14-24 
+YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+ 
+AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES IN THE 1966 HOUSEHOLD
+RECORD (I.E. R(421.), R(429.), ETC.). THE DECISION RULES FOR RE-CREATION AND 
+MODIFICATION CAN BE FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH 
+REFERS TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+     224           0
+      56           1 TO 13
+      72          14 TO 26
+     104          27 TO 39
+     275          40 TO 48
+     195          49 TO 51
+    3088          52
+  -------
+    4014
+ 
+Refusal(-1)            0
+Don't Know(-2)       112
+TOTAL =========>    4126   VALID SKIP(-4)    1099     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             52        Mean:               46.89
+ 
+Lead In: R00630.00[Default]
+Default Next Question: R00630.60
+--------------------------------------------------------------------------------
+R00630.60    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF FATHER, 66 (3-DIGIT) (REVISED) (60 CODES)
+ 
+OCCUPATION OF FATHER (3-DIGIT) (REVISED)
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+  THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE
+  ARE NOT SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH
+  THE VARIABLE WAS RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH
+  VARIABLES FOR FATHER AND MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+    DATE CHANGED: JUNE 1, 1974
+       THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR
+         SURVEYS OF MEN 14-24 YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY
+         INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+         AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES
+            IN THE 1966 HOUSEHOLD RECORD (I.E. R(421.), R(429.), ETC.).
+         THE DECISION RULES FOR RE-CREATION AND MODIFICATION CAN BE
+            FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH REFERS
+            TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+     308           0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS
+     361         200 TO 222: FARMERS AND FARM MANAGERS
+     572         250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM
+     158         301 TO 370: CLERICAL AND KINDRED WORKERS
+     179         380 TO 395: SALES WORKERS
+     860         401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS
+      23         555: MEMBERS OF THE ARMED FORCES
+     677         601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE 
+                          WORKERS)
+       1         801 TO 804: PRIVATE HOUSEHOLD WORKERS
+     195         810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS
+      93         901 TO 905: FARM LABORERS AND FOREMEN
+     289         960 TO 985: LABORERS, EXCEPT FARM AND MINE
+     102         995: OCCUPATION NOT REPORTED
+  -------
+    3818
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3818   VALID SKIP(-4)    1407     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:            995        Mean:              504.22
+ 
+Lead In: R00630.30[Default]
+Default Next Question: R00630.90
+--------------------------------------------------------------------------------
+R00630.90    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             OCCUPATION OF FATHER, 66 (DUNCAN INDEX)
+ 
+OCCUPATION OF FATHER (DUNCAN INDEX)
+ 
+SEE ATTACHMENT 2 FOR DEFINITIONS.
+    DATE CREATED: JUNE 1, 1974
+ 
+       R(630.9) WAS ASSIGNED ON THE BASIS OF 3-DIGIT OCCUPATION R(630.6)
+               USING ATTACHMENT 2, PART 2, AND TABLE 1.
+ 
+     443           1 TO 9
+    1232          10 TO 19
+     352          20 TO 29
+     214          30 TO 39
+     482          40 TO 49
+     107          50 TO 59
+     664          60 TO 69
+      68          70 TO 79
+     112          80 TO 89
+      42          90 TO 99
+  -------
+    3716
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3716   VALID SKIP(-4)    1509     NON-INTERVIEW(-5)       0
+ 
+Min:              3        Max:             96        Mean:                34.9
+ 
+Lead In: R00630.60[Default]
+Default Next Question: R00631.00
+--------------------------------------------------------------------------------
+R00631.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             HIGHEST GRADE COMPLETED BY FATHER, 66
+ 
+HIGHEST GRADE COMPLETED BY FATHER
+ 
+00 NEVER COMPLETED A GRADE 01 THRU 18 ACTUAL GRADE
+  THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE
+  ARE NOT SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH
+  THE VARIABLE WAS RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH
+  VARIABLES FOR FATHER AND MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+    DATE CHANGED: JUNE 15, 1974
+       THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR
+         SURVEYS OF MEN 14-24 YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY
+         INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+         AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES
+            IN THE 1966 HOUSEHOLD RECORD (I.E. R(421.), R(429.), ETC.).
+         THE DECISION RULES FOR RE-CREATION AND MODIFICATION CAN BE
+            FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH REFERS
+            TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+      46       0 NONE
+      27       1 FIRST GRADE
+      62       2 SECOND GRADE
+      96       3 THIRD GRADE
+     102       4 FOURTH GRADE
+     124       5 FIFTH GRADE
+     221       6 SIXTH GRADE
+     222       7 SEVENTH GRADE
+     623       8 EIGHTH GRADE
+     208       9 NINTH GRADE
+     309      10 TENTH GRADE
+     180      11 ELEVENTH GRADE
+    1046      12 TWELFTH GRADE
+     108      13 FIRST YEAR COLLEGE
+     144      14 SECOND YEAR COLLEGE
+      51      15 THIRD YEAR COLLEGE
+     213      16 FOURTH YEAR COLLEGE
+      29      17 FIFTH YEAR COLLEGE
+     119      18 SIXTH+ YEARS COLLEGE
+  -------
+    3930
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3930   VALID SKIP(-4)    1295     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00630.90[Default]
+Default Next Question: R00632.00
+--------------------------------------------------------------------------------
+R00632.00    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             EMPLOYMENT STATUS OF MOTHER, 66
+ 
+EMPLOYMENT STATUS OF MOTHER
+THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE
+  ARE NOT SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH
+  THE VARIABLE WAS RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH
+  VARIABLES FOR FATHER AND MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+    DATE CHANGED: JUNE 1, 1974
+       THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR
+         SURVEYS OF MEN 14-24 YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY
+         INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+         AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES
+            IN THE 1966 HOUSEHOLD RECORD (I.E. R(421.), R(429.), ETC.).
+         THE DECISION RULES FOR RE-CREATION AND MODIFICATION CAN BE
+            FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH REFERS
+            TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+    2577       1 WORKED
+    2159       0 DID NOT WORK
+  -------
+    4736
+ 
+Refusal(-1)            0
+Don't Know(-2)        45
+TOTAL =========>    4781   VALID SKIP(-4)     444     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00631.00[Default]
+Default Next Question: R00632.30
+--------------------------------------------------------------------------------
+R00632.30    [CV]                                           Survey Year: 1966
+  PRIMARY VARIABLE
+
+             # OF WEEKS WORKED BY MOTHER IN PAST YEAR, 66 (REVISED)
+ 
+# OF WEEKS WORKED BY MOTHER IN PAST YEAR (REVISED)  0 NONE 01 THRU 52 ACTUAL 
+NUMBER OF WEEKS -2 DON'T KNOW
+  THE DECISION RULES BY WHICH CENSUS ORIGINALLY CREATED THIS VARIABLE
+  ARE NOT SHOWN IN THE DERIVATION SECTION BELOW; THE RULES BY WHICH
+  THE VARIABLE WAS RECREATED ARE SHOWN.  AMONG THE DIFFICULTIES WITH
+  VARIABLES FOR FATHER AND MOTHER WERE:
+     1) THE INFORMATION CONCERNING PARENTS LIVING OUTSIDE THE
+        RESPONDENT'S HOUSEHOLD WAS COLLECTED IN THE QUESTIONNAIRE
+        PROPER, WHILE INFORMATION FOR THOSE LIVING WITH THE RESPONDENT
+        WAS COLLECTED ON THE LAST PAGE OF THE QUESTIONNAIRE.
+     2) THE CODING SCHEME USED BY CENSUS FOR THE LATTER SECTION
+        INCLUDED A CODE FOR "PARENT" AND DID NOT DISTINGUISH BETWEEN
+        "FATHER" AND "MOTHER".  THE RECREATION RULES SHOWN BELOW ARE
+        THE EVENTUAL RESULT OF A LARGELY MANUAL PROCESS TO
+        REINTRODUCE THE OMITTED DISTINCTION.
+ 
+    DATE CHANGED: JUNE 1, 1974
+       THIS VARIABLE WAS RE-CREATED DURING REVISION OF FILES FOR
+         SURVEYS OF MEN 14-24 YEARS OLD IN A PROCESS WHICH SIMULTANEOUSLY
+         INVOLVED THE RE-CREATION OF...
+            R(630.) EMPLOYMENT STATUS OF FATHER PAST 12 MOS., 1966   'ESF'
+            R(630.3) NO. OF WEEKS WORKED, FATHER PAST 12 MOS., 1966   'WWF'
+            R(630.6) OCCUPATION OF FATHER, PAST 12 MOS., 1966         'OCF'
+            R(631.) HIGHEST GRADE ATTENDED BY FATHER, 1966           'EDF'
+            R(632.) EMPLOYMENT STATUS OF MOTHER PAST 12 MOS., 1966   'ESM'
+            R(632.3) NO. OF WEEKS WORKED, MOTHER PAST 12 MOS., 1966   'WWM'
+            R(632.6) OCCUPATION OF MOTHER, PAST 12 MOS., 1966         'OCM'
+            R(633.) HIGHEST GRADE ATTENDED BY MOTHER, 1966           'EDM'
+         AND THE MODIFICATION OF 'RELATION TO RESPONDENT' VARIABLES
+            IN THE 1966 HOUSEHOLD RECORD (I.E. R(421.), R(429.), ETC.).
+         THE DECISION RULES FOR RE-CREATION AND MODIFICATION CAN BE
+            FOUND IN CODEBOOK SUPPLEMENT, APPENDIX NUMBER 6, WHICH REFERS
+            TO VARIABLES BY THE NAMES GIVEN BELOW.
+ 
+       INPUT VARIABLES
+         A) FROM HOUSEHOLD RECORD, 1966
+            'REL' RELATION TO RESPONDENT    R(421.),R(429.),ETC.
+                  NOTE- ORIGINAL CENSUS CODING DID NOT DISTINGUISH
+                        MOTHER OR FATHER, EACH WAS 'PARENT'
+            'WKS' NUMBER OF WEEKS WORKED    R(426.),R(434.),ETC.
+            'HRS' NUMBER OF HOURS PER WEEK WORKED    R(427.),R(435.),ETC.
+            'OCC' OCCUPATION (3-DIGIT)    R(428.),R(436.),ETC.
+            'GRD' HIGHEST GRADE ATTENDED    R(424.),R(432.),ETC.
+            'FIN' DID ... COMPLETE GRADE?    R(425.),R(433.),ETC.
+                  NOTE- ORIGINAL 'GRD' AND 'FIN' WERE EACH IN DIFFERENT
+                        LOCATIONS DEPENDING ON AGE OF FAMILY MEMBER
+                        (SEE 1966 QUESTIONNAIRE ITEMS 113 THRU 117).
+                        THESE WERE COMBINED FROM FOUR TO TWO EARLIER
+                        (I.E., R(424.) NOW IS BOTH Q. 114 AND Q. 116,
+                               R(425.) NOW IS BOTH Q. 115 AND Q. 117)
+         B) FROM 1966 QUESTIONNAIRE ITEMS 102A THRU 103B (FATHER)
+            'CHU' R(402.) CHECK ITEM U      'QEF' R(406.)
+            'QWF' R(403.)                   'QFF' R(407.)
+            'QOF' R(405.)
+         C) FROM 1966 QUESTIONNAIRE ITEMS 104A THRU 105B (MOTHER)
+            'CHV' R(408.)                   'QOM' R(412.)
+            'QQM' R(409.)                   'QEM' R(413.)
+            'QWM' R(410.)                   'QFM' R(414.)
+         D) SERIAL NUMBER R(1.)
+ 
+    2159           0
+     291           1 TO 13
+     255          14 TO 26
+     252          27 TO 39
+     265          40 TO 48
+     116          49 TO 51
+    1339          52
+  -------
+    4677
+ 
+Refusal(-1)            0
+Don't Know(-2)       104
+TOTAL =========>    4781   VALID SKIP(-4)     444     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             52        Mean:               22.07
+ 
+Lead In: R00632.00[Default]
+Default Next Question: R00632.60
+--------------------------------------------------------------------------------
+R01712.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ TEST NAME, 68
+ 
+IQ TEST
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     472       0 NO I.Q. TEST NAME OR POINT AVERAGE
+     848       1 OTIS/ BETA/ GAMMA
+     625       2 CALIFORNIA TEST OF MENTAL MATURITY (CTMM/CMM)
+     169       3 LORGE-THORNDIKE INTELLIGENCE TEST
+     216       4 HENMON-NELSON TEST (HNTMA)
+      42       5 TEST OF EDUCATIONAL ABILITY (TEA)
+      34       6 PRIMARY MENTAL ABILITY TEST (PMA/PMAT)
+     223       7 PRELIMINARY AND SCHOLASTIC APTITUDE TESTS (PSAT/SAT/CEEB)
+      97       8 IOWA TEST OF EDUCATIONAL DEVELOPMENT (ITED)
+      64       9 DIFFERENTIAL APTITUDE TEST (DAT)
+     165      10 SCHOOL AND COLLEGE ABILITY TEST (SCAT)
+      44      11 AMERICAN COLLEGE TESTING PROGRAM (ACT/ACTP)
+      20      12 NATIONAL MERIT SCHOLARSHIP QUALIFYING TEST (NMSQT)
+     282      13 I.Q. SCORE ESTIMATED FROM GRADE POINT AVERAGE (ITEM 12)
+      42      14 MISCELLANEOUS OTHER TESTS CODED BY DR. HERRIOTT
+     498      15 MISCELLANEOUS OTHER TESTS CODED BY CENSUS BUREAU CLERKS
+  -------
+    3841
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3841   VALID SKIP(-4)     477     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01711.00[Default]
+Default Next Question: R01713.00
+--------------------------------------------------------------------------------
+R01713.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - ONE HALF, 68
+ 
+IQ CATEGORY - WHICH HALF?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+    1538       1 BOTTOM HALF
+    1833       2 TOP HALF
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01712.00[Default]
+Default Next Question: R01714.00
+--------------------------------------------------------------------------------
+R01714.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - ONE 3RD, 68
+ 
+IQ CATEGORY - WHICH THIRD?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     974       1 BOTTOM THIRD
+    1161       2 MIDDLE THIRD
+    1236       3 TOP THIRD
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01713.00[Default]
+Default Next Question: R01715.00
+--------------------------------------------------------------------------------
+R01715.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - ONE 4TH, 68
+ 
+IQ CATEGORY - WHICH QUARTILE?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     732       1 BOTTOM QUARTILE
+     806       2 3RD QUARTILE
+     897       3 2ND QUARTILE
+     936       4 TOP QUARTILE
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01714.00[Default]
+Default Next Question: R01716.00
+--------------------------------------------------------------------------------
+R01716.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - ONE 5TH, 68
+ 
+IQ CATEGORY - WHICH FIFTH?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     587       1 BOTTOM QUINTILE
+     621       2 4TH QUINTILE
+     677       3 3RD QUINTILE
+     689       4 2ND QUINTILE
+     797       5 TOP QUINTILE
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01715.00[Default]
+Default Next Question: R01717.00
+--------------------------------------------------------------------------------
+R01717.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - ONE 10TH, 68
+ 
+IQ CATEGORY - WHICH TENTH?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     290       1 BOTTOM TEN PERCENT
+     297       2 9TH TENTH
+     322       3 8TH TENTH
+     299       4 7TH TENTH
+     330       5 6TH TENTH
+     347       6 5TH TENTH
+     340       7 4TH TENTH
+     349       8 3RD TENTH
+     416       9 2ND TENTH
+     381      10 TOP TEN PERCENT
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01716.00[Default]
+Default Next Question: R01718.00
+--------------------------------------------------------------------------------
+R01718.00    [11B]                                          Survey Year: 1968
+  PRIMARY VARIABLE
+
+             IQ CATEGORY - STANINE, 68
+ 
+IQ CATEGORY - WHICH STANINE?
+FOR FURTHER INFORMATION SEE CODEBOOK SUPPLEMENT # 09
+ 
+     122       9 HIGHEST STANINE - HIGHEST 4 PERCENT
+     259       8 NEXT 7 PERCENT
+     479       7 NEXT 12 PERCENT
+     626       6 NEXT 17 PERCENT
+     763       5 MIDDLE 20 PERCENT
+     489       4 NEXT 17 PERCENT
+     314       3 NEXT 12 PERCENT
+     182       2 NEXT 7 PERCENT
+     137       1 LOWEST STANINE - LOWEST 4 PERCENT
+  -------
+    3371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3371   VALID SKIP(-4)     947     NON-INTERVIEW(-5)     907
+ 
+Lead In: R01717.00[Default]
+Default Next Question: R01719.00
+--------------------------------------------------------------------------------
+R04547.00    [22A]                                          Survey Year: 1976
+  PRIMARY VARIABLE
+
+             RATE OF PAY AT CURRENT JOB 76
+ 
+Altogether, how much do you usually earn at this job before deductions?
+ 
+000001 THRU 999998 ACTUAL DOLLARS
+$.01 - 9999.98 WHEN PER HOUR
+$1.00 - 999998. WHEN OTHER THAN PER HOUR
+ 
+    1878           1 TO 999
+     248        1000 TO 1999
+      14        2000 TO 2999
+       3        4000 TO 4999
+       5        5000 TO 5999
+       5        6000 TO 6999
+       7        7000 TO 7999
+      26        8000 TO 8999
+      28        9000 TO 9999
+     291       10000 TO 14999
+     257       15000 TO 19999
+     108       20000 TO 24999
+      77       25000 TO 49999
+       8       50000 TO 999999
+  -------
+    2955
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    2955   VALID SKIP(-4)     740     NON-INTERVIEW(-5)    1530
+ 
+Min:              7        Max:          50000        Mean:             4923.77
+ 
+Lead In: R04545.00[Default]
+Default Next Question: R04548.00
+--------------------------------------------------------------------------------
+R05073.00    [64]                                           Survey Year: 1976
+  PRIMARY VARIABLE
+
+             MARITAL STATUS, 76
+ 
+What is your present marital status?
+ 
+    2556       1 MARRIED, SPOUSE PRESENT
+      19       2 MARRIED, SPOUSE ABSENT
+       3       3 WIDOWED   (Go To R05078.00)
+     197       4 DIVORCED   (Go To R05078.00)
+     136       5 SEPARATED   (Go To R05078.00)
+     775       6 NEVER MARRIED   (Go To R05078.00)
+  -------
+    3686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3686   VALID SKIP(-4)       9     NON-INTERVIEW(-5)    1530
+ 
+Lead In: R05072.00[Default]  R05062.00[0:0]
+Default Next Question: R05074.00
+--------------------------------------------------------------------------------
+R05439.40    [CV]                                           Survey Year: 1976
+  PRIMARY VARIABLE
+
+             HIGHEST GRADE COMPLETED AS OF 76 (REVISED)
+ 
+What is the highest grade of regular school you have completed?
+DATE CHANGED: OCTOBER 31, 1979
+ 
+       3       0 NONE
+       2       1 FIRST GRADE
+       2       2 SECOND GRADE
+       4       3 THIRD GRADE
+       6       4 FOURTH GRADE
+      13       5 FIFTH GRADE
+      22       6 SIXTH GRADE
+      42       7 SEVENTH GRADE
+      90       8 EIGHTH GRADE
+      92       9 NINTH GRADE
+     148      10 TENTH GRADE
+     194      11 ELEVENTH GRADE
+    1213      12 TWELFTH GRADE
+     332      13 FIRST YEAR COLLEGE
+     314      14 SECOND YEAR COLLEGE
+     209      15 THIRD YEAR COLLEGE
+     539      16 FOURTH YEAR COLLEGE
+     182      17 FIFTH YEAR COLLEGE
+     264      18 SIXTH+ YEARS COLLEGE
+  -------
+    3671
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    3671   VALID SKIP(-4)      24     NON-INTERVIEW(-5)    1530
+ 
+Lead In: R05439.00[Default]
+Default Next Question: R05439.50

@@ -1,0 +1,169 @@
+
+
+Reference
+Number     Year  Variable Description                                                                              Question Name  
+------------------------------------------------------------------------------------------------------------------------------------
+R00001.00  1966  IDENTIFICATION CODE, 66                                                                           R0000100       
+R00022.00  1966  AGE, 66                                                                                           R0002200       
+R00022.02  1966  MONTH OF R BIRTH, 66                                                                              R0002202       
+R00022.03  1966  YEAR OF R BIRTH, 66                                                                               R0002203       
+R00023.00  1966  RACE, 66                                                                                          R0002300       
+R00024.00  1966  MARITAL STATUS, 66                                                                                R0002400       
+R00024.51  1966  REGION OF RESIDENCE IN 66 (REVISED)                                                               R0002451       
+R00024.54  1966  COMPARISON OF CURRENT WITH PREVIOUS SMSA OF RESIDENCE IN 66                                       R0002454       
+R00024.55  1966  CURRENT RESIDENCE IN SMSA, 66? (REVISED)                                                          R0002455       
+R00024.56  1966  SIZE OF LABOR FORCE, 70 CENSUS, FOR LABOR MARKET OF 66 RESIDENCE (REVISED)                        R0002456       
+R00025.00  1966  TYPE OF AREA OF RESIDENCE, 66                                                                     R0002500       
+R00027.00  1966  TYPE OF PROPERTY OF RESIDENCE, 66                                                                 R0002700       
+R00028.00  1966  TENURE, 66                                                                                        R0002800       
+R00034.00  1966  INDUSTRIAL DIVERSIFICATION SCORE FOR LABOR MARKET OF CURRENT RESIDENCE, 66                        R0003400       
+R00036.00  1966  INDEX OF DEMAND FOR MALE LABOR FOR LABOR MARKET OF CURRENT RESIDENCE, 66                          R0003600       
+R00038.00  1966  PRESENCE OF ACCREDITED 2 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE                                R0003800       
+R00039.00  1966  TYPE OF ACCREDITED 2 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE                                    R0003900       
+R00040.00  1966  PRESENCE OF ACCREDITED 4 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE                                R0004000       
+R00041.00  1966  TYPE OF ACCREDITED 4 YEAR COLLEGE - LABOR MARKET, 66 RESIDENCE                                    R0004100       
+R00043.00  1966  ENROLLMENT STATUS, 66 - IS R CURRENTLY ENROLLED?                                                  R0004300       
+R00054.00  1966  ENROLLMENT STATUS,  66 (CH ITEM)                                                                  R0005400       
+R00091.00  1966  HAS R EVER SERVED IN THE ARMED FORCES? AS OF 66                                                   R0009100       
+R00105.00  1966  DID R EVER TRY TO ENTER ARMED FORCES? 66                                                          R0010500       
+R00108.00  1966  COMPARISON OF RESIDENCE WHILE IN HIGH SCHOOL & CURRENT RESIDENCE, 66                              R0010800       
+R00111.00  1966  WAS LAST HIGH SCHOOL ATTENDED A PUBLIC SCHOOL? 66                                                 R0011100       
+R00128.00  1966  ATTITUDE TOWARD HIGH SCHOOL EXPERIENCE, 66                                                        R0012800       
+R00150.00  1966  ATTITUDE TOWARD COLLEGE EXPERIENCE, 66                                                            R0015000       
+R00226.00  1966  ATTITUDE TOWARD CURRENT JOB 66                                                                    R0022600       
+R00227.00  1966  1ST FACTOR LIKED MOST ABOUT CURRENT JOB 66                                                        R0022700       
+R00228.00  1966  2ND FACTOR LIKED MOST ABOUT CURRENT JOB 66                                                        R0022800       
+R00229.00  1966  3RD FACTOR LIKED MOST ABOUT CURRENT JOB 66                                                        R0022900       
+R00230.00  1966  1ST FACTOR DISLIKED MOST ABOUT CURRENT JOB 66                                                     R0023000       
+R00231.00  1966  2ND FACTOR DISLIKED MOST ABOUT CURRENT JOB 66                                                     R0023100       
+R00232.00  1966  3RD FACTOR DISLIKED MOST ABOUT CURRENT JOB 66                                                     R0023200       
+R00233.00  1966  RATE OF PAY REQUIRED ACCEPT HYPOTHETICAL JOB OFFER SAME AREA, 66                                  R0023300       
+R00234.00  1966  TIME UNIT OF RATE OF PAY REQUIRED TO ACCEPT HYPOTHETICAL JOB OFFER SAME AREA, 66                  R0023400       
+R00235.00  1966  REACTION TO HYPOTHETICAL JOB OFFER IN SAME AREA, 66                                               R0023500       
+R00236.00  1966  RATE OF PAY REQUIRED ACCEPT HYPOTHETICAL JOB OFFER DIFFERENT AREA, 66                             R0023600       
+R00237.00  1966  TIME UNIT OF RATE OF PAY REQUIRED TO ACCEPT HYPOTHETICAL JOB OFFER DIFFERENT AREA, 66             R0023700       
+R00238.00  1966  REACTION TO HYPOTHETICAL JOB OFFER IN DIFFERENT AREA, 66                                          R0023800       
+R00240.00  1966  PLANS OF R IF LOSS OF CURRENT JOB, 66                                                             R0024000       
+R00241.00  1966  TYPE OF TRAINING R WOULD TAKE IF LOSS OF CURRENT JOB, 66                                          R0024100       
+R00242.00  1966  TYPE OF SCHOOL R WOULD ENROLL IN IF LOSS OF CURRENT JOB, 66                                       R0024200       
+R00243.00  1966  METHOD OF FINANCING FOR SCHOOL OR TRAINING IF LOSS OF CURRENT JOB, 66                             R0024300       
+R00244.00  1966  INDUSTRY OF JOB R WOULD TAKE IF LOSS OF CURRENT JOB, 66 (3-DIGIT) (60 CODES)                      R0024400       
+R00245.00  1966  OCCUPATION OF JOB R WOULD TAKE IF LOSS OF CURRENT JOB, 66 (3-DIGIT) (60 CODES)                    R0024500       
+R00246.00  1966  LOCATION R WOULD TAKE A JOB IN IF LOSS OF CURRENT JOB, 66                                         R0024600       
+R00248.00  1966  LOCATION OF BUSINESS R WOULD BEGIN IF LOSS OF CURRENT JOB, 66                                     R0024800       
+R00249.00  1966  OCCUPATION OF JOB R WOULD SEEK IF LOSS OF CURRENT JOB, 66 (3-DIGIT) (60 CODES)                    R0024900       
+R00297.00  1966  KNOWLEDGE OF WORLD OF WORK - HOSPITAL ORDERLY - QUESTION A-1, 66                                  R0029700       
+R00298.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION A-1, 66                                         R0029800       
+R00299.00  1966  KNOWLEDGE OF WORLD OF WORK - MACHINIST - QUESTION B-1, 66                                         R0029900       
+R00300.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION B-2, 66                                         R0030000       
+R00301.00  1966  KNOWLEDGE OF WORLD OF WORK - ACETYLENE WELDER - QUESTION C-1, 66                                  R0030100       
+R00302.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION C-2, 66                                         R0030200       
+R00303.00  1966  KNOWLEDGE OF WORLD OF WORK - STATIONARY ENGINEER - QUESTION D-1, 66                               R0030300       
+R00304.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION D-2, 66                                         R0030400       
+R00305.00  1966  KNOWLEDGE OF WORLD OF WORK - STATISTICAL CLERK - QUESTION E-1, 66                                 R0030500       
+R00306.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION E-2, 66                                         R0030600       
+R00307.00  1966  KNOWLEDGE OF WORLD OF WORK - FORK LIFT OPERATOR - QUESTION F-1, 66                                R0030700       
+R00308.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION F-2, 66                                         R0030800       
+R00309.00  1966  KNOWLEDGE OF WORLD OF WORK - ECONOMIST - QUESTION G-1, 66                                         R0030900       
+R00310.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION G-2, 66                                         R0031000       
+R00311.00  1966  KNOWLEDGE OF WORLD OF WORK - MEDICAL ILLUSTRATOR - QUESTION H-1, 66                               R0031100       
+R00312.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION H-2, 66                                         R0031200       
+R00313.00  1966  KNOWLEDGE OF WORLD OF WORK - DRAFTSMAN - QUESTION I-1, 66                                         R0031300       
+R00314.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION I-2, 66                                         R0031400       
+R00315.00  1966  KNOWLEDGE OF WORLD OF WORK - SOCIAL WORKER - QUESTION J-1, 66                                     R0031500       
+R00316.00  1966  KNOWLEDGE OF WORLD OF WORK - SCHOOLING - QUESTION J-2, 66                                         R0031600       
+R00317.00  1966  MOTIVATION TO WORK - MOST IMPORTANT THING ABOUT JOB, 66                                           R0031700       
+R00318.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON A, 66                                            R0031800       
+R00319.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON B, 66                                            R0031900       
+R00320.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON C, 66                                            R0032000       
+R00321.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON D, 66                                            R0032100       
+R00322.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON E, 66                                            R0032200       
+R00323.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON F, 66                                            R0032300       
+R00324.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON G, 66                                            R0032400       
+R00325.00  1966  KNOWLEDGE OF WORLD OF WORK - EARNINGS COMPARISON H, 66                                            R0032500       
+R00326.00  1966  WAS ANOTHER PERSON PRESENT WHEN R ANSWERED OCCUPATION COMPARISON QUESTIONS? 66                    R0032600       
+R00336.00  1966  ENROLLMENT STATUS, 66 (3RD CH ITEM)                                                               R0033600       
+R00337.00  1966  DOES HEALTH LIMIT SCHOOL ACTIVITY? 66                                                             R0033700       
+R00338.00  1966  DOES HEALTH LIMIT WORK? 66                                                                        R0033800       
+R00339.00  1966  DOES HEALTH LIMIT ANY OTHER ACTIVITIES? 66                                                        R0033900       
+R00346.00  1966  IS R HEAD OF HOUSEHOLD? 66 (CH ITEM)                                                              R0034600       
+R00349.00  1966  DOES R OWN OR RENT HIS HOUSE? (CH ITEM), 66                                                       R0034900       
+R00351.00  1966  MARKET VALUE OF HOUSE OR APARTMENT, 66                                                            R0035100       
+R00352.00  1966  AMOUNT OF DEBT ON HOUSE OR APARTMENT, 66                                                          R0035200       
+R00353.00  1966  $ AMOUNT OF SAVINGS, 66                                                                           R0035300       
+R00354.00  1966  $ AMOUNT OF U.S. SAVINGS BONDS, 66                                                                R0035400       
+R00355.00  1966  MARKET VALUE OF BONDS, STOCKS, & MUTUAL FUNDS, 66                                                 R0035500       
+R00356.00  1966  DOES R/WIFE RENT/OWN/INVEST IN FARM/BUSINESS/REAL ESTATE? 66                                      R0035600       
+R00357.00  1966  MARKET VALUE OF FARM/BUSINESS/ REAL ESTATE, 66                                                    R0035700       
+R00358.00  1966  $ AMOUNT OF FARM/BUSINESS/REAL ESTATE LIABILITY, 66                                               R0035800       
+R00359.00  1966  MODEL YEAR OF AUTOMOBILE, 66                                                                      R0035900       
+R00360.00  1966  $ AMOUNT OF AUTOMOBILE LIABILITY, 66                                                              R0036000       
+R00361.00  1966  $ AMOUNT OF OTHER LIABILITY, 66                                                                   R0036100       
+R00375.00  1966  DOES R LIVE WITH BOTH PARENTS? (CH ITEM), 66                                                      R0037500       
+R00376.00  1966  # OF DEPENDENTS EXCLUDING WIFE, 66                                                                R0037600       
+R00377.00  1966  WHICH DEPENDENTS LIVE OUTSIDE HOUSEHOLD? 66                                                       R0037700       
+R00380.00  1966  WAS R BIRTHPLACE IN THE UNITED STATES? 66                                                         R0038000       
+R00381.00  1966  COMPARISON OF BIRTHPLACE TO CURRENT RESIDENCE, 66                                                 R0038100       
+R00382.00  1966  LENGTH OF TIME IN CURRENT RESIDENCE, 66                                                           R0038200       
+R00388.00  1966  LIFE STATUS OF PARENTS OF R, 66                                                                   R0038800       
+R00389.00  1966  LIFE STATUS OF PARENTS OF WIFE, 66                                                                R0038900       
+R00390.00  1966  BIRTHPLACE OF R FATHER, 66                                                                        R0039000       
+R00391.00  1966  BIRTHPLACE OF R MOTHER, 66                                                                        R0039100       
+R00392.00  1966  BIRTHPLACE OF R PATERNAL GRANDFATHER, 66                                                          R0039200       
+R00393.00  1966  BIRTHPLACE OF R PATERNAL GRANDMOTHER, 66                                                          R0039300       
+R00394.00  1966  BIRTHPLACE OF R MATERNAL GRANDFATHER, 66                                                          R0039400       
+R00395.00  1966  BIRTHPLACE OF R MATERNAL GRANDMOTHER, 66                                                          R0039500       
+R00396.00  1966  RESIDENCE OF R AT AGE 14, 66                                                                      R0039600       
+R00397.00  1966  PERSON R LIVED WITH AT AGE 14, 66                                                                 R0039700       
+R00398.00  1966  OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14  (3-DIGIT) (60 CODES) 66              R0039800       
+R00399.00  1966  WERE MAGAZINES AVAILABLE AT AGE 14? 66                                                            R0039900       
+R00400.00  1966  WERE NEWSPAPERS AVAILABLE AT AGE 14? 66                                                           R0040000       
+R00401.00  1966  WAS LIBRARY CARD AVAILABLE AT AGE 14? 66                                                          R0040100       
+R00402.00  1966  WAS FATHER IN HOUSEHOLD WHEN R WAS AGE 14? (CH ITEM) 66                                           R0040200       
+R00404.00  1966  DID FATHER USUALLY WORK FULL-TIME IN PAST YEAR? 66                                                R0040400       
+R00406.00  1966  HIGHEST GRADE ATTENDED BY FATHER, 66                                                              R0040600       
+R00407.00  1966  DID FATHER COMPLETE HIGHEST GRADE ATTENDED? 66                                                    R0040700       
+R00408.00  1966  WAS MOTHER IN HOUSEHOLD WHEN R WAS AGE 14? (CH ITEM) 66                                           R0040800       
+R00409.00  1966  DID MOTHER WORK IN PAST YEAR? 66                                                                  R0040900       
+R00411.00  1966  DID MOTHER USUALLY WORK FULL-TIME IN PAST YEAR? 66                                                R0041100       
+R00413.00  1966  HIGHEST GRADE ATTENDED BY MOTHER, 66                                                              R0041300       
+R00414.00  1966  DID MOTHER COMPLETE HIGHEST GRADE ATTENDED? 66                                                    R0041400       
+R00415.00  1966  DOES R HAVE SIBLINGS LIVING OUTSIDE THE HOUSEHOLD? 66                                             R0041500       
+R00421.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: RELATIONSHIP TO R, 66                                      R0042100       
+R00422.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: AGE, 66                                                    R0042200       
+R00423.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: ENROLLMENT STATUS, 66                                      R0042300       
+R00424.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: HIGHEST GRADE ATTENDED, 66                                 R0042400       
+R00425.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: FINISHED GRADE? 66                                         R0042500       
+R00426.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: WEEKS WORKED IN PAST YEAR (AGE 14+) 66                     R0042600       
+R00427.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: HOURS PER WEEK WORKED (AGE 14+) 66                         R0042700       
+R00428.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  1: OCCUPATION IN PAST YEAR (AGE 14+) 66 (3-DIGIT) (60 CODES)  R0042800       
+R00429.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: RELATIONSHIP TO R, 66                                      R0042900       
+R00430.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: AGE, 66                                                    R0043000       
+R00431.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: ENROLLMENT STATUS, 66                                      R0043100       
+R00432.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: HIGHEST GRADE ATTENDED, 66                                 R0043200       
+R00433.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: FINISHED GRADE? 66                                         R0043300       
+R00434.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: WEEKS WORKED IN PAST YEAR (AGE 14+) 66                     R0043400       
+R00435.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: HOURS PER WEEK WORKED (AGE 14+) 66                         R0043500       
+R00436.00  1966  HOUSEHOLD RECORD - FAMILY MEMBER #  2: OCCUPATION IN PAST YEAR (AGE 14+) 66 (3 DIGIT) (60 CODES)  R0043600       
+R00623.00  1966  TOTAL NET FAMILY ASSETS, 66  *KEY*                                                                R0062300       
+R00623.10  1966  TOTAL FAMILY ASSETS, 66 (SUMMATION)                                                               R0062310       
+R00625.50  1966  OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - (DUNCAN INDEX) 66                   R0062550       
+R00626.00  1966  OCCUPATION OF FATHER OR HEAD OF HOUSEHOLD WHEN R WAS AGE 14 - (1-DIGIT) 66 (60 CODES)             R0062600       
+R00629.00  1966  INDEX OF SOCIOECONOMIC LEVEL OF PARENTAL FAMILY, 66                                               R0062900       
+R00630.00  1966  EMPLOYMENT STATUS OF FATHER, 66                                                                   R0063000       
+R00630.30  1966  # OF WEEKS WORKED BY FATHER IN PAST YEAR, 66 (REVISED)                                            R0063030       
+R00630.60  1966  OCCUPATION OF FATHER, 66 (3-DIGIT) (REVISED) (60 CODES)                                           R0063060       
+R00630.90  1966  OCCUPATION OF FATHER, 66 (DUNCAN INDEX)                                                           R0063090       
+R00631.00  1966  HIGHEST GRADE COMPLETED BY FATHER, 66                                                             R0063100       
+R00632.00  1966  EMPLOYMENT STATUS OF MOTHER, 66                                                                   R0063200       
+R00632.30  1966  # OF WEEKS WORKED BY MOTHER IN PAST YEAR, 66 (REVISED)                                            R0063230       
+R01712.00  1968  IQ TEST NAME, 68                                                                                  R0171200       
+R01713.00  1968  IQ CATEGORY - ONE HALF, 68                                                                        R0171300       
+R01714.00  1968  IQ CATEGORY - ONE 3RD, 68                                                                         R0171400       
+R01715.00  1968  IQ CATEGORY - ONE 4TH, 68                                                                         R0171500       
+R01716.00  1968  IQ CATEGORY - ONE 5TH, 68                                                                         R0171600       
+R01717.00  1968  IQ CATEGORY - ONE 10TH, 68                                                                        R0171700       
+R01718.00  1968  IQ CATEGORY - STANINE, 68                                                                         R0171800       
+R04547.00  1976  RATE OF PAY AT CURRENT JOB 76                                                                     R0454700       
+R05073.00  1976  MARITAL STATUS, 76                                                                                R0507300       
+R05439.40  1976  HIGHEST GRADE COMPLETED AS OF 76 (REVISED)                                                        R0543940       

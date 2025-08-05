@@ -1,0 +1,290 @@
+# packages
+
+sigmoid <- function(x) {
+  1 / (1 + exp(-x))
+}
+
+tanh_f <- function(x) {
+  tanh(x)
+}
+
+relu <- function(x) {
+  pmax(0, x)
+}
+
+if (!require(glmnet)) {
+  install.packages("glmnet")
+  library(glmnet)
+}
+
+if (!require(lpSolve)) {
+  install.packages("lpSolve")
+  library(lpSolve)
+}
+
+# find trim operator Q
+Q_trim <- function(X,rho=0.5,trim_form='standard',quant=50){
+  UDV_list = svd(X)
+  U = UDV_list$u
+  D = UDV_list$d
+  V = t(UDV_list$v)
+  if (trim_form == 'standard'){
+    tau = quantile(D, rho)
+    Dtilde = pmin(D, tau)
+    Q = diag(nrow(X)) - U %*% diag(1 - Dtilde / D) %*%  t(U)
+    return(Q)
+  }
+  if (trim_form == 'fixed'){
+    tau =D[quant]
+    Dtilde = pmin(D, tau)
+    Q = diag(nrow(X)) - U %*% diag(1 - Dtilde / D) %*%  t(U)
+    return(Q)
+  }
+  if (trim_form == 'zero'){
+    gap_list = (D[1:(round(length(D)/2)-1)] - D[2:round(length(D)/2)])/D[2:round(length(D)/2)]
+    q_hat = which.max(gap_list)
+    Q = diag(nrow(X)) - U[,1:q_hat] %*%t(U[,1:q_hat])
+    return(Q)
+  }
+  if (trim_form =='no_trim'){
+    Q = diag(nrow(X))
+    return(Q)
+  }
+}
+
+# lasso for y~X
+Lasso_func <- function(X,y){
+  fit = cv.glmnet(x=X, y=y,intercept = FALSE)
+  beta = as.matrix((coef(fit,S =fit$lambda.min)[-1]))
+  result = list("betas" = beta,"res" = y-X %*% beta)
+  return(result)
+}
+
+# find Zt = argmin\|X Z_t-y\|_{\inf}
+find_Zt <- function(X,y){
+  p <- dim(X)[1]
+  n <- dim(X)[2]
+  
+  
+  # Objective: Minimize t
+  # Decision variables: [beta_1, beta_2, ..., beta_n,beta_1_, beta_2_, ..., beta_n_, t]
+  f.obj <- c(rep(0, 2*n), 1)  # Coefficients for the objective function
+  
+  # Constraints:
+  # 1. X * beta - t <= y
+  # 2. -X * beta - t <= -y
+  
+  # Construct A_ub matrix
+  A_upper <- cbind(X,-X,-1)    # X * beta+ - X * beta- - t
+  A_lower <- cbind(-X,X,-1)   # -X * beta+ + X * beta- - t
+  A_ub <- rbind(A_upper, A_lower)
+  
+  # Construct b_ub vector
+  b_ub <- c(y, -y)
+  
+  # Solve the linear program
+  lp_result <- lp(
+    direction = "min",
+    objective.in = f.obj,
+    const.mat = A_ub,
+    const.dir = rep("<=", 2 * p),
+    const.rhs = b_ub,
+    compute.sens = FALSE,
+    dense.const = TRUE
+  )
+  
+  # Check if the optimization was successful
+  if (lp_result$status == 0) {
+    # Extract the solution
+    solution <- lp_result$solution
+    beta_opt <- solution[1:n] - solution[(n+1):(2*n)]
+    t_opt <- solution[2*n + 1]
+    
+    cat("Optimal Zt:\n")
+    #print(beta_opt)
+    cat("\nMinimum infinity norm:", t_opt, "\n")
+  } else {
+    cat("Optimization failed. Status code:", lp_result$status, "\n")
+    cat("Message:", lp_result$message, "\n")
+  }
+  return(list('Z_t'=beta_opt,'loss'=t_opt))
+}
+
+# data
+generate_dataset = function(Psi,phi,beta,n, p, s, q, sigmaE, sigma, pert){
+  #create H and Gamma with N(0,1) values and of appropriate size. H can be tuned with pert
+  H = pert*matrix(rnorm(n*q,mean=0,sd=1),n,q,byrow = TRUE)
+  #value of X independent from H
+  E = matrix(rnorm(n*p,mean=0,sd=sigmaE),n,p,byrow = TRUE)
+
+  #f_H <- sin(H)
+
+  #defined in eq. (2), high-dimensional measured covariates
+  X = E + 4/(1+exp(-H%*%Psi)) + 4*sin(H%*%Psi)
+
+
+  # beta = matrix(rep(c(1,0),times = c(s,p-s)),p,1,byrow = TRUE)
+
+  #nx1 matrix with values of mean 0 and SD of sigma, error in Y independent of X
+  nu = matrix(rnorm(n*1,mean=0,sd=sigma),n,1,byrow = TRUE)
+
+  #eq. (1), the response of the Structural Equation Model
+  Y = X %*% beta + H %*% phi + nu
+  return_list = list("X"= X,"Y"= Y,"Hphi"=H%*%phi)
+  return(return_list)
+}
+
+
+
+
+
+# ## estimation
+# 
+# # our method
+# transfer_estimation <- function(X_s,y_s,X_t,y_t,rho=0.5,trim_form = 'standard',linear=TRUE){
+#   n_s = dim(X_s)[1]
+#   n_t = dim(X_t)[1]
+#   p = dim(X_s)[2]
+#   X = rbind(X_s,X_t)
+#   y = c(y_s,y_t)
+#   
+#   # trim operator
+#   
+#   # Q = Q_trim(X,rho=rho,trim_form = trim_form)
+#   # # do QX, QY together
+#   # QX = Q%*%X
+#   # Qy = Q%*%y
+#   # 
+#   # # split to source and target 
+#   # QX_s = QX[1:n_s,1:p]
+#   # Qy_s = Qy[1:n_s]
+#   # QX_t = QX[(n_s+1):(n_s+n_t),1:p]
+#   # Qy_t = Qy[(n_s+1):(n_s+n_t)]
+#   
+#   # trim operator
+#   Q_s = Q_trim(X_s,rho=rho,trim_form = trim_form)
+#   Q_t = Q_trim(X_t,rho=rho,trim_form = trim_form)
+#   # QX,Qy
+#   QX_s = Q_s%*%X_s
+#   Qy_s = Q_s%*%y_s
+#   QX_t = Q_t%*%X_t
+#   Qy_t = Q_t%*%y_t
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   beta_s = Lasso_func(QX_s,Qy_s)$beta
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   lasso_s = Lasso_func(QX_s,Qy_s)
+#   beta_s = lasso_s$beta
+#   
+#   # estimate bias Z_t
+#   Z_s = lasso_s$res
+#   Z_t = find_Zt(t(QX_t)/n_t, t(QX_s)%*%Z_s/n_s)$Z_t
+#   
+#   #estimate eta by Qy_t-Z_t-QX_t*beta_s~QX_t
+#   eta = Lasso_func(QX_t, Qy_t-Z_t-QX_t%*%beta_s)$beta
+#   
+#   ret_list = list('eta'=eta,'beta_s'=beta_s,'beta_t'=beta_s+eta)
+# }
+# 
+# # baseline 1: no transfer
+# baseline1_estimation <- function(X_s,y_s,X_t,y_t,rho=0.5,trim_form = 'standard'){
+#   
+#   # trim operator
+#   Q_s = Q_trim(X_s,rho=rho,trim_form = trim_form)
+#   Q_t = Q_trim(X_t,rho=rho,trim_form = trim_form)
+#   # QX,Qy
+#   QX_s = Q_s%*%X_s
+#   Qy_s = Q_s%*%y_s
+#   QX_t = Q_t%*%X_t
+#   Qy_t = Q_t%*%y_t
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   beta_s = Lasso_func(QX_s,Qy_s)$beta
+#   
+#   # estimate beta_t by Qy_t~QX_t
+#   beta_t = Lasso_func(QX_t,Qy_t)$beta
+#   
+#   ret_list = list('eta'=beta_t-beta_s,'beta_s'=beta_s,'beta_t'=beta_t)
+# }
+# 
+# # baseline 2
+# # transfer the coefficient beta 
+# # Transfer learning for high-dimensional linear regression: Prediction, estimation and minimax optimality. Sai Li, T. Tony Cai & Hongzhe Li. JRSSB 2021
+# baseline2_estimation <- function(X_s,y_s,X_t,y_t,rho=0.5,trim_form = 'standard'){
+#   # trim operator
+#   Q_s = Q_trim(X_s,rho=rho,trim_form = trim_form)
+#   Q_t = Q_trim(X_t,rho=rho,trim_form = trim_form)
+#   # QX,Qy
+#   QX_s = Q_s%*%X_s
+#   Qy_s = Q_s%*%y_s
+#   QX_t = Q_t%*%X_t
+#   Qy_t = Q_t%*%y_t
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   beta_s = Lasso_func(QX_s,Qy_s)$beta
+#   
+#   # estimate eta by Qy_t-QX_t*beta_s~QX_t
+#   eta = Lasso_func(QX_t,Qy_t-QX_t%*%beta_s)$beta
+#   
+#   ret_list = list('eta'=eta,'beta_s'=beta_s,'beta_t'=beta_s+eta)
+# }
+# 
+# # baseline 3: transfer the structure of X 
+# baseline3_estimation <- function(X_s,y_s,X_t,y_t,rho=0.5,trim_form = 'standard'){
+#   n_s = dim(X_s)[1]
+#   n_t = dim(X_t)[1]
+#   p = dim(X_s)[2]
+#   X = rbind(X_s,X_t)
+#   y = c(y_s,y_t)
+#   
+#   # trim operator
+#   Q = Q_trim(X,rho=rho,trim_form = trim_form)
+#   # do QX, QY together
+#   QX = Q%*%X
+#   Qy = Q%*%y
+#   
+#   # split to source and target 
+#   QX_s = QX[1:n_s,1:p]
+#   Qy_s = Qy[1:n_s]
+#   QX_t = QX[(n_s+1):(n_s+n_t),1:p]
+#   Qy_t = Qy[(n_s+1):(n_s+n_t)]
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   beta_s = Lasso_func(QX_s,Qy_s)$beta
+#   
+#   # estimate beta_t by Qy_t~QX_t
+#   beta_t = Lasso_func(QX_t,Qy_t)$beta
+#   
+#   ret_list = list('eta'=beta_t-beta_s,'beta_s'=beta_s,'beta_t'=beta_t)
+# }
+# 
+# # baseline 4: transfer both the structure of X and the coefficient beta
+# baseline4_estimation <- function(X_s,y_s,X_t,y_t,rho=0.5,trim_form = 'standard'){
+#   n_s = dim(X_s)[1]
+#   n_t = dim(X_t)[1]
+#   p = dim(X_s)[2]
+#   X = rbind(X_s,X_t)
+#   y = c(y_s,y_t)
+#   
+#   # trim operator
+#   Q = Q_trim(X,rho=rho,trim_form = trim_form)
+#   # do QX, QY together
+#   QX = Q%*%X
+#   Qy = Q%*%y
+#   
+#   # split to source and target 
+#   QX_s = QX[1:n_s,1:p]
+#   Qy_s = Qy[1:n_s]
+#   QX_t = QX[(n_s+1):(n_s+n_t),1:p]
+#   Qy_t = Qy[(n_s+1):(n_s+n_t)]
+#   
+#   # estimate beta_s by Qy_s~QX_s
+#   beta_s = Lasso_func(QX_s,Qy_s)$beta
+#   
+#   # estimate beta_t by Qy_t-QX_t*beta_s~QX_t
+#   eta = Lasso_func(QX_t,Qy_t-QX_t%*%beta_s)$beta
+#   
+#   ret_list = list('eta'=eta,'beta_s'=beta_s,'beta_t'=beta_s+eta)
+# }
+
