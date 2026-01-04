@@ -1,0 +1,2593 @@
+# Set working directory
+setwd('/home/yuanyuanbenben/project_transfer_learning/transfer_learning_confounder/realdata2')
+
+new_data <- read.table('dataset/default.dat', sep=' ')
+names(new_data) <- c('R0000100',
+                     'R0002200',
+                     'R0002202',
+                     'R0002203',
+                     'R0002300',
+                     'R0002400',
+                     'R0002451',
+                     'R0002454',
+                     'R0002455',
+                     'R0002456',
+                     'R0002500',
+                     'R0002700',
+                     'R0002800',
+                     'R0003400',
+                     'R0003600',
+                     'R0003800',
+                     'R0003900',
+                     'R0004000',
+                     'R0004100',
+                     'R0004300',
+                     'R0005400',
+                     'R0009100',
+                     'R0010500',
+                     'R0010800',
+                     'R0011100',
+                     'R0012800',
+                     'R0015000',
+                     'R0022600',
+                     'R0022700',
+                     'R0022800',
+                     'R0022900',
+                     'R0023000',
+                     'R0023100',
+                     'R0023200',
+                     'R0023300',
+                     'R0023400',
+                     'R0023500',
+                     'R0023600',
+                     'R0023700',
+                     'R0023800',
+                     'R0024000',
+                     'R0024100',
+                     'R0024200',
+                     'R0024300',
+                     'R0024400',
+                     'R0024500',
+                     'R0024600',
+                     'R0024800',
+                     'R0024900',
+                     'R0029700',
+                     'R0029800',
+                     'R0029900',
+                     'R0030000',
+                     'R0030100',
+                     'R0030200',
+                     'R0030300',
+                     'R0030400',
+                     'R0030500',
+                     'R0030600',
+                     'R0030700',
+                     'R0030800',
+                     'R0030900',
+                     'R0031000',
+                     'R0031100',
+                     'R0031200',
+                     'R0031300',
+                     'R0031400',
+                     'R0031500',
+                     'R0031600',
+                     'R0031700',
+                     'R0031800',
+                     'R0031900',
+                     'R0032000',
+                     'R0032100',
+                     'R0032200',
+                     'R0032300',
+                     'R0032400',
+                     'R0032500',
+                     'R0032600',
+                     'R0033600',
+                     'R0033700',
+                     'R0033800',
+                     'R0033900',
+                     'R0034600',
+                     'R0034900',
+                     'R0035100',
+                     'R0035200',
+                     'R0035300',
+                     'R0035400',
+                     'R0035500',
+                     'R0035600',
+                     'R0035700',
+                     'R0035800',
+                     'R0035900',
+                     'R0036000',
+                     'R0036100',
+                     'R0037500',
+                     'R0037600',
+                     'R0037700',
+                     'R0038000',
+                     'R0038100',
+                     'R0038200',
+                     'R0038800',
+                     'R0038900',
+                     'R0039000',
+                     'R0039100',
+                     'R0039200',
+                     'R0039300',
+                     'R0039400',
+                     'R0039500',
+                     'R0039600',
+                     'R0039700',
+                     'R0039800',
+                     'R0039900',
+                     'R0040000',
+                     'R0040100',
+                     'R0040200',
+                     'R0040400',
+                     'R0040600',
+                     'R0040700',
+                     'R0040800',
+                     'R0040900',
+                     'R0041100',
+                     'R0041300',
+                     'R0041400',
+                     'R0041500',
+                     'R0042100',
+                     'R0042200',
+                     'R0042300',
+                     'R0042400',
+                     'R0042500',
+                     'R0042600',
+                     'R0042700',
+                     'R0042800',
+                     'R0042900',
+                     'R0043000',
+                     'R0043100',
+                     'R0043200',
+                     'R0043300',
+                     'R0043400',
+                     'R0043500',
+                     'R0043600',
+                     'R0062300',
+                     'R0062310',
+                     'R0062550',
+                     'R0062600',
+                     'R0062900',
+                     'R0063000',
+                     'R0063030',
+                     'R0063060',
+                     'R0063090',
+                     'R0063100',
+                     'R0063200',
+                     'R0063230',
+                     'R0171200',
+                     'R0171300',
+                     'R0171400',
+                     'R0171500',
+                     'R0171600',
+                     'R0171700',
+                     'R0171800',
+                     'R0454700',
+                     'R0507300',
+                     'R0543940')
+
+
+# Handle missing values
+
+new_data[new_data == -1] = NA  # Refused
+new_data[new_data == -2] = NA  # Dont know
+new_data[new_data == -3] = NA  # Invalid missing
+new_data[new_data == -4] = NA  # Valid missing
+new_data[new_data == -5] = NA  # Non-interview
+
+
+# If there are values not categorized they will be represented as NA
+
+vallabels = function(data) {
+  data$R0002202 <- factor(data$R0002202,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,999.0),
+                          labels=c("1: JANUARY",
+                                   "2: FEBRUARY",
+                                   "3: MARCH",
+                                   "4: APRIL",
+                                   "5: MAY",
+                                   "6: JUNE",
+                                   "7: JULY",
+                                   "8: AUGUST",
+                                   "9: SEPTEMBER",
+                                   "10: OCTOBER",
+                                   "11: NOVEMBER",
+                                   "12: DECEMBER",
+                                   "999: NEVER"))
+  data$R0002300 <- factor(data$R0002300,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("WHITE",
+                                   "BLACK",
+                                   "OTHER"))
+  data$R0002400 <- factor(data$R0002400,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("MARRIED, SPOUSE PRESENT",
+                                   "MARRIED, SPOUSE ABSENT",
+                                   "WIDOWED",
+                                   "DIVORCED",
+                                   "SEPARATED",
+                                   "NEVER MARRIED"))
+  data$R0002451 <- factor(data$R0002451,
+                          levels=c(0.0,1.0),
+                          labels=c("LIVES IN NON-SOUTH",
+                                   "LIVES IN SOUTH"))
+  data$R0002454 <- factor(data$R0002454,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0),
+                          labels=c("0: DOES NOT LIVE IN SMSA",
+                                   "1: SMSA OF 1966 RESIDENCE",
+                                   "2: SMSA OF SECOND RESIDENCE",
+                                   "3: SMSA OF THIRD RESIDENCE",
+                                   "4: SMSA OF FOURTH RESIDENCE",
+                                   "5: SMSA OF FIFTH RESIDENCE",
+                                   "6: SMSA OF SIXTH RESIDENCE",
+                                   "7: SMSA OF SEVENTH RESIDENCE",
+                                   "8: SMSA OF EIGHTH RESIDENCE",
+                                   "9: SMSA OF NINTH RESIDENCE",
+                                   "10: SMSA OF TENTH RESIDENCE"))
+  data$R0002455 <- factor(data$R0002455,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("IN SMSA:  IN CENTRAL CITY",
+                                   "IN SMSA:  NOT IN CENTRAL CITY",
+                                   "NOT IN SMSA"))
+  data$R0002456 <- factor(data$R0002456,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0),
+                          labels=c("LESS THAN 50,000",
+                                   "50,000 TO 199,999",
+                                   "200,000 TO 399,999",
+                                   "400,000 TO 499,999",
+                                   "500,000 TO 799,999",
+                                   "800,000 TO 999,999",
+                                   "1,000,000 TO 2,999,999",
+                                   "3,000,000+"))
+  data$R0002500 <- factor(data$R0002500,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0),
+                          labels=c("URBANIZED AREA - 3,000,000 OR MORE",
+                                   "URBANIZED AREA - 1,000,000 TO 2,999,999",
+                                   "URBANIZED AREA - 250,000 TO 999,999",
+                                   "URBANIZED AREA - UNDER 250,000",
+                                   "URBAN PLACES 25,000 - OUTSIDE URBANIZED AREAS",
+                                   "URBAN PLACES 10,000 - 24,999 OUTSIDE URBANIZED AREAS",
+                                   "URBAN PLACES 2,500 - 9,999 OUTSIDE URBANIZED AREAS",
+                                   "RURAL BASED ON  1960 CENSUS CLASSIFICATION."))
+  data$R0002700 <- factor(data$R0002700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("URBAN",
+                                   "FARM (10 ACRES OR MORE, AND SALES $50+)",
+                                   "FARM (LESS THAN 10 ACRES, AND SALES $250+)",
+                                   "NONFARM (10 ACRES OR MORE, AND SALES LESS THAN $50)",
+                                   "NONFARM (LESS THAN 10 ACRES, AND SALES LESS THAN $250)"))
+  data$R0002800 <- factor(data$R0002800,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("OWNED OR BEING BOUGHT",
+                                   "RENTED",
+                                   "NO CASH RENT"))
+  data$R0003600 <- factor(data$R0003600,
+                          levels=c(1.0,2.0),
+                          labels=c("SCORE LESS THAN 20",
+                                   "SCORE IS 20 PLUS"))
+  data$R0003800 <- factor(data$R0003800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("YES, PRIVATE ONLY",
+                                   "YES, PUBLIC ONLY",
+                                   "YES, BOTH PUBLIC AND PRIVATE 2 YEAR COLLEGE",
+                                   "NO 2 YEAR COLLEGE"))
+  data$R0003900 <- factor(data$R0003900,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("AT LEAST ONE COED COLLEGE, BOYS AND GIRLS COLLEGES BOTH",
+                                   "BOYS COLLEGES ONLY",
+                                   "GIRLS COLLEGES ONLY",
+                                   "NO 2 YEAR COLLEGES"))
+  data$R0004000 <- factor(data$R0004000,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("YES, PRIVATE ONLY",
+                                   "YES, PUBLIC ONLY",
+                                   "YES, BOTH PUBLIC AND PRIVATE 4 YEAR COLLEGE",
+                                   "NO 4 YEAR COLLEGE"))
+  data$R0004100 <- factor(data$R0004100,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("AT LEAST ONE COED COLLEGE, BOYS AND GIRLS COLLEGES BOTH",
+                                   "BOYS COLLEGES ONLY",
+                                   "GIRLS COLLEGES ONLY",
+                                   "NO 4 YEAR COLLEGES"))
+  data$R0004300 <- factor(data$R0004300,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, NOT CURRENTLY ENROLLED",
+                                   "YES, CURRENTLY ENROLLED"))
+  data$R0005400 <- factor(data$R0005400,
+                          levels=c(1.0,2.0),
+                          labels=c("ENROLLED IN SCHOOL (EXCEPT ENROLLED IN ELEMENTARY SCHOOL) OR COLLEGE GRADUATE",
+                                   "ALL OTHERS NOT ENROLLED AND COMPLETED 1-15 YEARS OF SCHOOL"))
+  data$R0009100 <- factor(data$R0009100,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("YES, NAVY",
+                                   "YES, ARMY",
+                                   "YES, AIR FORCE",
+                                   "YES, MARINES",
+                                   "YES, COAST GUARD",
+                                   "NO, DID NOT SERVE"))
+  data$R0010500 <- factor(data$R0010500,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, OR UNDER 17 YEARS OLD",
+                                   "YES"))
+  data$R0010800 <- factor(data$R0010800,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("SAME SMSA OR COUNTY",
+                                   "DIFFERENT SMSA OR COUNTY, SAME STATE",
+                                   "DIFFERENT STATE, SAME DIVISION",
+                                   "DIFFERENT DIVISION",
+                                   "ABROAD (EXCEPT U.S. POSSESSIONS)"))
+  data$R0011100 <- factor(data$R0011100,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, PRIVATE",
+                                   "YES, PUBLIC"))
+  data$R0012800 <- factor(data$R0012800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LIKE IT VERY MUCH",
+                                   "LIKE IT FAIRLY WELL",
+                                   "DISLIKE IT SOMEWHAT",
+                                   "DISLIKE IT VERY MUCH"))
+  data$R0015000 <- factor(data$R0015000,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LIKE IT VERY MUCH",
+                                   "LIKE IT FAIRLY WELL",
+                                   "DISLIKE IT SOMEWHAT",
+                                   "DISLIKE IT VERY MUCH"))
+  data$R0022600 <- factor(data$R0022600,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LIKE IT VERY MUCH",
+                                   "LIKE IT FAIRLY WELL",
+                                   "DISLIKE IT SOMEWHAT",
+                                   "DISLIKE IT VERY MUCH"))
+  data$R0022700 <- factor(data$R0022700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,40.0),
+                          labels=c("LIKES THE KIND OF WORK",
+                                   "ABILITY OR CAPACITY TO DO WORK",
+                                   "FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING",
+                                   "TYPE OF WORK HAS VARIETY, IS INTERESTING",
+                                   "MY OWN BOSS, INDEPENDENCE",
+                                   "NOT MUCH PRESSURE OR MUCH RESPONSIBILITY",
+                                   "WORK INVOLVES RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB SECURITY",
+                                   "STEADY WORK",
+                                   "FRINGE BENEFITS",
+                                   "SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "CONGENIAL FELLOW WORKERS",
+                                   "GOOD UNION",
+                                   "KEEPS ME BUSY",
+                                   "MEET INTERESTING PEOPLE",
+                                   "OTHER EXTRINSIC",
+                                   "CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE",
+                                   "NOTHING (WRITTEN IN AS STATED)",
+                                   "Unknown"))
+  data$R0022800 <- factor(data$R0022800,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0),
+                          labels=c("LIKES THE KIND OF WORK",
+                                   "ABILITY OR CAPACITY TO DO WORK",
+                                   "FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING",
+                                   "TYPE OF WORK HAS VARIETY, IS INTERESTING",
+                                   "MY OWN BOSS, INDEPENDENCE",
+                                   "NOT MUCH PRESSURE OR MUCH RESPONSIBILITY",
+                                   "WORK INVOLVES RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB SECURITY",
+                                   "STEADY WORK",
+                                   "FRINGE BENEFITS",
+                                   "SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "CONGENIAL FELLOW WORKERS",
+                                   "GOOD UNION",
+                                   "KEEPS ME BUSY",
+                                   "MEET INTERESTING PEOPLE",
+                                   "OTHER EXTRINSIC",
+                                   "CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE"))
+  data$R0022900 <- factor(data$R0022900,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0),
+                          labels=c("LIKES THE KIND OF WORK",
+                                   "ABILITY OR CAPACITY TO DO WORK",
+                                   "FEELS THAT TYPE OF WORK IS IMPORTANT, SATISFYING, CHALLENGING",
+                                   "TYPE OF WORK HAS VARIETY, IS INTERESTING",
+                                   "MY OWN BOSS, INDEPENDENCE",
+                                   "NOT MUCH PRESSURE OR MUCH RESPONSIBILITY",
+                                   "WORK INVOLVES RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB SECURITY",
+                                   "STEADY WORK",
+                                   "FRINGE BENEFITS",
+                                   "SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "CONGENIAL FELLOW WORKERS",
+                                   "GOOD UNION",
+                                   "KEEPS ME BUSY",
+                                   "MEET INTERESTING PEOPLE",
+                                   "OTHER EXTRINSIC",
+                                   "CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE"))
+  data$R0023000 <- factor(data$R0023000,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,40.0),
+                          labels=c("DISLIKES THE KIND OF WORK",
+                                   "WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS DANGEROUS, HAZARDOUS",
+                                   "FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT CHALLENGING, NOT MAKING USE OF ABILITIES",
+                                   "TYPE OF WORK IS MONOTONOUS, DULL",
+                                   "CODE 5 IS NOT USED HERE",
+                                   "TOO MUCH PRESSURE OR RESPONSIBILITY",
+                                   "WORK INVOLVES LITTLE OR NO RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB INSECURITY",
+                                   "WORK NOT STEADY",
+                                   "FRINGE BENEFITS",
+                                   "LACK OF SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "DISLIKES FELLOW WORKERS",
+                                   "POOR UNION",
+                                   "NOT ENOUGH TO DO",
+                                   "CODE 21 IS NOT USED",
+                                   "OTHER EXTRINSIC",
+                                   "NO CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE",
+                                   "NOTHING (WRITTEN AS STATED)",
+                                   "UNKNOWN"))
+  data$R0023100 <- factor(data$R0023100,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,40.0),
+                          labels=c("DISLIKES THE KIND OF WORK",
+                                   "WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS DANGEROUS, HAZARDOUS",
+                                   "FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT CHALLENGING, NOT MAKING USE OF ABILITIES",
+                                   "TYPE OF WORK IS MONOTONOUS, DULL",
+                                   "CODE 5 IS NOT USED HERE",
+                                   "TOO MUCH PRESSURE OR RESPONSIBILITY",
+                                   "WORK INVOLVES LITTLE OR NO RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB INSECURITY",
+                                   "WORK NOT STEADY",
+                                   "FRINGE BENEFITS",
+                                   "LACK OF SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "DISLIKES FELLOW WORKERS",
+                                   "POOR UNION",
+                                   "NOT ENOUGH TO DO",
+                                   "CODE 21 IS NOT USED",
+                                   "OTHER EXTRINSIC",
+                                   "NO CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE",
+                                   "NOTHING (WRITTEN AS STATED)",
+                                   "UNKNOWN"))
+  data$R0023200 <- factor(data$R0023200,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,40.0),
+                          labels=c("DISLIKES THE KIND OF WORK",
+                                   "WORK IS DIFFICULT: ON FEET ALL DAY, TOO MUCH LIFTING, WORK IS DANGEROUS, HAZARDOUS",
+                                   "FEELS TYPE OF WORK IS NOT IMPORTANT, NOT SATISFYING, NOT CHALLENGING, NOT MAKING USE OF ABILITIES",
+                                   "TYPE OF WORK IS MONOTONOUS, DULL",
+                                   "CODE 5 IS NOT USED HERE",
+                                   "TOO MUCH PRESSURE OR RESPONSIBILITY",
+                                   "WORK INVOLVES LITTLE OR NO RESPONSIBILITY",
+                                   "OTHER INTRINSIC",
+                                   "EARNINGS",
+                                   "JOB INSECURITY",
+                                   "WORK NOT STEADY",
+                                   "FRINGE BENEFITS",
+                                   "LACK OF SENIORITY",
+                                   "HOURS OF WORK",
+                                   "WORKING CONDITIONS",
+                                   "SUPERVISION",
+                                   "COMPANY POLICY AND ADMINISTRATION",
+                                   "DISLIKES FELLOW WORKERS",
+                                   "POOR UNION",
+                                   "NOT ENOUGH TO DO",
+                                   "CODE 21 IS NOT USED",
+                                   "OTHER EXTRINSIC",
+                                   "NO CHANCE FOR ADVANCEMENT",
+                                   "UNCLASSIFIABLE",
+                                   "NOTHING (WRITTEN AS STATED)",
+                                   "UNKNOWN"))
+  data$R0023400 <- factor(data$R0023400,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0),
+                          labels=c("HOUR",
+                                   "DAY",
+                                   "WEEK",
+                                   "BIWEEKLY OR SEMI-MONTHLY",
+                                   "MONTHLY",
+                                   "YEARLY",
+                                   "PIECE RATE",
+                                   "ANY PAY OR OTHER"))
+  data$R0023500 <- factor(data$R0023500,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("WOULD TAKE A STEADY JOB AT SAME OR LESS PAY",
+                                   "WOULD ACCEPT JOB, DONT KNOW AMOUNT",
+                                   "WOULDNT TAKE IT AT ANY CONCEIVABLE PAY",
+                                   "OTHER"))
+  data$R0023700 <- factor(data$R0023700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0),
+                          labels=c("HOUR",
+                                   "DAY",
+                                   "WEEK",
+                                   "BIWEEKLY OR SEMI-MONTHLY",
+                                   "MONTHLY",
+                                   "YEARLY",
+                                   "PIECE RATE",
+                                   "ANY PAY OR OTHER"))
+  data$R0023800 <- factor(data$R0023800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("WOULD TAKE A STEADY JOB AT SAME OR LESS PAY",
+                                   "WOULD ACCEPT JOB, DONT KNOW AMOUNT",
+                                   "WOULDNT TAKE IT AT ANY CONCEIVABLE PAY",
+                                   "OTHER"))
+  data$R0024000 <- factor(data$R0024000,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("RETURN TO SCHOOL; GET TRAINING",
+                                   "TAKE ANOTHER JOB I KNOW ABOUT",
+                                   "GO INTO BUSINESS",
+                                   "LOOK FOR WORK",
+                                   "ENTER ARMED FORCES",
+                                   "OTHER"))
+  data$R0024100 <- factor(data$R0024100,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("NONE",
+                                   "PROFESSIONAL, TECHNICAL",
+                                   "MANAGERIAL",
+                                   "CLERICAL, SALES",
+                                   "SKILLED MANUAL",
+                                   "SEMI-SKILLED MANUAL",
+                                   "OTHER"))
+  data$R0024200 <- factor(data$R0024200,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("HIGH SCHOOL",
+                                   "COLLEGE",
+                                   "BUSINESS SCHOOL OR COLLEGE",
+                                   "TRADE OR TECHNICAL SCHOOL",
+                                   "OTHER"))
+  data$R0024300 <- factor(data$R0024300,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0),
+                          labels=c("SCHOLARSHIP",
+                                   "AID FROM PARENTS, RELATIVES",
+                                   "WORK (FULL OR PART-TIME)",
+                                   "SAVINGS",
+                                   "GOVERNMENT PROGRAM",
+                                   "OTHER",
+                                   "COMBINATION OF METHODS (INCLUDING WORK)",
+                                   "COMBINATION OF METHODS (EXCLUDING WORK)"))
+  data$R0024600 <- factor(data$R0024600,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("SAME SMSA OR COUNTY",
+                                   "DIFFERENT SMSA OR COUNTY, SAME STATE",
+                                   "DIFFERENT STATE, SAME DIVISION",
+                                   "DIFFERENT DIVISION",
+                                   "ABROAD (EXCEPT U.S. POSSESSIONS)"))
+  data$R0024800 <- factor(data$R0024800,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("SAME SMSA OR COUNTY",
+                                   "DIFFERENT SMSA OR COUNTY, SAME STATE",
+                                   "DIFFERENT STATE, SAME DIVISION",
+                                   "DIFFERENT DIVISION",
+                                   "ABROAD (EXCEPT U.S. POSSESSIONS)"))
+  data$R0029700 <- factor(data$R0029700,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("HELPS TO TAKE CARE OF HOSPITAL PATIENTS",
+                                   "ORDERS FOOD AND OTHER SUPPLIES FOR HOSPITAL KITCHENS",
+                                   "WORKS AT HOSPITAL DESK WHERE PATIENTS CHECK IN"))
+  data$R0029800 <- factor(data$R0029800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0029900 <- factor(data$R0029900,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("MAKES ADJUSTMENTS ON AUTOMOBILE, AIRPLANE, AND TRACTOR ENGINES",
+                                   "REPAIRS ELECTRICAL EQUIPMENT",
+                                   "SETS UP AND OPERATES METAL LATHES, SHAPERS, GRINDERS, BUFFERS, ETC."))
+  data$R0030000 <- factor(data$R0030000,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0030100 <- factor(data$R0030100,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("BUILDS WOODEN CRATES TO HOLD TANKS OF ACETYLENE GAS",
+                                   "USES A GAS TORCH TO CUT METAL OR JOIN PIECES OF METAL TOGETHER",
+                                   "OPERATES A MACHINE THAT STITCHES THE SOLES TO THE UPPER PARTS OF SHOES"))
+  data$R0030200 <- factor(data$R0030200,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0030300 <- factor(data$R0030300,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("WORKS AT A DESK, MAKING DRAWINGS AND SOLVING ENGINEERING PROBLEMS",
+                                   "DRIVES A LOCOMOTIVE THAT MOVES CARS AROUND IN A FREIGHT YARD",
+                                   "OPERATES AND MAINTAINS SUCH EQUIPMENT AS STEAM BOILERS AND GENERATORS"))
+  data$R0030400 <- factor(data$R0030400,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0030500 <- factor(data$R0030500,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("MAKES CALCULATIONS WITH AN ADDING MACHINE OR A CALCULATOR",
+                                   "SELLS VARIOUS KINDS OF OFFICE MACHINES AND OFFICE SUPPLIES",
+                                   "COLLECTS TICKETS AT SPORTS EVENTS AND OTHER TYPES OF ENTERTAINMENT"))
+  data$R0030600 <- factor(data$R0030600,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0030700 <- factor(data$R0030700,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("OPERATES A MACHINE THAT MAKES A CERTAIN KIND OF AGRICULTURAL TOOL",
+                                   "OPERATES A FREIGHT ELEVATOR IN A WAREHOUSE OR FACTORY",
+                                   "DRIVES AN ELECTRICAL OR GAS POWERED MACHINE TO MOVE MATERIAL IN A WAREHOUSE OR FACTORY"))
+  data$R0030800 <- factor(data$R0030800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0030900 <- factor(data$R0030900,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("PREPARES MENUS IN A HOSPITAL, HOTEL, OR OTHER SUCH ESTABLISHMENT",
+                                   "DOES RESEARCH ON SUCH MATTERS AS GENERAL BUSINESS CONDITIONS, UNEMPLOYMENT, ETC.",
+                                   "ASSISTS A CHEMIST IN DEVELOPING CHEMICAL FORMULAS"))
+  data$R0031000 <- factor(data$R0031000,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0031100 <- factor(data$R0031100,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("HANDS TOOLS AND EQUIPMENT TO A SURGEON DURING AN OPERATION",
+                                   "DEMONSTRATES THE USE OF VARIOUS TYPES OF MEDICINES",
+                                   "DRAWS PICTURES THAT ARE USED TO TEACH ANATOMY AND SURGICAL OPERATING PROCEDURES"))
+  data$R0031200 <- factor(data$R0031200,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0031300 <- factor(data$R0031300,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("MAKES SCALE DRAWINGS OF PRODUCTS OR EQUIPMENT FOR ENGINEERING OR MANUFACTURING PURPOSES",
+                                   "MIXES AND SERVES DRINKS IN A BAR OR TAVERN",
+                                   "PUSHES OR PULLS A CART IN A FACTORY OR WAREHOUSE"))
+  data$R0031400 <- factor(data$R0031400,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0031500 <- factor(data$R0031500,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("WORKS FOR A WELFARE AGENCY AND HELPS PEOPLE WITH VARIOUS TYPES OF PROBLEMS THEY MAY HAVE",
+                                   "CONDUCTS RESEARCH ON LIFE IN PRIMITIVE SOCIETIES",
+                                   "WRITES NEWSPAPER STORIES ON MARRIAGES, ENGAGEMENTS, BIRTHS, AND SIMILAR EVENTS"))
+  data$R0031600 <- factor(data$R0031600,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("LESS THAN A HIGH SCHOOL DIPLOMA",
+                                   "A HIGH SCHOOL DIPLOMA",
+                                   "SOME COLLEGE",
+                                   "COLLEGE DEGREE"))
+  data$R0031700 <- factor(data$R0031700,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("LIKING IT",
+                                   "GOOD WAGES",
+                                   "COMBINATION OF LIKING IT AND GOOD WAGES"))
+  data$R0031800 <- factor(data$R0031800,
+                          levels=c(1.0,2.0),
+                          labels=c("AN AUTOMOBILE MECHANIC",
+                                   "AN ELECTRICIAN"))
+  data$R0031900 <- factor(data$R0031900,
+                          levels=c(1.0,2.0),
+                          labels=c("A MEDICAL DOCTOR",
+                                   "A LAWYER"))
+  data$R0032000 <- factor(data$R0032000,
+                          levels=c(1.0,2.0),
+                          labels=c("AN AERONAUTICAL ENGINEER",
+                                   "A MEDICAL DOCTOR"))
+  data$R0032100 <- factor(data$R0032100,
+                          levels=c(1.0,2.0),
+                          labels=c("A TRUCK DRIVER",
+                                   "A GROCERY STORE CLERK"))
+  data$R0032200 <- factor(data$R0032200,
+                          levels=c(1.0,2.0),
+                          labels=c("AN UNSKILLED LABORER IN A STEEL MILL",
+                                   "AN UNSKILLED LABORER IN A SHOE FACTORY"))
+  data$R0032300 <- factor(data$R0032300,
+                          levels=c(1.0,2.0),
+                          labels=c("A LAWYER",
+                                   "A HIGH SCHOOL TEACHER"))
+  data$R0032400 <- factor(data$R0032400,
+                          levels=c(1.0,2.0),
+                          labels=c("A HIGH SCHOOL TEACHER",
+                                   "A JANITOR"))
+  data$R0032500 <- factor(data$R0032500,
+                          levels=c(1.0,2.0),
+                          labels=c("A JANITOR",
+                                   "A POLICEMAN"))
+  data$R0032600 <- factor(data$R0032600,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0033600 <- factor(data$R0033600,
+                          levels=c(1.0,2.0),
+                          labels=c("RESPONDENT CURRENTLY IN SCHOOL",
+                                   "RESPONDENT CURRENTLY NOT IN SCHOOL"))
+  data$R0033700 <- factor(data$R0033700,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0033800 <- factor(data$R0033800,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0033900 <- factor(data$R0033900,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0034600 <- factor(data$R0034600,
+                          levels=c(1.0,2.0),
+                          labels=c("RESPONDENT IS NOT HEAD OF HOUSEHOLD",
+                                   "RESPONDENT IS HEAD OF HOUSEHOLD"))
+  data$R0034900 <- factor(data$R0034900,
+                          levels=c(1.0,2.0),
+                          labels=c("OWNED OR BEING BOUGHT",
+                                   "RENT OR NO CASH RENT"))
+  data$R0035600 <- factor(data$R0035600,
+                          levels=c(0.0,1.0,2.0,3.0,4.0),
+                          labels=c("NONE",
+                                   "YES, FARM",
+                                   "YES, BUSINESS",
+                                   "YES, REAL ESTATE",
+                                   "YES, COMBINATION OF CODES 1, 2, AND/OR 3"))
+  data$R0037500 <- factor(data$R0037500,
+                          levels=c(1.0,2.0),
+                          labels=c("RESPONDENT LIVES WITH PARENTS",
+                                   "RESPONDENT DOES NOT LIVE WITH PARENTS"))
+  data$R0037700 <- factor(data$R0037700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0),
+                          labels=c("PARENTS (PARENTS-IN-LAW)",
+                                   "BROTHERS AND SISTERS (INCLUDING IN-LAWS)",
+                                   "CHILDREN",
+                                   "COMBINATION OF CODES 1, 2, OR 3",
+                                   "OTHER FAMILY MEMBERS",
+                                   "NA",
+                                   "NONE"))
+  data$R0038000 <- factor(data$R0038000,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, BORN OUTSIDE THE UNITED STATES",
+                                   "YES, BORN IN THE UNITED STATES"))
+  data$R0038100 <- factor(data$R0038100,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("SAME SMSA OR COUNTY",
+                                   "DIFFERENT SMSA OR COUNTY, SAME STATE",
+                                   "DIFFERENT STATE, SAME DIVISION",
+                                   "DIFFERENT DIVISION",
+                                   "ABROAD (EXCEPT U.S. POSSESSIONS)"))
+  data$R0038200 <- factor(data$R0038200,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("LESS THAN 1 YEAR",
+                                   "1 YEAR OR MORE",
+                                   "ALL MY LIFE"))
+  data$R0038800 <- factor(data$R0038800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("BOTH PARENTS ALIVE",
+                                   "MOTHER ALIVE, FATHER DEAD",
+                                   "FATHER ALIVE, MOTHER DEAD",
+                                   "NEITHER PARENT ALIVE"))
+  data$R0038900 <- factor(data$R0038900,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("RESPONDENT IS NOT MARRIED",
+                                   "BOTH PARENTS ALIVE",
+                                   "MOTHER ALIVE, FATHER DEAD",
+                                   "FATHER ALIVE, MOTHER DEAD",
+                                   "NEITHER PARENT ALIVE"))
+  data$R0039000 <- factor(data$R0039000,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039100 <- factor(data$R0039100,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039200 <- factor(data$R0039200,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039300 <- factor(data$R0039300,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039400 <- factor(data$R0039400,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039500 <- factor(data$R0039500,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("U.S. OR CANADA",
+                                   "NORTH OR WEST EUROPE",
+                                   "CENTRAL OR EASTERN EUROPE",
+                                   "SOUTHERN EUROPE",
+                                   "LATIN AMERICA",
+                                   "OTHER"))
+  data$R0039600 <- factor(data$R0039600,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("ON A FARM OR RANCH",
+                                   "IN THE COUNTRY, NOT ON FARM OR RANCH",
+                                   "IN A TOWN OR SMALL CITY (UNDER 25,000)",
+                                   "IN THE SUBURB OF A LARGE CITY",
+                                   "IN A CITY OF 25,000 - 100,000",
+                                   "IN A LARGE CITY (100,000 OR MORE)"))
+  data$R0039700 <- factor(data$R0039700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0),
+                          labels=c("FATHER AND MOTHER",
+                                   "FATHER AND STEP-MOTHER",
+                                   "MOTHER AND STEP-FATHER",
+                                   "FATHER",
+                                   "MOTHER",
+                                   "SOME OTHER ADULT MALE RELATIVE",
+                                   "SOME OTHER ADULT FEMALE RELATIVE",
+                                   "SOME OTHER ARRANGEMENT",
+                                   "ON MY OWN"))
+  data$R0039900 <- factor(data$R0039900,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0040000 <- factor(data$R0040000,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0040100 <- factor(data$R0040100,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0040200 <- factor(data$R0040200,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("FATHER LIVES IN HOUSEHOLD",
+                                   "FATHER DECEASED",
+                                   "DID NOT LIVE WITH FATHER WHEN 14 YEARS OLD",
+                                   "OTHER"))
+  data$R0040400 <- factor(data$R0040400,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, PART-TIME",
+                                   "YES, FULL-TIME"))
+  data$R0040600 <- factor(data$R0040600,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0),
+                          labels=c("NONE",
+                                   "FIRST GRADE",
+                                   "SECOND GRADE",
+                                   "THIRD GRADE",
+                                   "FOURTH GRADE",
+                                   "FIFTH GRADE",
+                                   "SIXTH GRADE",
+                                   "SEVENTH GRADE",
+                                   "EIGHTH GRADE",
+                                   "NINTH GRADE",
+                                   "TENTH GRADE",
+                                   "ELEVENTH GRADE",
+                                   "TWELFTH GRADE",
+                                   "FIRST YEAR COLLEGE",
+                                   "SECOND YEAR COLLEGE",
+                                   "THIRD YEAR COLLEGE",
+                                   "FOURTH YEAR COLLEGE",
+                                   "FIFTH YEAR COLLEGE",
+                                   "SIXTH+ YEARS COLLEGE"))
+  data$R0040700 <- factor(data$R0040700,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0040800 <- factor(data$R0040800,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("MOTHER LIVES IN HOUSEHOLD",
+                                   "MOTHER DECEASED",
+                                   "DID NOT LIVE WITH MOTHER WHEN 14 YEARS OLD",
+                                   "OTHER"))
+  data$R0040900 <- factor(data$R0040900,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0041100 <- factor(data$R0041100,
+                          levels=c(0.0,1.0),
+                          labels=c("NO, PART-TIME",
+                                   "YES, FULL-TIME"))
+  data$R0041300 <- factor(data$R0041300,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0),
+                          labels=c("NONE",
+                                   "FIRST GRADE",
+                                   "SECOND GRADE",
+                                   "THIRD GRADE",
+                                   "FOURTH GRADE",
+                                   "FIFTH GRADE",
+                                   "SIXTH GRADE",
+                                   "SEVENTH GRADE",
+                                   "EIGHTH GRADE",
+                                   "NINTH GRADE",
+                                   "TENTH GRADE",
+                                   "ELEVENTH GRADE",
+                                   "TWELFTH GRADE",
+                                   "FIRST YEAR COLLEGE",
+                                   "SECOND YEAR COLLEGE",
+                                   "THIRD YEAR COLLEGE",
+                                   "FOURTH YEAR COLLEGE",
+                                   "FIFTH YEAR COLLEGE",
+                                   "SIXTH+ YEARS COLLEGE"))
+  data$R0041400 <- factor(data$R0041400,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0041500 <- factor(data$R0041500,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0042100 <- factor(data$R0042100,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0),
+                          labels=c("SPOUSE",
+                                   "CHILD (SEX NOT SPECIFIED)",
+                                   "SON",
+                                   "DAUGHTER",
+                                   "PARENT (SEX NOT SPECIFIED)",
+                                   "FATHER",
+                                   "MOTHER",
+                                   "PARENT-IN-LAW",
+                                   "SIBLING (SEX NOT SPECIFIED)",
+                                   "SISTER",
+                                   "BROTHER",
+                                   "GRANDCHILD",
+                                   "OTHER RELATIVE"))
+  data$R0042300 <- factor(data$R0042300,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0042500 <- factor(data$R0042500,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0042900 <- factor(data$R0042900,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0),
+                          labels=c("SPOUSE",
+                                   "CHILD (SEX NOT SPECIFIED)",
+                                   "SON",
+                                   "DAUGHTER",
+                                   "PARENT (SEX NOT SPECIFIED)",
+                                   "FATHER",
+                                   "MOTHER",
+                                   "PARENT-IN-LAW",
+                                   "SIBLING (SEX NOT SPECIFIED)",
+                                   "SISTER",
+                                   "BROTHER",
+                                   "GRANDCHILD",
+                                   "OTHER RELATIVE"))
+  data$R0043100 <- factor(data$R0043100,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0043300 <- factor(data$R0043300,
+                          levels=c(0.0,1.0),
+                          labels=c("NO",
+                                   "YES"))
+  data$R0062600 <- factor(data$R0062600,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0),
+                          labels=c("PROFESSIONAL, TECHNICAL, AND KINDRED",
+                                   "MANAGERS, OFFICIALS, AND PROPRIETORS",
+                                   "CLERICAL AND KINDRED",
+                                   "SALES WORKERS",
+                                   "CRAFTSMEN, FOREMEN, AND KINDRED",
+                                   "OPERATIVES AND KINDRED",
+                                   "PRIVATE HOUSEHOLD WORKERS",
+                                   "SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD",
+                                   "FARMERS AND FARM MANAGERS",
+                                   "FARM LABORERS AND FOREMEN",
+                                   "LABORERS, EXCEPT FARM AND MINE",
+                                   "ARMED FORCES"))
+  data$R0063000 <- factor(data$R0063000,
+                          levels=c(0.0,1.0),
+                          labels=c("DID NOT WORK",
+                                   "WORKED"))
+  data$R0063100 <- factor(data$R0063100,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0),
+                          labels=c("NONE",
+                                   "FIRST GRADE",
+                                   "SECOND GRADE",
+                                   "THIRD GRADE",
+                                   "FOURTH GRADE",
+                                   "FIFTH GRADE",
+                                   "SIXTH GRADE",
+                                   "SEVENTH GRADE",
+                                   "EIGHTH GRADE",
+                                   "NINTH GRADE",
+                                   "TENTH GRADE",
+                                   "ELEVENTH GRADE",
+                                   "TWELFTH GRADE",
+                                   "FIRST YEAR COLLEGE",
+                                   "SECOND YEAR COLLEGE",
+                                   "THIRD YEAR COLLEGE",
+                                   "FOURTH YEAR COLLEGE",
+                                   "FIFTH YEAR COLLEGE",
+                                   "SIXTH+ YEARS COLLEGE"))
+  data$R0063200 <- factor(data$R0063200,
+                          levels=c(0.0,1.0),
+                          labels=c("DID NOT WORK",
+                                   "WORKED"))
+  data$R0171200 <- factor(data$R0171200,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0),
+                          labels=c("NO I.Q. TEST NAME OR POINT AVERAGE",
+                                   "OTIS/ BETA/ GAMMA",
+                                   "CALIFORNIA TEST OF MENTAL MATURITY (CTMM/CMM)",
+                                   "LORGE-THORNDIKE INTELLIGENCE TEST",
+                                   "HENMON-NELSON TEST (HNTMA)",
+                                   "TEST OF EDUCATIONAL ABILITY (TEA)",
+                                   "PRIMARY MENTAL ABILITY TEST (PMA/PMAT)",
+                                   "PRELIMINARY AND SCHOLASTIC APTITUDE TESTS (PSAT/SAT/CEEB)",
+                                   "IOWA TEST OF EDUCATIONAL DEVELOPMENT (ITED)",
+                                   "DIFFERENTIAL APTITUDE TEST (DAT)",
+                                   "SCHOOL AND COLLEGE ABILITY TEST (SCAT)",
+                                   "AMERICAN COLLEGE TESTING PROGRAM (ACT/ACTP)",
+                                   "NATIONAL MERIT SCHOLARSHIP QUALIFYING TEST (NMSQT)",
+                                   "I.Q. SCORE ESTIMATED FROM GRADE POINT AVERAGE (ITEM 12)",
+                                   "MISCELLANEOUS OTHER TESTS CODED BY DR. HERRIOTT",
+                                   "MISCELLANEOUS OTHER TESTS CODED BY CENSUS BUREAU CLERKS"))
+  data$R0171300 <- factor(data$R0171300,
+                          levels=c(1.0,2.0),
+                          labels=c("BOTTOM HALF",
+                                   "TOP HALF"))
+  data$R0171400 <- factor(data$R0171400,
+                          levels=c(1.0,2.0,3.0),
+                          labels=c("BOTTOM THIRD",
+                                   "MIDDLE THIRD",
+                                   "TOP THIRD"))
+  data$R0171500 <- factor(data$R0171500,
+                          levels=c(1.0,2.0,3.0,4.0),
+                          labels=c("BOTTOM QUARTILE",
+                                   "3RD QUARTILE",
+                                   "2ND QUARTILE",
+                                   "TOP QUARTILE"))
+  data$R0171600 <- factor(data$R0171600,
+                          levels=c(1.0,2.0,3.0,4.0,5.0),
+                          labels=c("BOTTOM QUINTILE",
+                                   "4TH QUINTILE",
+                                   "3RD QUINTILE",
+                                   "2ND QUINTILE",
+                                   "TOP QUINTILE"))
+  data$R0171700 <- factor(data$R0171700,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0),
+                          labels=c("BOTTOM TEN PERCENT",
+                                   "9TH TENTH",
+                                   "8TH TENTH",
+                                   "7TH TENTH",
+                                   "6TH TENTH",
+                                   "5TH TENTH",
+                                   "4TH TENTH",
+                                   "3RD TENTH",
+                                   "2ND TENTH",
+                                   "TOP TEN PERCENT"))
+  data$R0171800 <- factor(data$R0171800,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0),
+                          labels=c("LOWEST STANINE - LOWEST 4 PERCENT",
+                                   "NEXT 7 PERCENT",
+                                   "NEXT 12 PERCENT",
+                                   "NEXT 17 PERCENT",
+                                   "MIDDLE 20 PERCENT",
+                                   "NEXT 17 PERCENT",
+                                   "NEXT 12 PERCENT",
+                                   "NEXT 7 PERCENT",
+                                   "HIGHEST STANINE - HIGHEST 4 PERCENT"))
+  data$R0507300 <- factor(data$R0507300,
+                          levels=c(1.0,2.0,3.0,4.0,5.0,6.0),
+                          labels=c("MARRIED, SPOUSE PRESENT",
+                                   "MARRIED, SPOUSE ABSENT",
+                                   "WIDOWED",
+                                   "DIVORCED",
+                                   "SEPARATED",
+                                   "NEVER MARRIED"))
+  data$R0543940 <- factor(data$R0543940,
+                          levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0),
+                          labels=c("NONE",
+                                   "FIRST GRADE",
+                                   "SECOND GRADE",
+                                   "THIRD GRADE",
+                                   "FOURTH GRADE",
+                                   "FIFTH GRADE",
+                                   "SIXTH GRADE",
+                                   "SEVENTH GRADE",
+                                   "EIGHTH GRADE",
+                                   "NINTH GRADE",
+                                   "TENTH GRADE",
+                                   "ELEVENTH GRADE",
+                                   "TWELFTH GRADE",
+                                   "FIRST YEAR COLLEGE",
+                                   "SECOND YEAR COLLEGE",
+                                   "THIRD YEAR COLLEGE",
+                                   "FOURTH YEAR COLLEGE",
+                                   "FIFTH YEAR COLLEGE",
+                                   "SIXTH+ YEARS COLLEGE"))
+  return(data)
+}
+
+
+# If there are values not categorized they will be represented as NA
+
+vallabels_continuous = function(data) {
+  data$R0000100[1.0 <= data$R0000100 & data$R0000100 <= 5225.0] <- 1.0
+  data$R0000100 <- factor(data$R0000100,
+                          levels=c(1.0),
+                          labels=c("1 TO 5225: IDENTIFICATION CODE - YM COHORT"))
+  data$R0002200[0.0 <= data$R0002200 & data$R0002200 <= 13.0] <- 0.0
+  data$R0002200[29.0 <= data$R0002200 & data$R0002200 <= 99.0] <- 29.0
+  data$R0002200 <- factor(data$R0002200,
+                          levels=c(0.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0),
+                          labels=c("0 TO 13",
+                                   "14",
+                                   "15",
+                                   "16",
+                                   "17",
+                                   "18",
+                                   "19",
+                                   "20",
+                                   "21",
+                                   "22",
+                                   "23",
+                                   "24",
+                                   "25",
+                                   "26",
+                                   "27",
+                                   "28",
+                                   "29 TO 99"))
+  data$R0002203[21.0 <= data$R0002203 & data$R0002203 <= 35.0] <- 21.0
+  data$R0002203[36.0 <= data$R0002203 & data$R0002203 <= 40.0] <- 36.0
+  data$R0002203[53.0 <= data$R0002203 & data$R0002203 <= 63.0] <- 53.0
+  data$R0002203 <- factor(data$R0002203,
+                          levels=c(21.0,36.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0),
+                          labels=c("21 TO 35: 1921-1935",
+                                   "36 TO 40: 1936-1940",
+                                   "41: 1941",
+                                   "42: 1942",
+                                   "43: 1943",
+                                   "44: 1944",
+                                   "45: 1945",
+                                   "46: 1946",
+                                   "47: 1947",
+                                   "48: 1948",
+                                   "49: 1949",
+                                   "50: 1950",
+                                   "51: 1951",
+                                   "52: 1952",
+                                   "53 TO 63: 1953-1963"))
+  data$R0003400[5.0 <= data$R0003400 & data$R0003400 <= 9.0] <- 5.0
+  data$R0003400[10.0 <= data$R0003400 & data$R0003400 <= 14.0] <- 10.0
+  data$R0003400[15.0 <= data$R0003400 & data$R0003400 <= 19.0] <- 15.0
+  data$R0003400[20.0 <= data$R0003400 & data$R0003400 <= 24.0] <- 20.0
+  data$R0003400[25.0 <= data$R0003400 & data$R0003400 <= 29.0] <- 25.0
+  data$R0003400[30.0 <= data$R0003400 & data$R0003400 <= 34.0] <- 30.0
+  data$R0003400[35.0 <= data$R0003400 & data$R0003400 <= 39.0] <- 35.0
+  data$R0003400[40.0 <= data$R0003400 & data$R0003400 <= 99.0] <- 40.0
+  data$R0003400 <- factor(data$R0003400,
+                          levels=c(0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0),
+                          labels=c("0: DOES NOT LINE IN ONE OF SELECTED LABOR MARKETS",
+                                   "5 TO 9",
+                                   "10 TO 14",
+                                   "15 TO 19",
+                                   "20 TO 24",
+                                   "25 TO 29",
+                                   "30 TO 34",
+                                   "35 TO 39",
+                                   "40 TO 99"))
+  data$R0023300[-999999.0 <= data$R0023300 & data$R0023300 <= -6.0] <- -999999.0
+  data$R0023300[1.0 <= data$R0023300 & data$R0023300 <= 99.0] <- 1.0
+  data$R0023300[100.0 <= data$R0023300 & data$R0023300 <= 199.0] <- 100.0
+  data$R0023300[200.0 <= data$R0023300 & data$R0023300 <= 299.0] <- 200.0
+  data$R0023300[300.0 <= data$R0023300 & data$R0023300 <= 399.0] <- 300.0
+  data$R0023300[400.0 <= data$R0023300 & data$R0023300 <= 499.0] <- 400.0
+  data$R0023300[500.0 <= data$R0023300 & data$R0023300 <= 599.0] <- 500.0
+  data$R0023300[600.0 <= data$R0023300 & data$R0023300 <= 699.0] <- 600.0
+  data$R0023300[700.0 <= data$R0023300 & data$R0023300 <= 799.0] <- 700.0
+  data$R0023300[800.0 <= data$R0023300 & data$R0023300 <= 899.0] <- 800.0
+  data$R0023300[900.0 <= data$R0023300 & data$R0023300 <= 999.0] <- 900.0
+  data$R0023300[1000.0 <= data$R0023300 & data$R0023300 <= 999997.0] <- 1000.0
+  data$R0023300 <- factor(data$R0023300,
+                          levels=c(-999999.0,0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 99",
+                                   "100 TO 199",
+                                   "200 TO 299",
+                                   "300 TO 399",
+                                   "400 TO 499",
+                                   "500 TO 599",
+                                   "600 TO 699",
+                                   "700 TO 799",
+                                   "800 TO 899",
+                                   "900 TO 999",
+                                   "1000 TO 999997"))
+  data$R0023600[-999999.0 <= data$R0023600 & data$R0023600 <= -6.0] <- -999999.0
+  data$R0023600[1.0 <= data$R0023600 & data$R0023600 <= 99.0] <- 1.0
+  data$R0023600[100.0 <= data$R0023600 & data$R0023600 <= 199.0] <- 100.0
+  data$R0023600[200.0 <= data$R0023600 & data$R0023600 <= 299.0] <- 200.0
+  data$R0023600[300.0 <= data$R0023600 & data$R0023600 <= 399.0] <- 300.0
+  data$R0023600[400.0 <= data$R0023600 & data$R0023600 <= 499.0] <- 400.0
+  data$R0023600[500.0 <= data$R0023600 & data$R0023600 <= 599.0] <- 500.0
+  data$R0023600[600.0 <= data$R0023600 & data$R0023600 <= 699.0] <- 600.0
+  data$R0023600[700.0 <= data$R0023600 & data$R0023600 <= 799.0] <- 700.0
+  data$R0023600[800.0 <= data$R0023600 & data$R0023600 <= 899.0] <- 800.0
+  data$R0023600[900.0 <= data$R0023600 & data$R0023600 <= 999.0] <- 900.0
+  data$R0023600[1000.0 <= data$R0023600 & data$R0023600 <= 999997.0] <- 1000.0
+  data$R0023600 <- factor(data$R0023600,
+                          levels=c(-999999.0,0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 99",
+                                   "100 TO 199",
+                                   "200 TO 299",
+                                   "300 TO 399",
+                                   "400 TO 499",
+                                   "500 TO 599",
+                                   "600 TO 699",
+                                   "700 TO 799",
+                                   "800 TO 899",
+                                   "900 TO 999",
+                                   "1000 TO 999997"))
+  data$R0024400[16.0 <= data$R0024400 & data$R0024400 <= 18.0] <- 16.0
+  data$R0024400[126.0 <= data$R0024400 & data$R0024400 <= 156.0] <- 126.0
+  data$R0024400[206.0 <= data$R0024400 & data$R0024400 <= 459.0] <- 206.0
+  data$R0024400[506.0 <= data$R0024400 & data$R0024400 <= 579.0] <- 506.0
+  data$R0024400[606.0 <= data$R0024400 & data$R0024400 <= 696.0] <- 606.0
+  data$R0024400[706.0 <= data$R0024400 & data$R0024400 <= 736.0] <- 706.0
+  data$R0024400[806.0 <= data$R0024400 & data$R0024400 <= 809.0] <- 806.0
+  data$R0024400[816.0 <= data$R0024400 & data$R0024400 <= 839.0] <- 816.0
+  data$R0024400[846.0 <= data$R0024400 & data$R0024400 <= 849.0] <- 846.0
+  data$R0024400[867.0 <= data$R0024400 & data$R0024400 <= 898.0] <- 867.0
+  data$R0024400[906.0 <= data$R0024400 & data$R0024400 <= 936.0] <- 906.0
+  data$R0024400 <- factor(data$R0024400,
+                          levels=c(16.0,126.0,196.0,206.0,506.0,606.0,706.0,806.0,816.0,846.0,867.0,906.0,998.0,999.0),
+                          labels=c("16 TO 18: AGRICULTURE, FORESTRY AND FISHERIES",
+                                   "126 TO 156: MINING",
+                                   "196: CONSTRUCTION",
+                                   "206 TO 459: MANUFACTURING",
+                                   "506 TO 579: TRANSPORTATION, COMMNICATION, PUBLIC UTILITIES",
+                                   "606 TO 696: WHOLESALE AND RETAIL TRADE",
+                                   "706 TO 736: FINANCE, INSURANCE, AND REAL ESTATE",
+                                   "806 TO 809: BUSINESS AND REPAIR SERVICES",
+                                   "816 TO 839: PERSONAL SERVICES",
+                                   "846 TO 849: ENTERTINMENT AND RECREATION SERVICES",
+                                   "867 TO 898: PROFESSIONAL AND RELATED SERVICES",
+                                   "906 TO 936: PUBLIC ADMINISTRATION",
+                                   "998: ARMED FORCES",
+                                   "999: NOT REPORTED"))
+  data$R0024500[0.0 <= data$R0024500 & data$R0024500 <= 195.0] <- 0.0
+  data$R0024500[200.0 <= data$R0024500 & data$R0024500 <= 222.0] <- 200.0
+  data$R0024500[250.0 <= data$R0024500 & data$R0024500 <= 290.0] <- 250.0
+  data$R0024500[301.0 <= data$R0024500 & data$R0024500 <= 370.0] <- 301.0
+  data$R0024500[380.0 <= data$R0024500 & data$R0024500 <= 395.0] <- 380.0
+  data$R0024500[401.0 <= data$R0024500 & data$R0024500 <= 545.0] <- 401.0
+  data$R0024500[601.0 <= data$R0024500 & data$R0024500 <= 775.0] <- 601.0
+  data$R0024500[801.0 <= data$R0024500 & data$R0024500 <= 804.0] <- 801.0
+  data$R0024500[810.0 <= data$R0024500 & data$R0024500 <= 890.0] <- 810.0
+  data$R0024500[901.0 <= data$R0024500 & data$R0024500 <= 905.0] <- 901.0
+  data$R0024500[960.0 <= data$R0024500 & data$R0024500 <= 985.0] <- 960.0
+  data$R0024500 <- factor(data$R0024500,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0024900[0.0 <= data$R0024900 & data$R0024900 <= 195.0] <- 0.0
+  data$R0024900[200.0 <= data$R0024900 & data$R0024900 <= 222.0] <- 200.0
+  data$R0024900[250.0 <= data$R0024900 & data$R0024900 <= 290.0] <- 250.0
+  data$R0024900[301.0 <= data$R0024900 & data$R0024900 <= 370.0] <- 301.0
+  data$R0024900[380.0 <= data$R0024900 & data$R0024900 <= 395.0] <- 380.0
+  data$R0024900[401.0 <= data$R0024900 & data$R0024900 <= 545.0] <- 401.0
+  data$R0024900[601.0 <= data$R0024900 & data$R0024900 <= 775.0] <- 601.0
+  data$R0024900[801.0 <= data$R0024900 & data$R0024900 <= 804.0] <- 801.0
+  data$R0024900[810.0 <= data$R0024900 & data$R0024900 <= 890.0] <- 810.0
+  data$R0024900[901.0 <= data$R0024900 & data$R0024900 <= 905.0] <- 901.0
+  data$R0024900[960.0 <= data$R0024900 & data$R0024900 <= 985.0] <- 960.0
+  data$R0024900 <- factor(data$R0024900,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0035100[-999999.0 <= data$R0035100 & data$R0035100 <= -6.0] <- -999999.0
+  data$R0035100[1.0 <= data$R0035100 & data$R0035100 <= 999.0] <- 1.0
+  data$R0035100[1000.0 <= data$R0035100 & data$R0035100 <= 1999.0] <- 1000.0
+  data$R0035100[2000.0 <= data$R0035100 & data$R0035100 <= 2999.0] <- 2000.0
+  data$R0035100[3000.0 <= data$R0035100 & data$R0035100 <= 3999.0] <- 3000.0
+  data$R0035100[4000.0 <= data$R0035100 & data$R0035100 <= 4999.0] <- 4000.0
+  data$R0035100[5000.0 <= data$R0035100 & data$R0035100 <= 5999.0] <- 5000.0
+  data$R0035100[6000.0 <= data$R0035100 & data$R0035100 <= 6999.0] <- 6000.0
+  data$R0035100[7000.0 <= data$R0035100 & data$R0035100 <= 7999.0] <- 7000.0
+  data$R0035100[8000.0 <= data$R0035100 & data$R0035100 <= 8999.0] <- 8000.0
+  data$R0035100[9000.0 <= data$R0035100 & data$R0035100 <= 9999.0] <- 9000.0
+  data$R0035100[10000.0 <= data$R0035100 & data$R0035100 <= 14999.0] <- 10000.0
+  data$R0035100[15000.0 <= data$R0035100 & data$R0035100 <= 19999.0] <- 15000.0
+  data$R0035100[20000.0 <= data$R0035100 & data$R0035100 <= 24999.0] <- 20000.0
+  data$R0035100[25000.0 <= data$R0035100 & data$R0035100 <= 49999.0] <- 25000.0
+  data$R0035100[50000.0 <= data$R0035100 & data$R0035100 <= 999999.0] <- 50000.0
+  data$R0035100 <- factor(data$R0035100,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0035200[-999999.0 <= data$R0035200 & data$R0035200 <= -6.0] <- -999999.0
+  data$R0035200[1.0 <= data$R0035200 & data$R0035200 <= 999.0] <- 1.0
+  data$R0035200[1000.0 <= data$R0035200 & data$R0035200 <= 1999.0] <- 1000.0
+  data$R0035200[2000.0 <= data$R0035200 & data$R0035200 <= 2999.0] <- 2000.0
+  data$R0035200[3000.0 <= data$R0035200 & data$R0035200 <= 3999.0] <- 3000.0
+  data$R0035200[4000.0 <= data$R0035200 & data$R0035200 <= 4999.0] <- 4000.0
+  data$R0035200[5000.0 <= data$R0035200 & data$R0035200 <= 5999.0] <- 5000.0
+  data$R0035200[6000.0 <= data$R0035200 & data$R0035200 <= 6999.0] <- 6000.0
+  data$R0035200[7000.0 <= data$R0035200 & data$R0035200 <= 7999.0] <- 7000.0
+  data$R0035200[8000.0 <= data$R0035200 & data$R0035200 <= 8999.0] <- 8000.0
+  data$R0035200[9000.0 <= data$R0035200 & data$R0035200 <= 9999.0] <- 9000.0
+  data$R0035200[10000.0 <= data$R0035200 & data$R0035200 <= 14999.0] <- 10000.0
+  data$R0035200[15000.0 <= data$R0035200 & data$R0035200 <= 19999.0] <- 15000.0
+  data$R0035200[20000.0 <= data$R0035200 & data$R0035200 <= 24999.0] <- 20000.0
+  data$R0035200[25000.0 <= data$R0035200 & data$R0035200 <= 49999.0] <- 25000.0
+  data$R0035200[50000.0 <= data$R0035200 & data$R0035200 <= 999999.0] <- 50000.0
+  data$R0035200 <- factor(data$R0035200,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0035300[-999999.0 <= data$R0035300 & data$R0035300 <= -6.0] <- -999999.0
+  data$R0035300[1.0 <= data$R0035300 & data$R0035300 <= 499.0] <- 1.0
+  data$R0035300[500.0 <= data$R0035300 & data$R0035300 <= 999.0] <- 500.0
+  data$R0035300[1000.0 <= data$R0035300 & data$R0035300 <= 1499.0] <- 1000.0
+  data$R0035300[1500.0 <= data$R0035300 & data$R0035300 <= 1999.0] <- 1500.0
+  data$R0035300[2000.0 <= data$R0035300 & data$R0035300 <= 2499.0] <- 2000.0
+  data$R0035300[2500.0 <= data$R0035300 & data$R0035300 <= 2999.0] <- 2500.0
+  data$R0035300[3000.0 <= data$R0035300 & data$R0035300 <= 3499.0] <- 3000.0
+  data$R0035300[3500.0 <= data$R0035300 & data$R0035300 <= 3999.0] <- 3500.0
+  data$R0035300[4000.0 <= data$R0035300 & data$R0035300 <= 4499.0] <- 4000.0
+  data$R0035300[4500.0 <= data$R0035300 & data$R0035300 <= 4999.0] <- 4500.0
+  data$R0035300[5000.0 <= data$R0035300 & data$R0035300 <= 999999.0] <- 5000.0
+  data$R0035300 <- factor(data$R0035300,
+                          levels=c(-999999.0,0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+                          labels=c("-999999 TO -6: -6--999999",
+                                   "0",
+                                   "1 TO 499",
+                                   "500 TO 999",
+                                   "1000 TO 1499",
+                                   "1500 TO 1999",
+                                   "2000 TO 2499",
+                                   "2500 TO 2999",
+                                   "3000 TO 3499",
+                                   "3500 TO 3999",
+                                   "4000 TO 4499",
+                                   "4500 TO 4999",
+                                   "5000 TO 999999: 5000+"))
+  data$R0035400[-999999.0 <= data$R0035400 & data$R0035400 <= -6.0] <- -999999.0
+  data$R0035400[1.0 <= data$R0035400 & data$R0035400 <= 499.0] <- 1.0
+  data$R0035400[500.0 <= data$R0035400 & data$R0035400 <= 999.0] <- 500.0
+  data$R0035400[1000.0 <= data$R0035400 & data$R0035400 <= 1499.0] <- 1000.0
+  data$R0035400[1500.0 <= data$R0035400 & data$R0035400 <= 1999.0] <- 1500.0
+  data$R0035400[2000.0 <= data$R0035400 & data$R0035400 <= 2499.0] <- 2000.0
+  data$R0035400[2500.0 <= data$R0035400 & data$R0035400 <= 2999.0] <- 2500.0
+  data$R0035400[3000.0 <= data$R0035400 & data$R0035400 <= 3499.0] <- 3000.0
+  data$R0035400[3500.0 <= data$R0035400 & data$R0035400 <= 3999.0] <- 3500.0
+  data$R0035400[4000.0 <= data$R0035400 & data$R0035400 <= 4499.0] <- 4000.0
+  data$R0035400[4500.0 <= data$R0035400 & data$R0035400 <= 4999.0] <- 4500.0
+  data$R0035400[5000.0 <= data$R0035400 & data$R0035400 <= 999999.0] <- 5000.0
+  data$R0035400 <- factor(data$R0035400,
+                          levels=c(-999999.0,0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+                          labels=c("-999999 TO -6: -6--999999",
+                                   "0",
+                                   "1 TO 499",
+                                   "500 TO 999",
+                                   "1000 TO 1499",
+                                   "1500 TO 1999",
+                                   "2000 TO 2499",
+                                   "2500 TO 2999",
+                                   "3000 TO 3499",
+                                   "3500 TO 3999",
+                                   "4000 TO 4499",
+                                   "4500 TO 4999",
+                                   "5000 TO 999999: 5000+"))
+  data$R0035500[-999999.0 <= data$R0035500 & data$R0035500 <= -6.0] <- -999999.0
+  data$R0035500[1.0 <= data$R0035500 & data$R0035500 <= 999.0] <- 1.0
+  data$R0035500[1000.0 <= data$R0035500 & data$R0035500 <= 1999.0] <- 1000.0
+  data$R0035500[2000.0 <= data$R0035500 & data$R0035500 <= 2999.0] <- 2000.0
+  data$R0035500[3000.0 <= data$R0035500 & data$R0035500 <= 3999.0] <- 3000.0
+  data$R0035500[4000.0 <= data$R0035500 & data$R0035500 <= 4999.0] <- 4000.0
+  data$R0035500[5000.0 <= data$R0035500 & data$R0035500 <= 5999.0] <- 5000.0
+  data$R0035500[6000.0 <= data$R0035500 & data$R0035500 <= 6999.0] <- 6000.0
+  data$R0035500[7000.0 <= data$R0035500 & data$R0035500 <= 7999.0] <- 7000.0
+  data$R0035500[8000.0 <= data$R0035500 & data$R0035500 <= 8999.0] <- 8000.0
+  data$R0035500[9000.0 <= data$R0035500 & data$R0035500 <= 9999.0] <- 9000.0
+  data$R0035500[10000.0 <= data$R0035500 & data$R0035500 <= 14999.0] <- 10000.0
+  data$R0035500[15000.0 <= data$R0035500 & data$R0035500 <= 19999.0] <- 15000.0
+  data$R0035500[20000.0 <= data$R0035500 & data$R0035500 <= 24999.0] <- 20000.0
+  data$R0035500[25000.0 <= data$R0035500 & data$R0035500 <= 49999.0] <- 25000.0
+  data$R0035500[50000.0 <= data$R0035500 & data$R0035500 <= 999999.0] <- 50000.0
+  data$R0035500 <- factor(data$R0035500,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0035700[-999999.0 <= data$R0035700 & data$R0035700 <= -6.0] <- -999999.0
+  data$R0035700[1.0 <= data$R0035700 & data$R0035700 <= 999.0] <- 1.0
+  data$R0035700[1000.0 <= data$R0035700 & data$R0035700 <= 1999.0] <- 1000.0
+  data$R0035700[2000.0 <= data$R0035700 & data$R0035700 <= 2999.0] <- 2000.0
+  data$R0035700[3000.0 <= data$R0035700 & data$R0035700 <= 3999.0] <- 3000.0
+  data$R0035700[4000.0 <= data$R0035700 & data$R0035700 <= 4999.0] <- 4000.0
+  data$R0035700[5000.0 <= data$R0035700 & data$R0035700 <= 5999.0] <- 5000.0
+  data$R0035700[6000.0 <= data$R0035700 & data$R0035700 <= 6999.0] <- 6000.0
+  data$R0035700[7000.0 <= data$R0035700 & data$R0035700 <= 7999.0] <- 7000.0
+  data$R0035700[8000.0 <= data$R0035700 & data$R0035700 <= 8999.0] <- 8000.0
+  data$R0035700[9000.0 <= data$R0035700 & data$R0035700 <= 9999.0] <- 9000.0
+  data$R0035700[10000.0 <= data$R0035700 & data$R0035700 <= 14999.0] <- 10000.0
+  data$R0035700[15000.0 <= data$R0035700 & data$R0035700 <= 19999.0] <- 15000.0
+  data$R0035700[20000.0 <= data$R0035700 & data$R0035700 <= 24999.0] <- 20000.0
+  data$R0035700[25000.0 <= data$R0035700 & data$R0035700 <= 49999.0] <- 25000.0
+  data$R0035700[50000.0 <= data$R0035700 & data$R0035700 <= 999999.0] <- 50000.0
+  data$R0035700 <- factor(data$R0035700,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0035800[-999999.0 <= data$R0035800 & data$R0035800 <= -6.0] <- -999999.0
+  data$R0035800[1.0 <= data$R0035800 & data$R0035800 <= 999.0] <- 1.0
+  data$R0035800[1000.0 <= data$R0035800 & data$R0035800 <= 1999.0] <- 1000.0
+  data$R0035800[2000.0 <= data$R0035800 & data$R0035800 <= 2999.0] <- 2000.0
+  data$R0035800[3000.0 <= data$R0035800 & data$R0035800 <= 3999.0] <- 3000.0
+  data$R0035800[4000.0 <= data$R0035800 & data$R0035800 <= 4999.0] <- 4000.0
+  data$R0035800[5000.0 <= data$R0035800 & data$R0035800 <= 5999.0] <- 5000.0
+  data$R0035800[6000.0 <= data$R0035800 & data$R0035800 <= 6999.0] <- 6000.0
+  data$R0035800[7000.0 <= data$R0035800 & data$R0035800 <= 7999.0] <- 7000.0
+  data$R0035800[8000.0 <= data$R0035800 & data$R0035800 <= 8999.0] <- 8000.0
+  data$R0035800[9000.0 <= data$R0035800 & data$R0035800 <= 9999.0] <- 9000.0
+  data$R0035800[10000.0 <= data$R0035800 & data$R0035800 <= 14999.0] <- 10000.0
+  data$R0035800[15000.0 <= data$R0035800 & data$R0035800 <= 19999.0] <- 15000.0
+  data$R0035800[20000.0 <= data$R0035800 & data$R0035800 <= 24999.0] <- 20000.0
+  data$R0035800[25000.0 <= data$R0035800 & data$R0035800 <= 49999.0] <- 25000.0
+  data$R0035800[50000.0 <= data$R0035800 & data$R0035800 <= 999999.0] <- 50000.0
+  data$R0035800 <- factor(data$R0035800,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0035900[1.0 <= data$R0035900 & data$R0035900 <= 50.0] <- 1.0
+  data$R0035900[51.0 <= data$R0035900 & data$R0035900 <= 55.0] <- 51.0
+  data$R0035900[56.0 <= data$R0035900 & data$R0035900 <= 60.0] <- 56.0
+  data$R0035900[61.0 <= data$R0035900 & data$R0035900 <= 65.0] <- 61.0
+  data$R0035900[66.0 <= data$R0035900 & data$R0035900 <= 70.0] <- 66.0
+  data$R0035900[71.0 <= data$R0035900 & data$R0035900 <= 75.0] <- 71.0
+  data$R0035900 <- factor(data$R0035900,
+                          levels=c(0.0,1.0,51.0,56.0,61.0,66.0,71.0),
+                          labels=c("0: NO OWNERSHIP",
+                                   "1 TO 50: 1901-1950",
+                                   "51 TO 55: 1951-1955",
+                                   "56 TO 60: 1956-1960",
+                                   "61 TO 65: 1961-1965",
+                                   "66 TO 70: 1966-1970",
+                                   "71 TO 75: 1971-1975"))
+  data$R0036000[-999999.0 <= data$R0036000 & data$R0036000 <= -6.0] <- -999999.0
+  data$R0036000[1.0 <= data$R0036000 & data$R0036000 <= 499.0] <- 1.0
+  data$R0036000[500.0 <= data$R0036000 & data$R0036000 <= 999.0] <- 500.0
+  data$R0036000[1000.0 <= data$R0036000 & data$R0036000 <= 1499.0] <- 1000.0
+  data$R0036000[1500.0 <= data$R0036000 & data$R0036000 <= 1999.0] <- 1500.0
+  data$R0036000[2000.0 <= data$R0036000 & data$R0036000 <= 2499.0] <- 2000.0
+  data$R0036000[2500.0 <= data$R0036000 & data$R0036000 <= 2999.0] <- 2500.0
+  data$R0036000[3000.0 <= data$R0036000 & data$R0036000 <= 3499.0] <- 3000.0
+  data$R0036000[3500.0 <= data$R0036000 & data$R0036000 <= 3999.0] <- 3500.0
+  data$R0036000[4000.0 <= data$R0036000 & data$R0036000 <= 4499.0] <- 4000.0
+  data$R0036000[4500.0 <= data$R0036000 & data$R0036000 <= 4999.0] <- 4500.0
+  data$R0036000[5000.0 <= data$R0036000 & data$R0036000 <= 999999.0] <- 5000.0
+  data$R0036000 <- factor(data$R0036000,
+                          levels=c(-999999.0,0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+                          labels=c("-999999 TO -6: -6--999999",
+                                   "0",
+                                   "1 TO 499",
+                                   "500 TO 999",
+                                   "1000 TO 1499",
+                                   "1500 TO 1999",
+                                   "2000 TO 2499",
+                                   "2500 TO 2999",
+                                   "3000 TO 3499",
+                                   "3500 TO 3999",
+                                   "4000 TO 4499",
+                                   "4500 TO 4999",
+                                   "5000 TO 999999: 5000+"))
+  data$R0036100[-999999.0 <= data$R0036100 & data$R0036100 <= -6.0] <- -999999.0
+  data$R0036100[1.0 <= data$R0036100 & data$R0036100 <= 499.0] <- 1.0
+  data$R0036100[500.0 <= data$R0036100 & data$R0036100 <= 999.0] <- 500.0
+  data$R0036100[1000.0 <= data$R0036100 & data$R0036100 <= 1499.0] <- 1000.0
+  data$R0036100[1500.0 <= data$R0036100 & data$R0036100 <= 1999.0] <- 1500.0
+  data$R0036100[2000.0 <= data$R0036100 & data$R0036100 <= 2499.0] <- 2000.0
+  data$R0036100[2500.0 <= data$R0036100 & data$R0036100 <= 2999.0] <- 2500.0
+  data$R0036100[3000.0 <= data$R0036100 & data$R0036100 <= 3499.0] <- 3000.0
+  data$R0036100[3500.0 <= data$R0036100 & data$R0036100 <= 3999.0] <- 3500.0
+  data$R0036100[4000.0 <= data$R0036100 & data$R0036100 <= 4499.0] <- 4000.0
+  data$R0036100[4500.0 <= data$R0036100 & data$R0036100 <= 4999.0] <- 4500.0
+  data$R0036100[5000.0 <= data$R0036100 & data$R0036100 <= 999999.0] <- 5000.0
+  data$R0036100 <- factor(data$R0036100,
+                          levels=c(-999999.0,0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+                          labels=c("-999999 TO -6: -6--999999",
+                                   "0",
+                                   "1 TO 499",
+                                   "500 TO 999",
+                                   "1000 TO 1499",
+                                   "1500 TO 1999",
+                                   "2000 TO 2499",
+                                   "2500 TO 2999",
+                                   "3000 TO 3499",
+                                   "3500 TO 3999",
+                                   "4000 TO 4499",
+                                   "4500 TO 4999",
+                                   "5000 TO 999999: 5000+"))
+  data$R0037600[0.0 <= data$R0037600 & data$R0037600 <= 8.0] <- 0.0
+  data$R0037600 <- factor(data$R0037600,
+                          levels=c(0.0,9.0,99.0),
+                          labels=c("0 TO 8: ACTUAL NUMBER",
+                                   "9: 9 OR MORE",
+                                   "99: RESPONDENT LIVES WITH PARENTS"))
+  data$R0039800[0.0 <= data$R0039800 & data$R0039800 <= 195.0] <- 0.0
+  data$R0039800[200.0 <= data$R0039800 & data$R0039800 <= 222.0] <- 200.0
+  data$R0039800[250.0 <= data$R0039800 & data$R0039800 <= 290.0] <- 250.0
+  data$R0039800[301.0 <= data$R0039800 & data$R0039800 <= 370.0] <- 301.0
+  data$R0039800[380.0 <= data$R0039800 & data$R0039800 <= 395.0] <- 380.0
+  data$R0039800[401.0 <= data$R0039800 & data$R0039800 <= 545.0] <- 401.0
+  data$R0039800[601.0 <= data$R0039800 & data$R0039800 <= 775.0] <- 601.0
+  data$R0039800[801.0 <= data$R0039800 & data$R0039800 <= 804.0] <- 801.0
+  data$R0039800[810.0 <= data$R0039800 & data$R0039800 <= 890.0] <- 810.0
+  data$R0039800[901.0 <= data$R0039800 & data$R0039800 <= 905.0] <- 901.0
+  data$R0039800[960.0 <= data$R0039800 & data$R0039800 <= 985.0] <- 960.0
+  data$R0039800 <- factor(data$R0039800,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0042200[1.0 <= data$R0042200 & data$R0042200 <= 9.0] <- 1.0
+  data$R0042200[10.0 <= data$R0042200 & data$R0042200 <= 19.0] <- 10.0
+  data$R0042200[20.0 <= data$R0042200 & data$R0042200 <= 29.0] <- 20.0
+  data$R0042200[30.0 <= data$R0042200 & data$R0042200 <= 39.0] <- 30.0
+  data$R0042200[40.0 <= data$R0042200 & data$R0042200 <= 49.0] <- 40.0
+  data$R0042200[50.0 <= data$R0042200 & data$R0042200 <= 59.0] <- 50.0
+  data$R0042200[60.0 <= data$R0042200 & data$R0042200 <= 69.0] <- 60.0
+  data$R0042200[70.0 <= data$R0042200 & data$R0042200 <= 79.0] <- 70.0
+  data$R0042200[80.0 <= data$R0042200 & data$R0042200 <= 89.0] <- 80.0
+  data$R0042200[90.0 <= data$R0042200 & data$R0042200 <= 99.0] <- 90.0
+  data$R0042200[100.0 <= data$R0042200 & data$R0042200 <= 999.0] <- 100.0
+  data$R0042200 <- factor(data$R0042200,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0042400[1.0 <= data$R0042400 & data$R0042400 <= 12.0] <- 1.0
+  data$R0042400 <- factor(data$R0042400,
+                          levels=c(0.0,1.0,13.0,14.0,15.0,16.0,17.0,18.0,40.0,93.0,94.0),
+                          labels=c("0: NONE OR NEVER ATTENDED",
+                                   "1 TO 12: ACTUAL GRADE 1-12",
+                                   "13: FIRST YEAR OF COLLEGE",
+                                   "14: SECOND YEAR OR COLLEGE",
+                                   "15: THIRD YEAR OFD COLLEGE",
+                                   "16: FOURTH YEAR OF COLLEGE",
+                                   "17: FIFTH YEAR OF COLLEGE",
+                                   "18: SIXTH YEAR OF COLLEGE",
+                                   "40: TRADE OR SPECIAL SCHOOL",
+                                   "93: KINDERGARTEN",
+                                   "94: PRESCHOOL"))
+  data$R0042600[1.0 <= data$R0042600 & data$R0042600 <= 13.0] <- 1.0
+  data$R0042600[14.0 <= data$R0042600 & data$R0042600 <= 26.0] <- 14.0
+  data$R0042600[27.0 <= data$R0042600 & data$R0042600 <= 39.0] <- 27.0
+  data$R0042600[40.0 <= data$R0042600 & data$R0042600 <= 48.0] <- 40.0
+  data$R0042600[49.0 <= data$R0042600 & data$R0042600 <= 51.0] <- 49.0
+  data$R0042600[53.0 <= data$R0042600 & data$R0042600 <= 999.0] <- 53.0
+  data$R0042600 <- factor(data$R0042600,
+                          levels=c(0.0,1.0,14.0,27.0,40.0,49.0,52.0,53.0),
+                          labels=c("0",
+                                   "1 TO 13",
+                                   "14 TO 26",
+                                   "27 TO 39",
+                                   "40 TO 48",
+                                   "49 TO 51",
+                                   "52",
+                                   "53 TO 999: >52"))
+  data$R0042700[1.0 <= data$R0042700 & data$R0042700 <= 9.0] <- 1.0
+  data$R0042700[10.0 <= data$R0042700 & data$R0042700 <= 19.0] <- 10.0
+  data$R0042700[20.0 <= data$R0042700 & data$R0042700 <= 29.0] <- 20.0
+  data$R0042700[30.0 <= data$R0042700 & data$R0042700 <= 39.0] <- 30.0
+  data$R0042700[40.0 <= data$R0042700 & data$R0042700 <= 49.0] <- 40.0
+  data$R0042700[50.0 <= data$R0042700 & data$R0042700 <= 59.0] <- 50.0
+  data$R0042700[60.0 <= data$R0042700 & data$R0042700 <= 69.0] <- 60.0
+  data$R0042700[70.0 <= data$R0042700 & data$R0042700 <= 79.0] <- 70.0
+  data$R0042700[80.0 <= data$R0042700 & data$R0042700 <= 89.0] <- 80.0
+  data$R0042700[90.0 <= data$R0042700 & data$R0042700 <= 99.0] <- 90.0
+  data$R0042700[100.0 <= data$R0042700 & data$R0042700 <= 999.0] <- 100.0
+  data$R0042700 <- factor(data$R0042700,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0042800[0.0 <= data$R0042800 & data$R0042800 <= 195.0] <- 0.0
+  data$R0042800[200.0 <= data$R0042800 & data$R0042800 <= 222.0] <- 200.0
+  data$R0042800[250.0 <= data$R0042800 & data$R0042800 <= 290.0] <- 250.0
+  data$R0042800[301.0 <= data$R0042800 & data$R0042800 <= 370.0] <- 301.0
+  data$R0042800[380.0 <= data$R0042800 & data$R0042800 <= 395.0] <- 380.0
+  data$R0042800[401.0 <= data$R0042800 & data$R0042800 <= 545.0] <- 401.0
+  data$R0042800[601.0 <= data$R0042800 & data$R0042800 <= 775.0] <- 601.0
+  data$R0042800[801.0 <= data$R0042800 & data$R0042800 <= 804.0] <- 801.0
+  data$R0042800[810.0 <= data$R0042800 & data$R0042800 <= 890.0] <- 810.0
+  data$R0042800[901.0 <= data$R0042800 & data$R0042800 <= 905.0] <- 901.0
+  data$R0042800[960.0 <= data$R0042800 & data$R0042800 <= 985.0] <- 960.0
+  data$R0042800 <- factor(data$R0042800,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0043000[1.0 <= data$R0043000 & data$R0043000 <= 9.0] <- 1.0
+  data$R0043000[10.0 <= data$R0043000 & data$R0043000 <= 19.0] <- 10.0
+  data$R0043000[20.0 <= data$R0043000 & data$R0043000 <= 29.0] <- 20.0
+  data$R0043000[30.0 <= data$R0043000 & data$R0043000 <= 39.0] <- 30.0
+  data$R0043000[40.0 <= data$R0043000 & data$R0043000 <= 49.0] <- 40.0
+  data$R0043000[50.0 <= data$R0043000 & data$R0043000 <= 59.0] <- 50.0
+  data$R0043000[60.0 <= data$R0043000 & data$R0043000 <= 69.0] <- 60.0
+  data$R0043000[70.0 <= data$R0043000 & data$R0043000 <= 79.0] <- 70.0
+  data$R0043000[80.0 <= data$R0043000 & data$R0043000 <= 89.0] <- 80.0
+  data$R0043000[90.0 <= data$R0043000 & data$R0043000 <= 99.0] <- 90.0
+  data$R0043000[100.0 <= data$R0043000 & data$R0043000 <= 999.0] <- 100.0
+  data$R0043000 <- factor(data$R0043000,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0043200[1.0 <= data$R0043200 & data$R0043200 <= 12.0] <- 1.0
+  data$R0043200 <- factor(data$R0043200,
+                          levels=c(0.0,1.0,13.0,14.0,15.0,16.0,17.0,18.0,40.0,93.0,94.0),
+                          labels=c("0: NONE OR NEVER ATTENDED",
+                                   "1 TO 12: ACTUAL GRADE 1-12",
+                                   "13: FIRST YEAR OF COLLEGE",
+                                   "14: SECOND YEAR OR COLLEGE",
+                                   "15: THIRD YEAR OFD COLLEGE",
+                                   "16: FOURTH YEAR OF COLLEGE",
+                                   "17: FIFTH YEAR OF COLLEGE",
+                                   "18: SIXTH YEAR OF COLLEGE",
+                                   "40: TRADE OR SPECIAL SCHOOL",
+                                   "93: KINDERGARTEN",
+                                   "94: PRESCHOOL"))
+  data$R0043400[1.0 <= data$R0043400 & data$R0043400 <= 13.0] <- 1.0
+  data$R0043400[14.0 <= data$R0043400 & data$R0043400 <= 26.0] <- 14.0
+  data$R0043400[27.0 <= data$R0043400 & data$R0043400 <= 39.0] <- 27.0
+  data$R0043400[40.0 <= data$R0043400 & data$R0043400 <= 48.0] <- 40.0
+  data$R0043400[49.0 <= data$R0043400 & data$R0043400 <= 51.0] <- 49.0
+  data$R0043400[53.0 <= data$R0043400 & data$R0043400 <= 999.0] <- 53.0
+  data$R0043400 <- factor(data$R0043400,
+                          levels=c(0.0,1.0,14.0,27.0,40.0,49.0,52.0,53.0),
+                          labels=c("0",
+                                   "1 TO 13",
+                                   "14 TO 26",
+                                   "27 TO 39",
+                                   "40 TO 48",
+                                   "49 TO 51",
+                                   "52",
+                                   "53 TO 999: >52"))
+  data$R0043500[1.0 <= data$R0043500 & data$R0043500 <= 9.0] <- 1.0
+  data$R0043500[10.0 <= data$R0043500 & data$R0043500 <= 19.0] <- 10.0
+  data$R0043500[20.0 <= data$R0043500 & data$R0043500 <= 29.0] <- 20.0
+  data$R0043500[30.0 <= data$R0043500 & data$R0043500 <= 39.0] <- 30.0
+  data$R0043500[40.0 <= data$R0043500 & data$R0043500 <= 49.0] <- 40.0
+  data$R0043500[50.0 <= data$R0043500 & data$R0043500 <= 59.0] <- 50.0
+  data$R0043500[60.0 <= data$R0043500 & data$R0043500 <= 69.0] <- 60.0
+  data$R0043500[70.0 <= data$R0043500 & data$R0043500 <= 79.0] <- 70.0
+  data$R0043500[80.0 <= data$R0043500 & data$R0043500 <= 89.0] <- 80.0
+  data$R0043500[90.0 <= data$R0043500 & data$R0043500 <= 99.0] <- 90.0
+  data$R0043500[100.0 <= data$R0043500 & data$R0043500 <= 999.0] <- 100.0
+  data$R0043500 <- factor(data$R0043500,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0043600[0.0 <= data$R0043600 & data$R0043600 <= 195.0] <- 0.0
+  data$R0043600[200.0 <= data$R0043600 & data$R0043600 <= 222.0] <- 200.0
+  data$R0043600[250.0 <= data$R0043600 & data$R0043600 <= 290.0] <- 250.0
+  data$R0043600[301.0 <= data$R0043600 & data$R0043600 <= 370.0] <- 301.0
+  data$R0043600[380.0 <= data$R0043600 & data$R0043600 <= 395.0] <- 380.0
+  data$R0043600[401.0 <= data$R0043600 & data$R0043600 <= 545.0] <- 401.0
+  data$R0043600[601.0 <= data$R0043600 & data$R0043600 <= 775.0] <- 601.0
+  data$R0043600[801.0 <= data$R0043600 & data$R0043600 <= 804.0] <- 801.0
+  data$R0043600[810.0 <= data$R0043600 & data$R0043600 <= 890.0] <- 810.0
+  data$R0043600[901.0 <= data$R0043600 & data$R0043600 <= 905.0] <- 901.0
+  data$R0043600[960.0 <= data$R0043600 & data$R0043600 <= 985.0] <- 960.0
+  data$R0043600 <- factor(data$R0043600,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0062300[-999999.0 <= data$R0062300 & data$R0062300 <= -6.0] <- -999999.0
+  data$R0062300[1.0 <= data$R0062300 & data$R0062300 <= 999.0] <- 1.0
+  data$R0062300[1000.0 <= data$R0062300 & data$R0062300 <= 1999.0] <- 1000.0
+  data$R0062300[2000.0 <= data$R0062300 & data$R0062300 <= 2999.0] <- 2000.0
+  data$R0062300[3000.0 <= data$R0062300 & data$R0062300 <= 3999.0] <- 3000.0
+  data$R0062300[4000.0 <= data$R0062300 & data$R0062300 <= 4999.0] <- 4000.0
+  data$R0062300[5000.0 <= data$R0062300 & data$R0062300 <= 5999.0] <- 5000.0
+  data$R0062300[6000.0 <= data$R0062300 & data$R0062300 <= 6999.0] <- 6000.0
+  data$R0062300[7000.0 <= data$R0062300 & data$R0062300 <= 7999.0] <- 7000.0
+  data$R0062300[8000.0 <= data$R0062300 & data$R0062300 <= 8999.0] <- 8000.0
+  data$R0062300[9000.0 <= data$R0062300 & data$R0062300 <= 9999.0] <- 9000.0
+  data$R0062300[10000.0 <= data$R0062300 & data$R0062300 <= 14999.0] <- 10000.0
+  data$R0062300[15000.0 <= data$R0062300 & data$R0062300 <= 19999.0] <- 15000.0
+  data$R0062300[20000.0 <= data$R0062300 & data$R0062300 <= 24999.0] <- 20000.0
+  data$R0062300[25000.0 <= data$R0062300 & data$R0062300 <= 49999.0] <- 25000.0
+  data$R0062300[50000.0 <= data$R0062300 & data$R0062300 <= 999999.0] <- 50000.0
+  data$R0062300 <- factor(data$R0062300,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  data$R0062310[-999999.0 <= data$R0062310 & data$R0062310 <= -6.0] <- -999999.0
+  data$R0062310[1.0 <= data$R0062310 & data$R0062310 <= 999.0] <- 1.0
+  data$R0062310[1000.0 <= data$R0062310 & data$R0062310 <= 1999.0] <- 1000.0
+  data$R0062310[2000.0 <= data$R0062310 & data$R0062310 <= 2999.0] <- 2000.0
+  data$R0062310[3000.0 <= data$R0062310 & data$R0062310 <= 3999.0] <- 3000.0
+  data$R0062310[4000.0 <= data$R0062310 & data$R0062310 <= 4999.0] <- 4000.0
+  data$R0062310[5000.0 <= data$R0062310 & data$R0062310 <= 5999.0] <- 5000.0
+  data$R0062310[6000.0 <= data$R0062310 & data$R0062310 <= 6999.0] <- 6000.0
+  data$R0062310[7000.0 <= data$R0062310 & data$R0062310 <= 7999.0] <- 7000.0
+  data$R0062310[8000.0 <= data$R0062310 & data$R0062310 <= 8999.0] <- 8000.0
+  data$R0062310[9000.0 <= data$R0062310 & data$R0062310 <= 9999.0] <- 9000.0
+  data$R0062310[10000.0 <= data$R0062310 & data$R0062310 <= 14999.0] <- 10000.0
+  data$R0062310[15000.0 <= data$R0062310 & data$R0062310 <= 19999.0] <- 15000.0
+  data$R0062310[20000.0 <= data$R0062310 & data$R0062310 <= 24999.0] <- 20000.0
+  data$R0062310[25000.0 <= data$R0062310 & data$R0062310 <= 49999.0] <- 25000.0
+  data$R0062310[50000.0 <= data$R0062310 & data$R0062310 <= 2500000.0] <- 50000.0
+  data$R0062310 <- factor(data$R0062310,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 2500000"))
+  data$R0062550[1.0 <= data$R0062550 & data$R0062550 <= 9.0] <- 1.0
+  data$R0062550[10.0 <= data$R0062550 & data$R0062550 <= 19.0] <- 10.0
+  data$R0062550[20.0 <= data$R0062550 & data$R0062550 <= 29.0] <- 20.0
+  data$R0062550[30.0 <= data$R0062550 & data$R0062550 <= 39.0] <- 30.0
+  data$R0062550[40.0 <= data$R0062550 & data$R0062550 <= 49.0] <- 40.0
+  data$R0062550[50.0 <= data$R0062550 & data$R0062550 <= 59.0] <- 50.0
+  data$R0062550[60.0 <= data$R0062550 & data$R0062550 <= 69.0] <- 60.0
+  data$R0062550[70.0 <= data$R0062550 & data$R0062550 <= 79.0] <- 70.0
+  data$R0062550[80.0 <= data$R0062550 & data$R0062550 <= 89.0] <- 80.0
+  data$R0062550[90.0 <= data$R0062550 & data$R0062550 <= 99.0] <- 90.0
+  data$R0062550[100.0 <= data$R0062550 & data$R0062550 <= 999.0] <- 100.0
+  data$R0062550 <- factor(data$R0062550,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0062900[1.0 <= data$R0062900 & data$R0062900 <= 24.0] <- 1.0
+  data$R0062900[25.0 <= data$R0062900 & data$R0062900 <= 49.0] <- 25.0
+  data$R0062900[50.0 <= data$R0062900 & data$R0062900 <= 74.0] <- 50.0
+  data$R0062900[75.0 <= data$R0062900 & data$R0062900 <= 99.0] <- 75.0
+  data$R0062900[100.0 <= data$R0062900 & data$R0062900 <= 124.0] <- 100.0
+  data$R0062900[125.0 <= data$R0062900 & data$R0062900 <= 149.0] <- 125.0
+  data$R0062900[150.0 <= data$R0062900 & data$R0062900 <= 174.0] <- 150.0
+  data$R0062900[175.0 <= data$R0062900 & data$R0062900 <= 199.0] <- 175.0
+  data$R0062900[200.0 <= data$R0062900 & data$R0062900 <= 224.0] <- 200.0
+  data$R0062900[225.0 <= data$R0062900 & data$R0062900 <= 249.0] <- 225.0
+  data$R0062900[250.0 <= data$R0062900 & data$R0062900 <= 9999.0] <- 250.0
+  data$R0062900 <- factor(data$R0062900,
+                          levels=c(0.0,1.0,25.0,50.0,75.0,100.0,125.0,150.0,175.0,200.0,225.0,250.0),
+                          labels=c("0",
+                                   "1 TO 24",
+                                   "25 TO 49",
+                                   "50 TO 74",
+                                   "75 TO 99",
+                                   "100 TO 124",
+                                   "125 TO 149",
+                                   "150 TO 174",
+                                   "175 TO 199",
+                                   "200 TO 224",
+                                   "225 TO 249",
+                                   "250 TO 9999: 250+"))
+  data$R0063030[1.0 <= data$R0063030 & data$R0063030 <= 13.0] <- 1.0
+  data$R0063030[14.0 <= data$R0063030 & data$R0063030 <= 26.0] <- 14.0
+  data$R0063030[27.0 <= data$R0063030 & data$R0063030 <= 39.0] <- 27.0
+  data$R0063030[40.0 <= data$R0063030 & data$R0063030 <= 48.0] <- 40.0
+  data$R0063030[49.0 <= data$R0063030 & data$R0063030 <= 51.0] <- 49.0
+  data$R0063030[53.0 <= data$R0063030 & data$R0063030 <= 999.0] <- 53.0
+  data$R0063030 <- factor(data$R0063030,
+                          levels=c(0.0,1.0,14.0,27.0,40.0,49.0,52.0,53.0),
+                          labels=c("0",
+                                   "1 TO 13",
+                                   "14 TO 26",
+                                   "27 TO 39",
+                                   "40 TO 48",
+                                   "49 TO 51",
+                                   "52",
+                                   "53 TO 999: >52"))
+  data$R0063060[0.0 <= data$R0063060 & data$R0063060 <= 195.0] <- 0.0
+  data$R0063060[200.0 <= data$R0063060 & data$R0063060 <= 222.0] <- 200.0
+  data$R0063060[250.0 <= data$R0063060 & data$R0063060 <= 290.0] <- 250.0
+  data$R0063060[301.0 <= data$R0063060 & data$R0063060 <= 370.0] <- 301.0
+  data$R0063060[380.0 <= data$R0063060 & data$R0063060 <= 395.0] <- 380.0
+  data$R0063060[401.0 <= data$R0063060 & data$R0063060 <= 545.0] <- 401.0
+  data$R0063060[601.0 <= data$R0063060 & data$R0063060 <= 775.0] <- 601.0
+  data$R0063060[801.0 <= data$R0063060 & data$R0063060 <= 804.0] <- 801.0
+  data$R0063060[810.0 <= data$R0063060 & data$R0063060 <= 890.0] <- 810.0
+  data$R0063060[901.0 <= data$R0063060 & data$R0063060 <= 905.0] <- 901.0
+  data$R0063060[960.0 <= data$R0063060 & data$R0063060 <= 985.0] <- 960.0
+  data$R0063060 <- factor(data$R0063060,
+                          levels=c(0.0,200.0,250.0,301.0,380.0,401.0,555.0,601.0,801.0,810.0,901.0,960.0,995.0,999.0),
+                          labels=c("0 TO 195: PROFESSIONAL, TECHNICAL, AND KINDRED WORKERS",
+                                   "200 TO 222: FARMERS AND FARM MANAGERS",
+                                   "250 TO 290: MANAGERS, OFFICIALS, AND PROPRIETORS, EXCEPT FARM",
+                                   "301 TO 370: CLERICAL AND KINDRED WORKERS",
+                                   "380 TO 395: SALES WORKERS",
+                                   "401 TO 545: CRAFTSMEN, FOREMEN, AND KINDRED WORKERS",
+                                   "555: MEMBERS OF THE ARMED FORCES",
+                                   "601 TO 775: OPERATIVES AND KINDRED WORKERS (INCLUDES MINE WORKERS)",
+                                   "801 TO 804: PRIVATE HOUSEHOLD WORKERS",
+                                   "810 TO 890: SERVICE WORKERS, EXCEPT PRIVATE HOUSEHOLD WORKERS",
+                                   "901 TO 905: FARM LABORERS AND FOREMEN",
+                                   "960 TO 985: LABORERS, EXCEPT FARM AND MINE",
+                                   "995: OCCUPATION NOT REPORTED",
+                                   "999: DON'T KNOW"))
+  data$R0063090[1.0 <= data$R0063090 & data$R0063090 <= 9.0] <- 1.0
+  data$R0063090[10.0 <= data$R0063090 & data$R0063090 <= 19.0] <- 10.0
+  data$R0063090[20.0 <= data$R0063090 & data$R0063090 <= 29.0] <- 20.0
+  data$R0063090[30.0 <= data$R0063090 & data$R0063090 <= 39.0] <- 30.0
+  data$R0063090[40.0 <= data$R0063090 & data$R0063090 <= 49.0] <- 40.0
+  data$R0063090[50.0 <= data$R0063090 & data$R0063090 <= 59.0] <- 50.0
+  data$R0063090[60.0 <= data$R0063090 & data$R0063090 <= 69.0] <- 60.0
+  data$R0063090[70.0 <= data$R0063090 & data$R0063090 <= 79.0] <- 70.0
+  data$R0063090[80.0 <= data$R0063090 & data$R0063090 <= 89.0] <- 80.0
+  data$R0063090[90.0 <= data$R0063090 & data$R0063090 <= 99.0] <- 90.0
+  data$R0063090[100.0 <= data$R0063090 & data$R0063090 <= 999.0] <- 100.0
+  data$R0063090 <- factor(data$R0063090,
+                          levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+                          labels=c("0",
+                                   "1 TO 9",
+                                   "10 TO 19",
+                                   "20 TO 29",
+                                   "30 TO 39",
+                                   "40 TO 49",
+                                   "50 TO 59",
+                                   "60 TO 69",
+                                   "70 TO 79",
+                                   "80 TO 89",
+                                   "90 TO 99",
+                                   "100 TO 999: 100+"))
+  data$R0063230[1.0 <= data$R0063230 & data$R0063230 <= 13.0] <- 1.0
+  data$R0063230[14.0 <= data$R0063230 & data$R0063230 <= 26.0] <- 14.0
+  data$R0063230[27.0 <= data$R0063230 & data$R0063230 <= 39.0] <- 27.0
+  data$R0063230[40.0 <= data$R0063230 & data$R0063230 <= 48.0] <- 40.0
+  data$R0063230[49.0 <= data$R0063230 & data$R0063230 <= 51.0] <- 49.0
+  data$R0063230[53.0 <= data$R0063230 & data$R0063230 <= 999.0] <- 53.0
+  data$R0063230 <- factor(data$R0063230,
+                          levels=c(0.0,1.0,14.0,27.0,40.0,49.0,52.0,53.0),
+                          labels=c("0",
+                                   "1 TO 13",
+                                   "14 TO 26",
+                                   "27 TO 39",
+                                   "40 TO 48",
+                                   "49 TO 51",
+                                   "52",
+                                   "53 TO 999: >52"))
+  data$R0454700[-999999.0 <= data$R0454700 & data$R0454700 <= -6.0] <- -999999.0
+  data$R0454700[1.0 <= data$R0454700 & data$R0454700 <= 999.0] <- 1.0
+  data$R0454700[1000.0 <= data$R0454700 & data$R0454700 <= 1999.0] <- 1000.0
+  data$R0454700[2000.0 <= data$R0454700 & data$R0454700 <= 2999.0] <- 2000.0
+  data$R0454700[3000.0 <= data$R0454700 & data$R0454700 <= 3999.0] <- 3000.0
+  data$R0454700[4000.0 <= data$R0454700 & data$R0454700 <= 4999.0] <- 4000.0
+  data$R0454700[5000.0 <= data$R0454700 & data$R0454700 <= 5999.0] <- 5000.0
+  data$R0454700[6000.0 <= data$R0454700 & data$R0454700 <= 6999.0] <- 6000.0
+  data$R0454700[7000.0 <= data$R0454700 & data$R0454700 <= 7999.0] <- 7000.0
+  data$R0454700[8000.0 <= data$R0454700 & data$R0454700 <= 8999.0] <- 8000.0
+  data$R0454700[9000.0 <= data$R0454700 & data$R0454700 <= 9999.0] <- 9000.0
+  data$R0454700[10000.0 <= data$R0454700 & data$R0454700 <= 14999.0] <- 10000.0
+  data$R0454700[15000.0 <= data$R0454700 & data$R0454700 <= 19999.0] <- 15000.0
+  data$R0454700[20000.0 <= data$R0454700 & data$R0454700 <= 24999.0] <- 20000.0
+  data$R0454700[25000.0 <= data$R0454700 & data$R0454700 <= 49999.0] <- 25000.0
+  data$R0454700[50000.0 <= data$R0454700 & data$R0454700 <= 999999.0] <- 50000.0
+  data$R0454700 <- factor(data$R0454700,
+                          levels=c(-999999.0,0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+                          labels=c("-999999 TO -6",
+                                   "0",
+                                   "1 TO 999",
+                                   "1000 TO 1999",
+                                   "2000 TO 2999",
+                                   "3000 TO 3999",
+                                   "4000 TO 4999",
+                                   "5000 TO 5999",
+                                   "6000 TO 6999",
+                                   "7000 TO 7999",
+                                   "8000 TO 8999",
+                                   "9000 TO 9999",
+                                   "10000 TO 14999",
+                                   "15000 TO 19999",
+                                   "20000 TO 24999",
+                                   "25000 TO 49999",
+                                   "50000 TO 999999"))
+  return(data)
+}
+
+varlabels <- c("ID_CODE, 66",
+               "AGE, 66",
+               "MONTH R BIRTH, 66",
+               "YEAR R BIRTH, 66",
+               "RACE, 66",
+               "MAR_STAT, 66",
+               "REGION OF RES IN 66 REV",
+               "COMP CUR W PREV SMSA RES 66",
+               "CUR RES IN SMSA, 66? REV",
+               "SIZE LAB_FOR,70 CEN,LAB_MKT 66 RES REV",
+               "TYPE AREA RES, 66",
+               "TYPE PROPERTY OF RES, 66",
+               "TENURE,66",
+               "IND DIVERS SCORE LAB_MKT CUR RES, 66",
+               "INDEX MALE LABOR LAB_MKT CUR RES, 66",
+               "PRSNCE ACCREDITD 2 YR COL-LAB_MKT,66 RES",
+               "TYPE ACCREDITD 2 YR COL-LAB_MKT, 66 RES",
+               "PRSNCE ACCREDITD 4 YR COL-LAB_MKT,66 RES",
+               "TYPE ACCREDITD 4 YR COL-LAB_MKT, 66 RES",
+               "ENR_STAT, 66-IS R CURLY ENRLD?",
+               "ENR_STAT-(CH A), 66",
+               "R EVR SERVD ARM_FORC? AS OF 66",
+               "R EVR TRY TO ENTER ARM_FORC? 66",
+               "COMP RES H_SCHL AND CUR RES, 66",
+               "LAST H_SCHL ATTND PUB SCHL? 66",
+               "ATT TWD H_SCHL EXPERIENCE, 66",
+               "ATT TWD COL EXPERIENCE, 66",
+               "ATT CURR_JOB_66",
+               "1ST FCR LIKED_MST CURR_JOB_66",
+               "2ND FCR LIKED_MST CURR_JOB_66",
+               "3RD FCR LIKED_MST CURR_JOB_66",
+               "1ST FCR DSLK_MST CURR_JOB_66",
+               "2ND FCR DSLK_MST CURR_JOB_66",
+               "3RD FCR DSLK_MST CURR_JOB_66",
+               "ROP RQD ACPT HYP_JOB_OFR SAM_AR, 66",
+               "TM UN ROP ACPT HYP_JOB_OFR SAM_AR, 66",
+               "REACT HYP_JOB_OFR SAM_AR, 66",
+               "ROP RQD ACPT HYP_JOB_OFR DIF_AREA, 66",
+               "TM UN ROP ACPT HYP_JOB_OFR DIF_AREA, 66",
+               "REACT HYP_JOB_OFR DIF_AREA,66",
+               "PLANS OF R IF LOSS_OF_CURR_JOB, 66",
+               "TYPE TRNG R TAKE LOSS_OF_CURR_JOB, 66",
+               "TYPE SCHL R ENRL LOSS_OF_CURR_JOB, 66",
+               "MTHD FIN SCHL/TRNG LOSS_OF_CURR_JOB 66",
+               "IND JOB TAKE IF LOSS_OF_CURR_JOB, 66 3D 60C",
+               "OCC JOB TAKE IF LOSS_OF_CURR_JOB, 66 3D 60C",
+               "LOC R TAKE JOB IF LOSS_OF_CURR_JOB, 66",
+               "LOC BUS R BEGIN IF LOSS_OF_CURR_JOB, 66",
+               "OCC JOB R SEEK IF LOSS_OF_CURR_JOB 66 3D 60C",
+               "KWW-HOSPITAL ORDERLY-QUES A-1, 66",
+               "KWW-SCHLING-QUES A-1, 66",
+               "KWW-MACHINIST-QUES B-1, 66",
+               "KWW-SCHLING-QUES B-2, 66",
+               "KWW-ACETYLENE WELDER-QUES C-1, 66",
+               "KWW-SCHLING-QUES C-2, 66",
+               "KWW-STATIONARY ENGINEER-QUES D-1, 66",
+               "KWW-SCHLING-QUES D-2, 66",
+               "KWW-STATISTICAL CLERK-QUES E-1, 66",
+               "KWW-SCHLING-QUES E-2, 66",
+               "KWW-FORK LIFT OPERATOR-QUES F-1, 66",
+               "KWW-SCHLING-QUES F-2, 66",
+               "KWW-ECONOMIST-QUES G-1, 66",
+               "KWW-SCHLING-QUES G-2, 66",
+               "KWW-MEDICAL ILLUSTRATOR-QUES H-1, 66",
+               "KWW-SCHLING-QUES H-2, 66",
+               "KWW-DRAFTSMAN-QUES I-1, 66",
+               "KWW-SCHLING-QUES I-2, 66",
+               "KWW-SOCIAL WRKR-QUES J-1, 66",
+               "KWW-SCHLING-QUES J-2, 66",
+               "MOTIVATION WRK-MST IMPRTNT ABOUT JOB, 66",
+               "KWW-EARNGS COMP A, 66",
+               "KWW-EARNGS COMP B, 66",
+               "KWW-EARNGS COMP C, 66",
+               "KWW-EARNGS COMP D, 66",
+               "KWW-EARNGS COMP E, 66",
+               "KWW-EARNGS COMP F, 66",
+               "KWW-EARNGS COMP G, 66",
+               "KWW-EARNGS COMP H, 66",
+               "ANTHR PRSNT R ANSWER OCC COMP QUES? 66",
+               "ENR_STAT, 66-(3RD CH P)",
+               "HLTH LIMIT SCHL ACTVTY? 66",
+               "HLTH LIMIT WRK? 66",
+               "HLTH LIMIT ANY OTH ACTVTS? 66",
+               "R HEAD_OF_HH? 66 (CH Q)",
+               "R OWN/RENT HIS HOUSE?-(CH R), 66",
+               "MKT_VAL HOUSE/APT, 66",
+               "AMT DEBT ON HOUSE/APT, 66",
+               "DLR AMT SAVINGS, 66",
+               "DLR AMT U.S.SAVINGS_BONDS, 66",
+               "MKT_VAL BONDS,STOCKS,MUTUAL_FUNDS, 66",
+               "R/WIF RNT,OWN/INVST FARM BUS/REAL_EST?66",
+               "MKT_VAL FARM, BUS/REAL_EST, 66",
+               "DLR AMT FARM BUS/REAL_EST LBLTY,66",
+               "MODEL YR R AUTO, 66",
+               "DLR AMT AUTO LBLTY, 66",
+               "DLR AMT OTH LBLTY, 66",
+               "R LIV W/BOTH PRNTS?-(CH T), 66",
+               "#DPNDNTS EXCLUDING WIF, 66",
+               "WHICH DPNDNTS LIV OUTSIDE HH? 66",
+               "R BIRTHPLACE IN THE US? 66",
+               "COMP BIRTHPLACE TO CUR RES, 66",
+               "LENGTH OF TIME IN CUR RES, 66",
+               "LIFE STAT OF PRNTS OF R, 66",
+               "LIFE STAT OF PRNTS OF WIF, 66",
+               "BIRTHPLACE R FATHER, 66",
+               "BIRTHPLACE R MOTHER, 66",
+               "BIRTHPLACE R PATERNAL GRANDFATHER, 66",
+               "BIRTHPLACE R PATERNAL GRANDMOTHER, 66",
+               "BIRTHPLACE R MATERNAL GRANDFATHER, 66",
+               "BIRTHPLACE R MATERNAL GRANDMOTHER, 66",
+               "RES OF R AT AGE_14, 66",
+               "PRSN R LIVD W/AT AGE_14, 66",
+               "OCC FTHR/HEAD OF HH R AGE 14 3D 60C 66",
+               "WERE MAGAZINES AVAILABLE AT AGE_14? 66",
+               "WERE NEWSPAPERS AVAILABLE AT AGE_14? 66",
+               "LIB_CARD AVAILABLE AT AGE_14? 66",
+               "FTHR IN HH WHEN R AGE_14? 66-CH U",
+               "FTHR USUALLY WRK FT P_YR? 66",
+               "HGA BY FTHR, 66",
+               "FTHR COMPLT HGA? 66",
+               "MTHR IN HH WHEN R WAS AGE_14? 66-(CH V)",
+               "MTHR WRK P_YR? 66",
+               "MTHR USUALLY WRK FT P_YR? 66",
+               "HGA BY MTHR, 66",
+               "MTHR COMPLT HGA?",
+               "R HAV SIBS LIV OUTSIDE HH? 66",
+               "HH_RCR FAM MEM#1:RELNSHP R, 66",
+               "HH_RCR FAM MEM#1:AGE, 66",
+               "HH_RCR FAM MEM#1:ENR_STAT, 66",
+               "HH_RCR FAM MEM#1:HGA, 66",
+               "HH_RCR FAM MEM#1:FINISHED GRADE? 66",
+               "HH_RCR FAM MEM#1:WK WRK P_YR 14+ 66",
+               "HH_RCR FAM MEM#1:HRS/WK WRKD 14+ 66",
+               "HH_RCR FAM MEM#1:OCC P_YR 14+ 66 3D 60C",
+               "HH_RCR FAM MEM#2:RELNSHP R, 66",
+               "HH_RCR FAM MEM#2:AGE, 66",
+               "HH_RCR FAM MEM#2:ENR_STAT, 66",
+               "HH_RCR FAM MEM#2:HGA, 66",
+               "HH_RCR FAM MEM#2:FINISHED GRADE?66",
+               "HH_RCR FAM_MEM#2:WK WRK P_YR 14+ 66",
+               "HH_RCR FAM MEM#2:HRS/WK WRKD 14+ 66",
+               "HH_RCR FAM MEM#2:OCC P_YR 14+ 66 3D 60C",
+               "TOT NET FAM ASSETS, 66 *KEY*",
+               "TOT FAM ASSETS 66 SUM",
+               "OCC FTHR/HEAD_OF_HH R AGE_14,66-DUNC",
+               "OCC FTHR/HEAD_OF_HH R WAS AGE_14-1D 60C",
+               "INDX SOCIOECONOMIC LEVEL PARENTAL FAM,66",
+               "EMPLMT_STAT FTHR, 66",
+               "#WK_WRK BY FTHR P_YR, 66 (REVISED)",
+               "OCC FTHR, 66 3D (REVISED) 60C",
+               "OCC FTHR, 66 DUNC",
+               "HGC BY FTHR, 66",
+               "EMPLMT_STAT MTHR, 66",
+               "#WK_WRK BY MTHR P_YR, 66 (REVISED)",
+               "IQ_TEST_NAME, 68",
+               "IQ_CATEGORY-ONE HALF, 68",
+               "IQ_CATEGORY-ONE 3RD, 68",
+               "IQ_CATEGORY-ONE 4TH, 68",
+               "IQ_CATEGORY-ONE 5TH, 68",
+               "IQ_CATEGORY-ONE 10TH, 68",
+               "IQ_CATEGORY-STANINE, 68",
+               "ROP CURR_JOB_76",
+               "MAR_STAT, 76",
+               "HGC AS OF 76 REV"
+)
+
+
+# Use qnames rather than rnums
+
+qnames = function(data) {
+  names(data) <- c("R0000100_1966",
+                   "R0002200_1966",
+                   "R0002202_1966",
+                   "R0002203_1966",
+                   "R0002300_1966",
+                   "R0002400_1966",
+                   "R0002451_1966",
+                   "R0002454_1966",
+                   "R0002455_1966",
+                   "R0002456_1966",
+                   "R0002500_1966",
+                   "R0002700_1966",
+                   "R0002800_1966",
+                   "R0003400_1966",
+                   "R0003600_1966",
+                   "R0003800_1966",
+                   "R0003900_1966",
+                   "R0004000_1966",
+                   "R0004100_1966",
+                   "R0004300_1966",
+                   "R0005400_1966",
+                   "R0009100_1966",
+                   "R0010500_1966",
+                   "R0010800_1966",
+                   "R0011100_1966",
+                   "R0012800_1966",
+                   "R0015000_1966",
+                   "R0022600_1966",
+                   "R0022700_1966",
+                   "R0022800_1966",
+                   "R0022900_1966",
+                   "R0023000_1966",
+                   "R0023100_1966",
+                   "R0023200_1966",
+                   "R0023300_1966",
+                   "R0023400_1966",
+                   "R0023500_1966",
+                   "R0023600_1966",
+                   "R0023700_1966",
+                   "R0023800_1966",
+                   "R0024000_1966",
+                   "R0024100_1966",
+                   "R0024200_1966",
+                   "R0024300_1966",
+                   "R0024400_1966",
+                   "R0024500_1966",
+                   "R0024600_1966",
+                   "R0024800_1966",
+                   "R0024900_1966",
+                   "R0029700_1966",
+                   "R0029800_1966",
+                   "R0029900_1966",
+                   "R0030000_1966",
+                   "R0030100_1966",
+                   "R0030200_1966",
+                   "R0030300_1966",
+                   "R0030400_1966",
+                   "R0030500_1966",
+                   "R0030600_1966",
+                   "R0030700_1966",
+                   "R0030800_1966",
+                   "R0030900_1966",
+                   "R0031000_1966",
+                   "R0031100_1966",
+                   "R0031200_1966",
+                   "R0031300_1966",
+                   "R0031400_1966",
+                   "R0031500_1966",
+                   "R0031600_1966",
+                   "R0031700_1966",
+                   "R0031800_1966",
+                   "R0031900_1966",
+                   "R0032000_1966",
+                   "R0032100_1966",
+                   "R0032200_1966",
+                   "R0032300_1966",
+                   "R0032400_1966",
+                   "R0032500_1966",
+                   "R0032600_1966",
+                   "R0033600_1966",
+                   "R0033700_1966",
+                   "R0033800_1966",
+                   "R0033900_1966",
+                   "R0034600_1966",
+                   "R0034900_1966",
+                   "R0035100_1966",
+                   "R0035200_1966",
+                   "R0035300_1966",
+                   "R0035400_1966",
+                   "R0035500_1966",
+                   "R0035600_1966",
+                   "R0035700_1966",
+                   "R0035800_1966",
+                   "R0035900_1966",
+                   "R0036000_1966",
+                   "R0036100_1966",
+                   "R0037500_1966",
+                   "R0037600_1966",
+                   "R0037700_1966",
+                   "R0038000_1966",
+                   "R0038100_1966",
+                   "R0038200_1966",
+                   "R0038800_1966",
+                   "R0038900_1966",
+                   "R0039000_1966",
+                   "R0039100_1966",
+                   "R0039200_1966",
+                   "R0039300_1966",
+                   "R0039400_1966",
+                   "R0039500_1966",
+                   "R0039600_1966",
+                   "R0039700_1966",
+                   "R0039800_1966",
+                   "R0039900_1966",
+                   "R0040000_1966",
+                   "R0040100_1966",
+                   "R0040200_1966",
+                   "R0040400_1966",
+                   "R0040600_1966",
+                   "R0040700_1966",
+                   "R0040800_1966",
+                   "R0040900_1966",
+                   "R0041100_1966",
+                   "R0041300_1966",
+                   "R0041400_1966",
+                   "R0041500_1966",
+                   "R0042100_1966",
+                   "R0042200_1966",
+                   "R0042300_1966",
+                   "R0042400_1966",
+                   "R0042500_1966",
+                   "R0042600_1966",
+                   "R0042700_1966",
+                   "R0042800_1966",
+                   "R0042900_1966",
+                   "R0043000_1966",
+                   "R0043100_1966",
+                   "R0043200_1966",
+                   "R0043300_1966",
+                   "R0043400_1966",
+                   "R0043500_1966",
+                   "R0043600_1966",
+                   "R0062300_1966",
+                   "R0062310_1966",
+                   "R0062550_1966",
+                   "R0062600_1966",
+                   "R0062900_1966",
+                   "R0063000_1966",
+                   "R0063030_1966",
+                   "R0063060_1966",
+                   "R0063090_1966",
+                   "R0063100_1966",
+                   "R0063200_1966",
+                   "R0063230_1966",
+                   "R0171200_1968",
+                   "R0171300_1968",
+                   "R0171400_1968",
+                   "R0171500_1968",
+                   "R0171600_1968",
+                   "R0171700_1968",
+                   "R0171800_1968",
+                   "R0454700_1976",
+                   "R0507300_1976",
+                   "R0543940_1976")
+  return(data)
+}
+
+
+#********************************************************************************************************
+
+# Remove the '#' before the following line to create a data file called "categories" with value labels.
+#categories <- vallabels(new_data)
+
+# Remove the '#' before the following lines to rename variables using Qnames instead of Reference Numbers
+#new_data <- qnames(new_data)
+#categories <- qnames(categories)
+
+# Produce summaries for the raw (uncategorized) data file
+summary(new_data)
+
+# Remove the '#' before the following lines to produce summaries for the "categories" data file.
+#categories <- vallabels(new_data)
+#categories <- vallabels_continuous(new_data)
+#summary(categories)
+
+#************************************************************************************************************
+
+# select response Y as earning at 1976
+Y_ <- new_data$R0454700
+
+# delete those Y without record earning
+select_index <- !is.na(Y_)
+Y_processed <- as.matrix(Y_[!is.na(Y_)],ncol=1)
+
+# delete no recorded data and the first column (ID)
+new_data <- new_data[select_index,2:dim(new_data)[2]]
+
+# select treatment T as education
+# delete samples without education record
+select_index_2 <- !is.na(new_data$R0543940)
+new_data <- new_data[select_index_2,]
+Y_processed <- as.matrix(Y_processed[select_index_2,],ncol=1)
+T_ <- new_data$R0543940
+
+
+# high education if at least four year collage
+T_processed <- as.numeric(T_>=16)
+
+# select confounders as IQ, indicators for residence in the south, age,
+confounders <- data.frame('IQ' = new_data$R0171300, 'residence'=new_data$R0002451,'age'=new_data$R0002200, 'race'=new_data$R0002300)
+
+# covariates
+covariates <- new_data[, !(names(new_data) %in% c('R0002203', 'R0454700','R0543940','R0171300','R0171400','R0171500','R0171600','R0171700','R0171800','R0002451','R0002200','R0002300'))]
+
+
+# source data
+# control group: T = 0
+source_X <- as.matrix(covariates[T_processed == 0,])
+source_Y <- as.matrix(Y_processed[T_processed == 0,])
+source_confounder <- as.matrix(confounders[T_processed == 0,])
+source_confounder_index <- !is.na(rowSums(source_confounder))
+source_X <- source_X[source_confounder_index,]
+source_Y <- source_Y[source_confounder_index,]
+mean_Y <- mean(source_Y)
+std_Y <- (mean(source_Y**2))**0.5
+source_Y <- source_Y - mean_Y
+source_Y <- source_Y/std_Y
+source_confounder <- source_confounder[source_confounder_index,]
+
+# target data
+# experimental group: T = 1
+target_X <- as.matrix(covariates[T_processed == 1,])
+target_Y <- as.matrix(Y_processed[T_processed == 1,])
+target_confounder <- as.matrix(confounders[T_processed == 1,])
+target_confounder_index <- !is.na(rowSums(target_confounder))
+target_X <- target_X[target_confounder_index,]
+target_Y <- target_Y[target_confounder_index,]
+target_Y <- target_Y - mean_Y
+target_Y <- target_Y/std_Y
+target_confounder <- target_confounder[target_confounder_index,]
+
+# imputing missing data and data normalization
+means_x <- rep(0,dim(source_X)[2])
+std_x <- rep(0,dim(source_X)[2])
+for (i in 1:dim(source_X)[2]) {
+  miss_index <- is.na(source_X[,i])
+  means_x[i] <- mean(source_X[!miss_index,i])
+  source_X[miss_index,i] <- means_x[i]
+  source_X[,i] <- source_X[,i] - means_x[i]
+  std_x[i] <- (mean(source_X[,i]**2))**0.5
+  source_X[,i] <- source_X[,i]/std_x[i]
+}
+
+for (i in 1:dim(source_X)[2]) {
+  miss_index <- is.na(target_X[,i])
+  target_X[miss_index,i] <- mean(target_X[!miss_index,i])
+  target_X[,i] <- target_X[,i] - means_x[i]
+  target_X[,i] <- target_X[,i]/std_x[i]
+}
+
+# select useful covariates
+cor_coef =  t(source_X) %*% source_Y / length(source_Y)
+select_covariance_index = c(abs(cor_coef) > 0.1)
+
+source_X = source_X[,select_covariance_index]
+target_X = target_X[,select_covariance_index]
+means_x = means_x[select_covariance_index]
+std_x = std_x[select_covariance_index]
+
+rm(list = setdiff(ls(), c('source_X','source_Y','source_confounder','target_X','target_Y','target_confounder','means_x','std_x')))
+
+save.image("NLSM_data_preprocessed_fixed_p.RData")
+
+
+
+
+
+
+
+
+
+
+
